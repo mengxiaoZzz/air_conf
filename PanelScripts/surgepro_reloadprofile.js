@@ -13,7 +13,7 @@ let params = getParams()
 
     $done({
         title: params.title || `Surge Ultra`,
-        content: (params.content || `通透世界`) + `: ʚ|=${startTime}=|ɞ`,
+        content: (params.content || `通透世界`) + `: ʚ|-${startTime}-|ɞ`,
         icon: params.icon || `crown.fill`,
         "icon-color": params.color || `#f6c970`
     });
