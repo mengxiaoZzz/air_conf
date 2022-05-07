@@ -28,7 +28,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
     let [{region, status}] = await Promise.all([testDisneyPlus()])
     await Promise.all([check_netflix(), check_youtube_premium()])
         .then((result) => {
-            let disney_result = "Disney+: "
+            let disney_result = "Disney+:  "
             if (status === STATUS_COMING) {
                 disney_result += "即将登陆~" + region.toUpperCase()
             } else if (status === STATUS_AVAILABLE) {
@@ -135,7 +135,7 @@ async function check_netflix() {
         })
     }
 
-    let netflix_check_result = 'Netflix: '
+    let netflix_check_result = 'Netflix:   '
 
     await inner_check(81215567)
         .then((code) => {
@@ -169,12 +169,12 @@ async function check_netflix() {
 
 async function testDisneyPlus() {
     try {
-        let {region, cnbl} = await Promise.race([testHomePage(), timeout(7000)])
+        let {region, cnbl} = await Promise.race([testHomePage(), timeout()])
         // 即将登陆
         //  if (cnbl == 2) {
         //    return { region, status: STATUS_COMING }
         //  }
-        let {countryCode, inSupportedLocation} = await Promise.race([getLocationInfo(), timeout(7000)])
+        let {countryCode, inSupportedLocation} = await Promise.race([getLocationInfo(), timeout()])
         region = countryCode ?? region
         // 即将登陆
         if (inSupportedLocation === false || inSupportedLocation === 'false') {
@@ -183,21 +183,17 @@ async function testDisneyPlus() {
             // 支持解锁
             return {region, status: STATUS_AVAILABLE}
         }
-
     } catch (error) {
         // 不支持解锁
         if (error === 'Not Available') {
             return {status: STATUS_NOT_AVAILABLE}
         }
-
         // 检测超时
         if (error === 'Timeout') {
             return {status: STATUS_TIMEOUT}
         }
-
         return {status: STATUS_ERROR}
     }
-
 }
 
 function getLocationInfo() {
