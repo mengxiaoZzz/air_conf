@@ -18,9 +18,9 @@ let params = getParams()
     $done({
         title: params.title || `Surge Ultra®`,
         content: (params.content || `通透世界`) + `: ʚ|-${startTime}-|ɞ` + `\n` +
-            "Mitm:" + icon_status(mitm_status.enabled) +
-            "  Rewrite:" + icon_status(rewrite_status.enabled) +
-            "  Scripting:" + icon_status(scripting_status.enabled),
+            `Mitm:` + icon_status(mitm_status.enabled) +
+            `  Rewrite:` + icon_status(rewrite_status.enabled) +
+            `  Scripting:` + icon_status(scripting_status.enabled),
         icon: params.icon || `crown.fill`,
         "icon-color": params.color || `#f6c970`
     });
@@ -28,11 +28,7 @@ let params = getParams()
 })();
 
 function icon_status(status) {
-    if (status) {
-        return "\u2611";
-    } else {
-        return "\u2612"
-    }
+    return status ? "\u2611" : "\u2612";
 }
 
 function timeTransform(dateNow, dateTime) {
