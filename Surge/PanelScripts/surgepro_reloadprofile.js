@@ -7,18 +7,33 @@ let params = getParams()
     const dateTime = Math.floor(traffic.startTime * 1000);
     const startTime = timeTransform(dateNow, dateTime);
 
+    const mitm_status = (await httpAPI("/v1/features/mitm", "GET"));
+    const rewrite_status = (await httpAPI("/v1/features/rewrite", "GET"));
+    const scripting_status = (await httpAPI("/v1/features/scripting", "GET"));
+
     if ($trigger === "button") {
         await httpAPI("/v1/profiles/reload");
     }
 
     $done({
         title: params.title || `Surge Ultra`,
-        content: (params.content || `通透世界`) + `: ʚ|-${startTime}-|ɞ` + `\n` + `Mitm:` + icon_status(mitm_status.enabled),
+        content: (params.content || `通透世界`) + `: ʚ|-${startTime}-|ɞ` + `\n` +
+            "Mitm:" + icon_status(mitm_status.enabled) +
+            "  Rewrite:" + icon_status(rewrite_status.enabled) +
+            "  Scripting:" + icon_status(scripting_status.enabled),
         icon: params.icon || `crown.fill`,
         "icon-color": params.color || `#f6c970`
     });
 
 })();
+
+function icon_status(status) {
+    if (status) {
+        return "\u2611";
+    } else {
+        return "\u2612"
+    }
+}
 
 function timeTransform(dateNow, dateTime) {
     const dateDiff = dateNow - dateTime;
