@@ -16,7 +16,7 @@ let params = getParams()
     }
 
     $done({
-        title: params.title || `Surge Ultra`,
+        title: params.title || `Surge Ultra®`,
         content: (params.content || `通透世界`) + `: ʚ|-${startTime}-|ɞ` + `\n` +
             "Mitm:" + icon_status(mitm_status.enabled) +
             "  Rewrite:" + icon_status(rewrite_status.enabled) +
