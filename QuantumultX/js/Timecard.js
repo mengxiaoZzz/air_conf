@@ -15,13 +15,18 @@ let option = {
 let nowDate = new Date().toLocaleDateString()
 let year = nowDate.split('/')[0]
 // 各日期区分开方便日后区分放假通知与倒数日通知
-let holidayData = $.getjson('@DaysMatter.holidayData', null) // 法定节假日，放假的那种
-let daysData = [] // 节日集合，包含法定节假日，内置假日，用户假日（固定+浮动）
-let userDays = $.getdata('@DaysMatter.userDays') // 用户固定假日
+// 法定节假日
+let holidayData = $.getjson('@DaysMatter.holidayData', null)
+// 节日集合，包含法定节假日，内置假日，用户假日（固定+浮动）
+let daysData = []
+// 用户固定假日
+let userDays = $.getdata('@DaysMatter.userDays')
 let userDaysName = $.getdata('@DaysMatter.userDaysName')
-let userDays2 = $.getdata('@DaysMatter.userDays2') // 用户浮动假日
+// 用户浮动假日
+let userDays2 = $.getdata('@DaysMatter.userDays2')
 let userDaysName2 = $.getdata('@DaysMatter.userDaysName2')
-let userDaysData = $.getjson('@DaysMatter.userDaysData', {'list': []}) // 备用变量
+// 备用变量
+let userDaysData = $.getjson('@DaysMatter.userDaysData', {'list': []})
 let defaultDaysData =
     [{'date': '2023-2-10', 'name': '老爸生日'},
         {'date': '2023-3-27', 'name': '结婚纪念日3周年'},
