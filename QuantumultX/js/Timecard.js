@@ -7,7 +7,7 @@
  */
 const $ = new Env('DaysMatter', true)
 let title = '📅 倒数日'
-let url = 'https://raw.githubusercontent.com/zqzess/openApiData/main/calendar/cnholiday2.json'
+let url = ''
 let option = {
     url: url,
     headers: {}
@@ -16,21 +16,24 @@ let nowDate = new Date().toLocaleDateString()
 let year = nowDate.split('/')[0]
 // 各日期区分开方便日后区分放假通知与倒数日通知
 // 节日集合，包含法定节假日，内置假日，用户假日（固定+浮动）
-let daysData = []
-// 法定节假日
-let holidayData = $.getjson('@DaysMatter.holidayData', null)
-// 用户固定假日
-let userDays = $.getdata('@DaysMatter.userDays')
-let userDaysName = $.getdata('@DaysMatter.userDaysName')
-// 用户浮动假日
-let userDays2 = $.getdata('@DaysMatter.userDays2')
-let userDaysName2 = $.getdata('@DaysMatter.userDaysName2')
-// 备用变量
-let userDaysData = $.getjson('@DaysMatter.userDaysData', {'list': []})
-let defaultDaysData =
+let daysData =
     [
+        {'date': '2023-1-1', 'name': '元旦'},
+        {'date': '2023-1-21', 'name': '除夕'},
+        {'date': '2023-1-22', 'name': '春节'},
+        {'date': '2023-2-14', 'name': '情人节'},
+        {'date': '2023-3-8', 'name': '妇女节'},
+        {'date': '2023-4-1', 'name': '愚人节'},
+        {'date': '2023-4-5', 'name': '清明节'},
+        {'date': '2023-5-1', 'name': '劳动节'},
+        {'date': '2023-5-14', 'name': '母亲节'},
+        {'date': '2023-6-1', 'name': '儿童节'},
+        {'date': '2023-6-18', 'name': '父亲节'},
         {'date': '2023-6-21', 'name': '结婚纪念日'},
+        {'date': '2023-6-22', 'name': '端午节'},
         {'date': '2023-8-22', 'name': '七夕'},
+        {'date': '2023-9-29', 'name': '中秋节'},
+        {'date': '2023-10-1', 'name': '国庆节'},
         {'date': '2023-12-24', 'name': '平安夜'},
         {'date': '2023-12-28', 'name': '生日'},
         {'date': '2024-1-18', 'name': '腊八节'},
@@ -46,94 +49,23 @@ let dateDiffArray = []
 startWork()
 
 async function startWork() {
-    await setHoliDayData()
     let nowlist = now();
     $.log('距离最近的节日：' + daysData[nowlist].name)
-    let notifyContent = dateDiffArray[0].name + ":" + today(tnumcount(0)) + "," + dateDiffArray[Number(0) + Number(1)].name + ":" + tnumcount(Number(0) + Number(1)) + "天," + dateDiffArray[Number(0) + Number(2)].name + ":" + tnumcount(Number(0) + Number(2)) + "天"
+    let notifyContent = dateDiffArray[0].name + ":" + today(tnumCount(0)) + "," + dateDiffArray[Number(0) + Number(1)].name + ":" + tnumCount(Number(0) + Number(1)) + "天," + dateDiffArray[Number(0) + Number(2)].name + ":" + tnumCount(Number(0) + Number(2)) + "天"
     $.isSurge() ? body = {
-        title: title_random(tnumcount(Number(0))),
+        title: title_random(tnumCount(Number(0))),
         content: notifyContent,
-        icon: icon_now(tnumcount(Number(0))),
+        icon: icon_now(tnumCount(Number(0))),
         'icon-color': '#5AC8FA'
     } : body = {
-        title: title_random(tnumcount(Number(0))),
+        title: title_random(tnumCount(Number(0))),
         content: notifyContent,
-        icon: icon_now(tnumcount(Number(0))),
+        icon: icon_now(tnumCount(Number(0))),
         backgroundColor: '#339900'
     }
     $.msg(title, '', notifyContent)
-    notifyContent = notifyContent.replace(",", "\n")
     $.log('\n面板显示内容：\n' + notifyContent)
     $.isSurge || $.isStash ? $.done(body) : $.done()
-}
-
-async function setHoliDayData() {
-    if (holidayData === null || holidayData.year !== year) {
-        await $.http.get(option).then(function (response) {
-            let jsonObj = JSON.parse(response.body)
-            let result = jsonObj.data[0].holiday
-            result.forEach(function (i) {
-                if (i.year === year) {
-                    holidayData = i
-                    $.setjson(i, '@DaysMatter.holidayData')
-                }
-            })
-        })
-    }
-    daysData = daysData.concat(holidayData.list) // 法定节假日并入假日集合
-    let clearFlag = false
-    // 如果用户填写了固定日期，就解析并入节日集合，如公历生日，每年都是一样的，所以填入月和日即可，3-1。会自动解析并加入当前年份
-    if (userDays !== '' && userDays !== undefined && userDays !== null && userDaysName !== '' && userDaysName !== undefined && userDaysName !== null) {
-        userDays = userDays.replace('，', ',')
-        userDaysName = userDaysName.replace('，', ',')
-        let userDaysArray = userDays.split(',')
-        let userDaysNameArray = userDaysName.split(',')
-        if (userDaysArray.length !== userDaysNameArray.length) {
-            $.msg(title, '❌错误', '用户填写的固定日期和名称没有对应')
-        } else {
-            userDaysData = []
-            for (let i in userDaysArray) {
-                // 如果用户填写的是浮动日期，此处与下面的重复了，目前设计是浮动日期和固定日期分开填写，后期可视情况合并（删除下面）
-                if (userDaysArray[i].split('-').length > 2) {
-                    daysData.push({'date': userDaysArray[i], 'name': userDaysNameArray[i]})
-                    userDaysData.push({'date': userDaysArray[i], 'name': userDaysNameArray[i]}) // 此变量备用
-                } else if (userDaysArray[i].split('-').length === 2) { // 用户填写的是固定日期
-                    daysData.push({'date': year + '-' + userDaysArray[i], 'name': userDaysNameArray[i]})
-                    userDaysData.push({'date': year + '-' + userDaysArray[i], 'name': userDaysNameArray[i]}) // 此变量备用
-                }
-            }
-            $.setjson(userDaysData, '@DaysMatter.userDaysData')
-            clearFlag = true
-        }
-    }
-
-    // 如果用户填写了浮动日期，如母亲节每年5月第二个星期日这种，需要填入年份2024-5-4
-    if (userDays2 !== '' && userDays2 !== undefined && userDays2 !== null && userDaysName2 !== '' && userDaysName2 !== undefined && userDaysName2 !== null) {
-        userDays2 = userDays2.replace('，', ',')
-        userDaysName2 = userDaysName2.replace('，', ',')
-        let userDaysArray = userDays2.split(',')
-        let userDaysNameArray = userDaysName2.split(',')
-        if (userDaysArray.length !== userDaysNameArray.length) {
-            $.msg(title, '❌错误', '用户填写的浮动日期和名称没有对应')
-        } else {
-            if (!clearFlag) {
-                userDaysData = []
-            }
-            for (let i in userDaysArray) {
-                // 如果用户填写的是固定日期
-                if (userDaysArray[i].split('-').length > 2) {
-                    daysData.push({'date': userDaysArray[i], 'name': userDaysNameArray[i]})
-                    userDaysData.push({'date': userDaysArray[i], 'name': userDaysNameArray[i]}) // 此变量备用
-                }
-            }
-            $.setjson(userDaysData, '@DaysMatter.userDaysData')
-        }
-    }
-    if (defaultDaysData.length > 0) {
-        daysData = daysData.concat(defaultDaysData)
-    }
-    console.log('节日集合: ')
-    console.log(daysData)
 }
 
 /* 计算2个日期相差的天数，不包含今天，如：2016-12-13到2016-12-15，相差2天
@@ -151,7 +83,7 @@ function dateDiff(startDateString, endDateString) {
 }
 
 //计算输入序号对应的时间与现在的天数间隔
-function tnumcount(num) {
+function tnumCount(num) {
     return dateDiff(tnowf, dateDiffArray[num].date);
 }
 
