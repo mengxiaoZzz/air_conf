@@ -29,7 +29,6 @@ let userDaysName2 = $.getdata('@DaysMatter.userDaysName2')
 let userDaysData = $.getjson('@DaysMatter.userDaysData', {'list': []})
 let defaultDaysData =
     [
-        {'date': '2023-4-5', 'name': '清明'},
         {'date': '2023-6-21', 'name': '结婚纪念日'},
         {'date': '2023-8-22', 'name': '七夕'},
         {'date': '2023-12-24', 'name': '平安夜'},
