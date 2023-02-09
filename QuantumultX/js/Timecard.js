@@ -15,10 +15,10 @@ let option = {
 let nowDate = new Date().toLocaleDateString()
 let year = nowDate.split('/')[0]
 // 各日期区分开方便日后区分放假通知与倒数日通知
-// 法定节假日
-let holidayData = $.getjson('@DaysMatter.holidayData', null)
 // 节日集合，包含法定节假日，内置假日，用户假日（固定+浮动）
 let daysData = []
+// 法定节假日
+let holidayData = $.getjson('@DaysMatter.holidayData', null)
 // 用户固定假日
 let userDays = $.getdata('@DaysMatter.userDays')
 let userDaysName = $.getdata('@DaysMatter.userDaysName')
@@ -28,17 +28,12 @@ let userDaysName2 = $.getdata('@DaysMatter.userDaysName2')
 // 备用变量
 let userDaysData = $.getjson('@DaysMatter.userDaysData', {'list': []})
 let defaultDaysData =
-    [{'date': '2023-2-10', 'name': '老爸生日'},
-        {'date': '2023-3-27', 'name': '结婚纪念日3周年'},
+    [
         {'date': '2023-4-5', 'name': '清明'},
-        {'date': '2023-5-9', 'name': '生日'},
-        {'date': '2023-5-22', 'name': '奶奶生日'},
-        {'date': '2023-5-31', 'name': '楠楠生日'},
-        {'date': '2023-7-22', 'name': '老婆生日'},
+        {'date': '2023-6-21', 'name': '结婚纪念日'},
         {'date': '2023-8-22', 'name': '七夕'},
-        {'date': '2023-9-7', 'name': '多多生日'},
-        {'date': '2023-11-15', 'name': '妹妹生日'},
         {'date': '2023-12-24', 'name': '平安夜'},
+        {'date': '2023-12-28', 'name': '生日'},
         {'date': '2024-1-18', 'name': '腊八节'},
         {'date': '2024-2-2', 'name': '小年'},
         {'date': '2024-2-9', 'name': '除夕'},
