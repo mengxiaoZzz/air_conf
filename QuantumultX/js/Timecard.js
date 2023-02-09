@@ -7,6 +7,7 @@
  */
 const $ = new Env('DaysMatter', true)
 let title = '📅 倒数日'
+// let url = 'https://raw.githubusercontent.com/zqzess/openApiData/main/calendar/cnholiday2.json'
 let url = ''
 let option = {
     url: url,
