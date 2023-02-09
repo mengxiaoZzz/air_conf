@@ -61,8 +61,9 @@ async function startWork() {
         icon: icon_now(tnumcount(Number(0))),
         backgroundColor: '#339900'
     }
-    $.log('\n面板显示内容：\n' + notifyContent)
     $.msg(title, '', notifyContent)
+    notifyContent = notifyContent.replace(",", "\n")
+    $.log('\n面板显示内容：\n' + notifyContent)
     $.isSurge || $.isStash ? $.done(body) : $.done()
 }
 
