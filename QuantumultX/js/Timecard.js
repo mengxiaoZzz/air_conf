@@ -63,7 +63,7 @@ async function startWork() {
         backgroundColor: '#339900'
     }
     $.log('\n面板显示内容：\n' + notifyContent)
-    // $.msg(title, '', notifyContent)
+    $.msg(title, '', notifyContent)
     $.isSurge || $.isStash ? $.done(body) : $.done()
 }
 
