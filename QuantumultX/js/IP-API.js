@@ -70,12 +70,11 @@ function simplified(str) {
     if (length === 0) {
         return str;
     }
-    str.forEach(e => {
+    let array = Array.from(str);
+    return array.map(e => {
         let index = traditionalCodes.indexOf(e);
-        if (index >= 0) {
-            str[index] = simplifiedCodes.charAt(e);
-        }
-    })
+        return index >= 0 ? simplifiedCodes.charAt(index) : e;
+    }).join('');
 }
 
 
