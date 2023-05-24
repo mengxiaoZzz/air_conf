@@ -80,7 +80,7 @@ function simplified(str) {
 
 let body = $response.body;
 let obj = JSON.parse(body);
-let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']) + ' ' + simplified(obj['regionName']) + ' ' + simplified(obj['city']);
+let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']) + ' ' + simplified(obj['city']);
 let subtitle = obj['org'];
 let ip = obj['query'];
 let description = '服务商:' + obj['isp'] + '\n' + '地区:' + obj['regionName'] + '\n' + 'IP:' + obj['query'] + '\n' + '时区:' + obj['timezone'];
