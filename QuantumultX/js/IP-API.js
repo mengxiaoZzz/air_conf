@@ -81,11 +81,9 @@ function simplified(str) {
 let body = $response.body;
 let obj = JSON.parse(body);
 
-let title = flags.get(obj['countryCode']);
-if (obj['country'] === obj['city']) {
-    title += ' ' + simplified(obj['country']);
-} else {
-    title += ' ' + simplified(obj['country']) + ' ' + simplified(obj['city']);
+let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']);
+if (obj['country'] !== obj['city']) {
+    title += '  ' + simplified(obj['city']);
 }
 
 let subtitle = obj['org'];
