@@ -90,11 +90,11 @@ parsers: # array
           type: select
           proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 🎮 游戏平台
+        - name: 🎮 Game
           type: select
           proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 🛑 AdBlock
+        - name: 🆎 AdBlock
           type: select
           proxies: [REJECT, DIRECT]
 
@@ -284,7 +284,7 @@ parsers: # array
         - RULE-SET,Direct,DIRECT
         - RULE-SET,Lan,DIRECT
         - RULE-SET,Download,DIRECT
-        - RULE-SET,Anti-AD,🛑 AdBlock
+        - RULE-SET,Anti-AD,🆎 AdBlock
         - RULE-SET,OpenAI,🤖 OpenAI
         - RULE-SET,Apple,🍎 苹果服务
         - RULE-SET,Microsoft,🧩 微软服务
@@ -294,7 +294,7 @@ parsers: # array
         - RULE-SET,Twitter,🐦 推特消息
         - RULE-SET,BiliBili,📺 Bilibili
         - RULE-SET,PikPak,🎥 PikPak
-        - RULE-SET,Game,🎮 游戏平台
+        - RULE-SET,Game,🎮 Game
         - RULE-SET,ProxyMedia,📹 国际媒体
         - RULE-SET,ProxyGFWlist,🌏 国外网站
         - RULE-SET,ChinaIP,🌏 国内网站
