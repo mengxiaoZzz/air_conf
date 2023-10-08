@@ -18,8 +18,8 @@ parsers: # array
       }
     yaml:                     # 建立自己的配置
       mix-object:             # 对象合并至原配置最外层中
-        mixed-port: 7893      # 混合端口 HTTP和SOCKS5用一个端口
-        allow-lan: true       # 允许局域网的连接（可用来共享代理）
+        mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
+        allow-lan: false      # 允许局域网的连接（可用来共享代理）
         bind-address: "*"     # 仅在将allow-lan设置为true时适用
         # #"*": 绑定所有IP地址
         ipv6: false           # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
@@ -43,49 +43,56 @@ parsers: # array
 
       prepend-proxy-groups: # 建立策略组
 
-        - name: 🌏 国外网站
+        - name: 🚀 节点选择
           type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
-
-        - name: 📹 国际媒体
-          type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
 
         - name: 🍎 苹果服务
           type: select
-          proxies: [DIRECT, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动切换, ⚠ 故障转移]
+          proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+
+        - name: 📺 Bilibili
+          type: select
+          proxies: [ DIRECT, 🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点]
 
         - name: 🧩 微软服务
           type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
+          proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 🌌 谷歌服务
+        - name: 🌌 Google
           type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
+          proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 📟 电报消息
+        - name: 📟 Telegram
           type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
+          proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 🐦 推特消息
           type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
+          proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 🤖 OpenAI
           type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
+          proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 🎮 游戏平台
+        - name: 🎥 PikPak
           type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
-
-        - name: 📺 哔哩哔哩
-          type: select
-          proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, ]
+          proxies: [🇸🇬 新加坡节点, 🚀 节点选择]
 
         - name: 🌏 国内网站
           type: select
-          proxies: [DIRECT, 🚀 手动切换]
+          proxies: [ DIRECT, 🚀 节点选择 ]
+
+        - name: 🌏 国外网站
+          type: select
+          proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+
+        - name: 📹 国际媒体
+          type: select
+          proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+
+        - name: 🎮 游戏平台
+          type: select
+          proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 🛑 AdBlock
           type: select
@@ -93,10 +100,7 @@ parsers: # array
 
         - name: 🐟 漏网之鱼
           type: select
-          proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT, 🚀 手动切换, ⚠ 故障转移]
-
-        - name: 🚀 手动切换
-          type: select
+          proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, ⚠ 故障转移]
 
         - name: 🇭🇰 香港节点
           type: url-test # select/url-test/fallback/laod-balance
@@ -114,7 +118,7 @@ parsers: # array
           proxies:
             - DIRECT
 
-        - name: 🇸🇬 狮城节点
+        - name: 🇸🇬 新加坡节点
           type: url-test # select/url-test/fallback/laod-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
@@ -147,13 +151,13 @@ parsers: # array
             - DIRECT
 
       commands:
-        - proxy-groups.🚀 手动切换.proxies=[]proxyNames
+        - proxy-groups.🚀 节点选择.proxies=[]proxyNames
         - proxy-groups.⚠ 故障转移.proxies=[]proxyNames
         - proxy-groups.🇭🇰 香港节点.proxies=[]proxyNames|^(?!.*游戏).*(香港|HK|🇭🇰)+(.*)$
-        - proxy-groups.🇺🇸 美国节点.proxies=[]proxyNames|^(?!.*游戏).*(美国|US|🇺🇸|American)+(.*)$
-        - proxy-groups.🇸🇬 狮城节点.proxies=[]proxyNames|^(?!.*游戏).*(新加坡|狮城|🇸🇬|SG|Singapore)+(.*)$
-        - proxy-groups.🇯🇵 日本节点.proxies=[]proxyNames|^(?!.*游戏).*(日本|东京|🇯🇵|JP|Japan)+(.*)$
         - proxy-groups.🇨🇳 台湾节点.proxies=[]proxyNames|^(?!.*游戏).*(台湾|TW|🇨🇳|Taiwan)+(.*)$
+        - proxy-groups.🇸🇬 新加坡节点.proxies=[]proxyNames|^(?!.*游戏).*(新加坡|狮城|🇸🇬|SG|Singapore)+(.*)$
+        - proxy-groups.🇺🇸 美国节点.proxies=[]proxyNames|^(?!.*游戏).*(美国|US|🇺🇸|American)+(.*)$
+        - proxy-groups.🇯🇵 日本节点.proxies=[]proxyNames|^(?!.*游戏).*(日本|东京|🇯🇵|JP|Japan)+(.*)$
 
       mix-rule-providers: # 添加规则集
 
@@ -241,6 +245,13 @@ parsers: # array
           path: ./ruleset/OpenAI.yaml
           interval: 86400
 
+        PikPak:         # PikPak
+          type: http
+          behavior: classical
+          url:  https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PikPak/PikPak.yaml
+          path: ./ruleset/PikPak.yaml
+          interval: 86400
+
         BiliBili:         # 哔哩哔哩
           type: http
           behavior: classical
@@ -277,11 +288,12 @@ parsers: # array
         - RULE-SET,OpenAI,🤖 OpenAI
         - RULE-SET,Apple,🍎 苹果服务
         - RULE-SET,Microsoft,🧩 微软服务
-        - RULE-SET,Youtube,🌌 谷歌服务
-        - RULE-SET,Google,🌌 谷歌服务
-        - RULE-SET,Telegram,📟 电报消息
+        - RULE-SET,Youtube,🌌 Google
+        - RULE-SET,Google,🌌 Google
+        - RULE-SET,Telegram,📟 Telegram
         - RULE-SET,Twitter,🐦 推特消息
-        - RULE-SET,BiliBili,📺 哔哩哔哩
+        - RULE-SET,BiliBili,📺 Bilibili
+        - RULE-SET,PikPak,🎥 PikPak
         - RULE-SET,Game,🎮 游戏平台
         - RULE-SET,ProxyMedia,📹 国际媒体
         - RULE-SET,ProxyGFWlist,🌏 国外网站
