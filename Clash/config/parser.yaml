@@ -19,7 +19,7 @@ parsers: # array
     yaml:                     # 建立自己的配置
       mix-object:             # 对象合并至原配置最外层中
         mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
-        allow-lan: false      # 允许局域网的连接（可用来共享代理）
+        allow-lan: true       # 允许局域网的连接（可用来共享代理）
         bind-address: "*"     # 仅在将allow-lan设置为true时适用
         # #"*": 绑定所有IP地址
         ipv6: false           # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
