@@ -12,9 +12,27 @@ parsers: # array
     code: |                   # 删除服务商提供的策略组和规则
       module.exports.parse = (raw, { yaml }) => {
         const rawObj = yaml.parse(raw)
-        const groups = []
-        const rules = []
-        return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
+        rawObj.proxies.forEach( e => {
+          e.name = e.name.replace(" | 视频", "").replace(" | 游戏", "")
+        })
+        let proxies1 = rawObj.proxies.filter(e => e.name.includes('🇭🇰'))
+        let proxies2 = rawObj.proxies.filter(e => e.name.includes('🇨🇳'))
+        let proxies3 = rawObj.proxies.filter(e => e.name.includes('🇸🇬'))
+        let proxies4 = rawObj.proxies.filter(e => e.name.includes('🇯🇵'))
+        let proxies5 = rawObj.proxies.filter(e => e.name.includes('🇺🇸'))
+        let proxies6 = rawObj.proxies.filter(e => !e.name.includes('🇭🇰') && !e.name.includes('🇨🇳')
+                                      && !e.name.includes('🇸🇬') && !e.name.includes('🇯🇵') && !e.name.includes('🇺🇸')
+                                      && !e.name.includes('剩余') && !e.name.includes('套餐') && !e.name.includes('官网')
+                                      && !e.name.includes('GB') && !e.name.includes('Traffic') && !e.name.includes('Expire')
+                                      && !e.name.includes('网址')
+                                      )
+        proxies1.push(...proxies2)
+        proxies1.push(...proxies3)
+        proxies1.push(...proxies4)
+        proxies1.push(...proxies5)
+        proxies1.push(...proxies6)
+        rawObj.proxies = proxies1
+        return yaml.stringify({ ...rawObj, 'proxy-groups': [], 'rules': [] })
       }
     yaml:                     # 建立自己的配置
       mix-object:             # 对象合并至原配置最外层中
@@ -103,31 +121,7 @@ parsers: # array
           proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, ⚠ 故障转移]
 
         - name: 🇭🇰 香港节点
-          type: url-test # select/url-test/fallback/laod-balance
-          url: http://www.gstatic.com/generate_204
-          interval: 300
-          tolerance: 100
-          proxies:
-            - DIRECT
-
-        - name: 🇺🇸 美国节点
-          type: url-test # select/url-test/fallback/laod-balance
-          url: http://www.gstatic.com/generate_204
-          interval: 300
-          tolerance: 100
-          proxies:
-            - DIRECT
-
-        - name: 🇸🇬 新加坡节点
-          type: url-test # select/url-test/fallback/laod-balance
-          url: http://www.gstatic.com/generate_204
-          interval: 300
-          tolerance: 100
-          proxies:
-            - DIRECT
-
-        - name: 🇯🇵 日本节点
-          type: url-test # select/url-test/fallback/laod-balance
+          type: url-test # select/url-test/fallback/load-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 100
@@ -135,7 +129,31 @@ parsers: # array
             - DIRECT
 
         - name: 🇨🇳 台湾节点
-          type: url-test # select/url-test/fallback/laod-balance
+          type: url-test # select/url-test/fallback/load-balance
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+          tolerance: 100
+          proxies:
+            - DIRECT
+
+        - name: 🇸🇬 新加坡节点
+          type: url-test # select/url-test/fallback/load-balance
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+          tolerance: 100
+          proxies:
+            - DIRECT
+
+        - name: 🇯🇵 日本节点
+          type: url-test # select/url-test/fallback/load-balance
+          url: http://www.gstatic.com/generate_204
+          interval: 300
+          tolerance: 100
+          proxies:
+            - DIRECT
+
+        - name: 🇺🇸 美国节点
+          type: url-test # select/url-test/fallback/load-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 100
@@ -143,7 +161,7 @@ parsers: # array
             - DIRECT
 
         - name: ⚠ 故障转移
-          type: fallback # select/url-test/fallback/laod-balance
+          type: fallback # select/url-test/fallback/load-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 100
@@ -152,12 +170,12 @@ parsers: # array
 
       commands:
         - proxy-groups.🚀 节点选择.proxies=[]proxyNames
+        - proxy-groups.🇭🇰 香港节点.proxies=[]proxyNames|^(🇭🇰|香港|HK)+(.*)$
+        - proxy-groups.🇨🇳 台湾节点.proxies=[]proxyNames|^(🇨🇳|台湾|台灣|TW|Taiwan)+(.*)$
+        - proxy-groups.🇸🇬 新加坡节点.proxies=[]proxyNames|^(🇸🇬|新加坡|狮城|SG|Singapore)+(.*)$
+        - proxy-groups.🇯🇵 日本节点.proxies=[]proxyNames|^(🇯🇵|日本|东京|JP|Japan)+(.*)$
+        - proxy-groups.🇺🇸 美国节点.proxies=[]proxyNames|^(🇺🇸|美国|美國|US|American)+(.*)$
         - proxy-groups.⚠ 故障转移.proxies=[]proxyNames
-        - proxy-groups.🇭🇰 香港节点.proxies=[]proxyNames|^(?!.*游戏).*(香港|HK|🇭🇰)+(.*)$
-        - proxy-groups.🇨🇳 台湾节点.proxies=[]proxyNames|^(?!.*游戏).*(台湾|TW|🇨🇳|Taiwan)+(.*)$
-        - proxy-groups.🇸🇬 新加坡节点.proxies=[]proxyNames|^(?!.*游戏).*(新加坡|狮城|🇸🇬|SG|Singapore)+(.*)$
-        - proxy-groups.🇺🇸 美国节点.proxies=[]proxyNames|^(?!.*游戏).*(美国|US|🇺🇸|American)+(.*)$
-        - proxy-groups.🇯🇵 日本节点.proxies=[]proxyNames|^(?!.*游戏).*(日本|东京|🇯🇵|JP|Japan)+(.*)$
 
       mix-rule-providers: # 添加规则集
 
