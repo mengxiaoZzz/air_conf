@@ -20,7 +20,8 @@ parsers: # array
         let proxies3 = rawObj.proxies.filter(e => e.name.includes('🇸🇬'))
         let proxies4 = rawObj.proxies.filter(e => e.name.includes('🇯🇵'))
         let proxies5 = rawObj.proxies.filter(e => e.name.includes('🇺🇸'))
-        let proxies6 = rawObj.proxies.filter(e => !e.name.includes('🇭🇰') && !e.name.includes('🇨🇳')
+        let proxies6 = rawObj.proxies.filter(e => 
+                                         !e.name.includes('🇭🇰') && !e.name.includes('🇨🇳')
                                       && !e.name.includes('🇸🇬') && !e.name.includes('🇯🇵') && !e.name.includes('🇺🇸')
                                       && !e.name.includes('剩余') && !e.name.includes('套餐') && !e.name.includes('官网')
                                       && !e.name.includes('GB') && !e.name.includes('Traffic') && !e.name.includes('Expire')
