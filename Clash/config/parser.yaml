@@ -15,31 +15,31 @@ parsers: # array
         rawObj.proxies.forEach( e => {
           e.name = e.name.replace(" | 视频", "").replace(" | 游戏", "")
         })
-        let proxies1 = rawObj.proxies.filter(e => e.name.includes('🇭🇰'))
-        let proxies2 = rawObj.proxies.filter(e => e.name.includes('🇨🇳') || e.name.includes('🇹🇼'))
-        let proxies3 = rawObj.proxies.filter(e => e.name.includes('🇸🇬'))
-        let proxies4 = rawObj.proxies.filter(e => e.name.includes('🇯🇵'))
-        let proxies5 = rawObj.proxies.filter(e => e.name.includes('🇺🇸'))
-        let proxies6 = rawObj.proxies.filter(e => !e.name.includes('🇭🇰') && !e.name.includes('🇨🇳') && !e.name.includes('🇹🇼')
-                                      && !e.name.includes('🇸🇬') && !e.name.includes('🇯🇵') && !e.name.includes('🇺🇸')
-                                      && !e.name.includes('剩余') && !e.name.includes('套餐') && !e.name.includes('官网')
-                                      && !e.name.includes('GB') && !e.name.includes('Traffic') && !e.name.includes('Expire')
-                                      && !e.name.includes('网址')
-                                      )
-        proxies1.push(...proxies2)
-        proxies1.push(...proxies3)
-        proxies1.push(...proxies4)
-        proxies1.push(...proxies5)
-        proxies1.push(...proxies6)
-        rawObj.proxies = proxies1
+        let otherCharArray = ['剩余', '套餐', '官', '网', 'GB', 'Traffic', 'Expire']
+        let mainCountryBannerArray = ['🇭🇰', '🇨🇳', '🇹🇼', '🇸🇬', '🇯🇵', '🇺🇸']
+        let proxies_All = rawObj.proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0) 
+        
+        let sortProxies = []
+        let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
+        let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳') || e.name.includes('🇹🇼'))
+        let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
+        let proxies_JP = proxies_All.filter(e => e.name.includes('🇯🇵'))
+        let proxies_US = proxies_All.filter(e => e.name.includes('🇺🇸'))
+        let proxies_Other = proxies_All.filter(e => mainCountryBannerArray.filter(v => e.name.includes(v)).length === 0)
+        sortProxies.push(...proxies_HK)
+        sortProxies.push(...proxies_TW)
+        sortProxies.push(...proxies_SG)
+        sortProxies.push(...proxies_JP)
+        sortProxies.push(...proxies_US)
+        sortProxies.push(...proxies_Other)
+        rawObj.proxies = sortProxies
         return yaml.stringify({ ...rawObj, 'proxy-groups': [], 'rules': [] })
       }
     yaml:                     # 建立自己的配置
       mix-object:             # 对象合并至原配置最外层中
         mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
         allow-lan: true       # 允许局域网的连接（可用来共享代理）
-        bind-address: "*"     # 仅在将allow-lan设置为true时适用
-        # #"*": 绑定所有IP地址
+        bind-address: "*"     # 仅在将allow-lan设置为true时适用 "*": 绑定所有IP地址
         ipv6: false           # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
         mode: rule            # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
         log-level: info       # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
