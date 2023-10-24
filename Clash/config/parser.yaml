@@ -9,12 +9,12 @@ parsers: # array
       module.exports.parse = (raw, { yaml }) => {
         const rawObj = yaml.parse(raw)
         rawObj.proxies.forEach( e => {
-          e.name = e.name.replace(" | 视频", "").replace(" | 游戏", "")
+          e.name = e.name.replace(" | 视频", "").replace(" | 游戏", "").replace(" 購物", "").replace("Daily", "HK 喵呜")
         })
         let otherCharArray = ['剩余', '套餐', '官', '网', 'GB', 'Traffic', 'Expire']
         let mainCountryBannerArray = ['🇭🇰', '🇨🇳', '🇹🇼', '🇸🇬', '🇯🇵', '🇺🇸']
         let proxies_All = rawObj.proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0) 
-        
+
         let sortProxies = []
         let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
         let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳') || e.name.includes('🇹🇼'))
@@ -35,7 +35,7 @@ parsers: # array
       mix-object:             # 对象合并至原配置最外层中
         mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
         allow-lan: true       # 允许局域网的连接（可用来共享代理）
-        bind-address: "*"     # 仅在将allow-lan设置为true时适用,"*": 绑定所有IP地址
+        bind-address: "*"     # 仅在将allow-lan设置为true时适用, "*": 绑定所有IP地址
         ipv6: false           # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求记录
         mode: rule            # 规则模式：rule/ global/ direct/ script
         log-level: info       # 设置日志输出级别 (5个级别：silent / error / warning / info / debug)
@@ -116,7 +116,7 @@ parsers: # array
           proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, ⚠ 故障转移]
 
         - name: 🇭🇰 香港节点
-          type: url-test # select/url-test/fallback/load-balance
+          type: select    # select/url-test/fallback/load-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 100
@@ -124,7 +124,7 @@ parsers: # array
             - DIRECT
 
         - name: 🇹🇼 台湾节点
-          type: url-test # select/url-test/fallback/load-balance
+          type: select    # select/url-test/fallback/load-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 100
@@ -132,7 +132,7 @@ parsers: # array
             - DIRECT
 
         - name: 🇸🇬 新加坡节点
-          type: url-test # select/url-test/fallback/load-balance
+          type: select    # select/url-test/fallback/load-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 100
@@ -140,7 +140,7 @@ parsers: # array
             - DIRECT
 
         - name: 🇯🇵 日本节点
-          type: url-test # select/url-test/fallback/load-balance
+          type: select    # select/url-test/fallback/load-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 100
@@ -148,7 +148,7 @@ parsers: # array
             - DIRECT
 
         - name: 🇺🇸 美国节点
-          type: url-test # select/url-test/fallback/load-balance
+          type: select    # select/url-test/fallback/load-balance
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 100
@@ -209,6 +209,13 @@ parsers: # array
           path: ./ruleset/Apple.yaml
           interval: 86400
 
+        BiliBili:         # 哔哩哔哩
+          type: http
+          behavior: classical
+          url:  https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bilibili.yaml
+          path: ./ruleset/BiliBili.yaml
+          interval: 86400
+
         Microsoft:        # 微软服务
           type: http
           behavior: classical
@@ -265,11 +272,11 @@ parsers: # array
           path: ./ruleset/PikPak.yaml
           interval: 86400
 
-        BiliBili:         # 哔哩哔哩
+        ProxyMedia:      # 国际媒体
           type: http
           behavior: classical
-          url:  https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bilibili.yaml
-          path: ./ruleset/BiliBili.yaml
+          url:  https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
+          path: ./ruleset/ProxyMedia.yaml
           interval: 86400
 
         ChinaIP:          # 中国大陆
@@ -277,13 +284,6 @@ parsers: # array
           behavior: ipcidr
           url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
           path: ./ruleset/cncidr.yaml
-          interval: 86400
-
-        ProxyMedia:      # 国际媒体
-          type: http
-          behavior: classical
-          url:  https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
-          path: ./ruleset/ProxyMedia.yaml
           interval: 86400
 
         ProxyGFWlist:        # 代理网站
@@ -299,8 +299,8 @@ parsers: # array
         - RULE-SET,Download,DIRECT
         - RULE-SET,Anti-AD,🆎 AdBlock
         - RULE-SET,Apple,🍎 苹果服务
-        - RULE-SET,Microsoft,🧩 微软服务
         - RULE-SET,BiliBili,📺 Bilibili
+        - RULE-SET,Microsoft,🧩 微软服务
         - RULE-SET,Youtube,🌌 Google
         - RULE-SET,Google,🌌 Google
         - RULE-SET,OpenAI,🤖 OpenAI
