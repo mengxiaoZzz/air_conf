@@ -112,7 +112,7 @@ parsers: # array
         cfw-bypass: ['localhost', '*.local', 'captive.apple.com', 'e.crashlytics.com', 'sequoia.apple.com', 'seed-sequoia.siri.apple.com', 'www.baidu.com', 'passenger.t3go.cn', 'yunbusiness.ccb.com', 'wxh.wo.cn', 'gate.lagou.com', 'www.abchina.com.cn', 'login-service.mobile-bank.psbc.com', 'mobile-bank.psbc.com', '10.0.0.0/8', '100.64.0.0/10', '127.0.0.1/32', '169.254.0.0/16', '172.16.0.0/12', '192.168.0.0/16', '192.168.122.1/32', '193.168.0.1/32', '224.0.0.0/4', '240.0.0.0/4', '255.255.255.255/32', '::1/128', 'fc00::/7', 'fd00::/8', 'fe80::/10', 'ff00::/8', '2001::/32', '2001:db8::/32', '2002::/16', '::ffff:0:0:0:0/1', '::ffff:128:0:0:0/1' ]
         # 系统代理跳过列表
 
-      prepend-proxy-groups: # 建立策略组
+      append-proxy-groups: # 建立策略组
 
         - name: 🚀 节点选择
           type: select
@@ -336,7 +336,7 @@ parsers: # array
           path: ./ruleset/Global.yaml
           interval: 86400
 
-      prepend-rules: # 添加规则
+      append-rules: # 添加规则
         - RULE-SET,Direct,DIRECT
         - RULE-SET,Lan,DIRECT
         - RULE-SET,Download,DIRECT
