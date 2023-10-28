@@ -175,41 +175,26 @@ parsers: # array
 
         - name: 🇭🇰 香港节点
           type: select    # select/url-test/fallback/load-balance
-          url: http://www.gstatic.com/generate_204
-          interval: 300
-          tolerance: 100
           proxies:
             - DIRECT
 
         - name: 🇹🇼 台湾节点
           type: select    # select/url-test/fallback/load-balance
-          url: http://www.gstatic.com/generate_204
-          interval: 300
-          tolerance: 100
           proxies:
             - DIRECT
 
         - name: 🇸🇬 新加坡节点
           type: select    # select/url-test/fallback/load-balance
-          url: http://www.gstatic.com/generate_204
-          interval: 300
-          tolerance: 100
           proxies:
             - DIRECT
 
         - name: 🇯🇵 日本节点
           type: select    # select/url-test/fallback/load-balance
-          url: http://www.gstatic.com/generate_204
-          interval: 300
-          tolerance: 100
           proxies:
             - DIRECT
 
         - name: 🇺🇸 美国节点
           type: select    # select/url-test/fallback/load-balance
-          url: http://www.gstatic.com/generate_204
-          interval: 300
-          tolerance: 100
           proxies:
             - DIRECT
 
@@ -223,11 +208,11 @@ parsers: # array
 
       commands:
         - proxy-groups.🚀 节点选择.proxies=[]proxyNames
-        - proxy-groups.🇭🇰 香港节点.proxies=[]proxyNames|(🇭🇰|香港|HK|Hong)
-        - proxy-groups.🇹🇼 台湾节点.proxies=[]proxyNames|(🇨🇳|🇹🇼|台湾|台灣|TW|Taiwan)
-        - proxy-groups.🇸🇬 新加坡节点.proxies=[]proxyNames|(🇸🇬|新加坡|狮城|SG|Singapore)
-        - proxy-groups.🇯🇵 日本节点.proxies=[]proxyNames|(🇯🇵|日本|东京|JP|Japan)
-        - proxy-groups.🇺🇸 美国节点.proxies=[]proxyNames|(🇺🇸|美国|美國|US|American)
+        - proxy-groups.🇭🇰 香港节点.proxies.0+[]proxyNames|(🇭🇰|香港|HK|Hong)
+        - proxy-groups.🇹🇼 台湾节点.proxies.0+[]proxyNames|(🇨🇳|🇹🇼|台湾|台灣|TW|Taiwan)
+        - proxy-groups.🇸🇬 新加坡节点.proxies.0+[]proxyNames|(🇸🇬|新加坡|狮城|SG|Singapore)
+        - proxy-groups.🇯🇵 日本节点.proxies.0+[]proxyNames|(🇯🇵|日本|东京|JP|Japan)
+        - proxy-groups.🇺🇸 美国节点.proxies.0+[]proxyNames|(🇺🇸|美国|美國|US|American)
         - proxy-groups.⚠ 故障转移.proxies=[]proxyNames
 
       mix-rule-providers: # 添加规则集
