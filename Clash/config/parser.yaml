@@ -137,7 +137,7 @@ parsers: # array
           type: select
           proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 🐦 推特消息
+        - name: 🐦 Twitter
           type: select
           proxies: [🚀 节点选择, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
@@ -304,7 +304,7 @@ parsers: # array
         OpenAI:           # ChatGPT
           type: http
           behavior: classical
-          url:  https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml
+          url:  https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
           path: ./ruleset/OpenAI.yaml
           interval: 86400
 
@@ -315,25 +315,25 @@ parsers: # array
           path: ./ruleset/PikPak.yaml
           interval: 86400
 
-        ProxyMedia:      # 国际媒体
-          type: http
-          behavior: classical
-          url:  https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
-          path: ./ruleset/ProxyMedia.yaml
-          interval: 86400
-
         ChinaIP:          # 中国大陆
           type: http
-          behavior: ipcidr
-          url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
-          path: ./ruleset/cncidr.yaml
+          behavior: classical
+          url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml
+          path: ./ruleset/China.yaml
           interval: 86400
 
-        ProxyGFWlist:        # 代理网站
+        GlobalMedia:      # 国际媒体
           type: http
           behavior: classical
-          url:  https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml
-          path: ./ruleset/ProxyGFWlist.yaml
+          url:  https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml
+          path: ./ruleset/GlobalMedia.yaml
+          interval: 86400
+
+        Global:        # 代理网站
+          type: http
+          behavior: classical
+          url:  https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml
+          path: ./ruleset/Global.yaml
           interval: 86400
 
       prepend-rules: # 添加规则
@@ -348,11 +348,11 @@ parsers: # array
         - RULE-SET,Google,🌌 Google
         - RULE-SET,OpenAI,🤖 OpenAI
         - RULE-SET,Telegram,📟 Telegram
-        - RULE-SET,Twitter,🐦 推特消息
+        - RULE-SET,Twitter,🐦 Twitter
         - RULE-SET,PikPak,🎥 PikPak
         - RULE-SET,Game,🎮 Game
         - RULE-SET,ChinaIP,🌏 国内网站
-        - RULE-SET,ProxyMedia,📹 国际媒体
-        - RULE-SET,ProxyGFWlist,🌏 国外网站
+        - RULE-SET,GlobalMedia,📹 国际媒体
+        - RULE-SET,Global,🌏 国外网站
         - GEOIP,CN,🌏 国内网站
         - MATCH,🐟 漏网之鱼
