@@ -15,7 +15,7 @@ parsers: # array
         let name = ''
         if (proxies_Name.includes("🇭🇰 Hong Kong 20 [Premium]")) {
           name = 'Nexitally'
-        } else if (proxies_Name.includes("🇭🇰 HK 1.00x [EIP | 游戏]")) {
+        } else if (proxies_Name.includes("🇭🇰 HK 2.00x [EIP | 游戏]")) {
           name = '守候'
         } else if (proxies_Name.includes("🇭🇰 HK2 Eons")) {
           name = 'Metaverse'
