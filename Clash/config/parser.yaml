@@ -42,7 +42,8 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
         }
         if (name === 'SYN') {
-          proxies_All.push({ name: '🇱🇺 LU 硝酸二甲酯 x 0.01', type: 'ss', server: 'traffic-in-01.811920.xyz', port: 50009, cipher: 'aes-128-gcm', password: 'cb6e3d36-1bd9-40aa-bf73-70f35ee6d6a8', udp: true })
+          proxies_All.push({ name: '🇱🇺 LU 硝酸二甲酯 x 0.01', type: 'ss', server: 'traffic-in-01.811920.xyz', 
+          port: 50009, cipher: 'aes-128-gcm', password: 'cb6e3d36-1bd9-40aa-bf73-70f35ee6d6a8', udp: true })
         }
     
         let sortProxies = []
