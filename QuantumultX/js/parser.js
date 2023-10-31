@@ -35,25 +35,33 @@ function operator(proxies) {
     if (name === 'Metaverse') {
         proxies_First = proxies_All.filter(e => e.name.includes('0.2X'))
         proxies_All = proxies_All.filter(e => !e.name.includes('0.2X'))
-    }
-    if (name === 'Lend') {
+    } else if (name === 'Lend') {
         proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
         proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
 
         let proxies_DIRECT = proxies_All.filter(e => e.name.includes('DIRECT'))
         proxies_All = proxies_All.filter(e => !e.name.includes('DIRECT'))
         proxies_First.push(...proxies_DIRECT)
-    }
-    if (name === 'To2') {
+    } else if (name === 'To2') {
         proxies_First = proxies_All.filter(e => e.name.includes('0.1'))
         proxies_All = proxies_All.filter(e => !e.name.includes('0.1'))
-    }
-    if (name === 'VAE') {
+    } else if (name === 'VAE') {
         proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
         proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
     }
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
+    if (name === '守候') {
+        let proxies_HK_001 = proxies_HK.filter(e => e.name.includes('0.01'))
+        let proxies_HK_01 = proxies_HK.filter(e => e.name.includes('0.1'))
+        let proxies_HK_05 = proxies_HK.filter(e => e.name.includes('0.5'))
+        let proxies_HK_Other = proxies_HK.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1') && !e.name.includes('0.5'))
+        proxies_HK = []
+        proxies_HK.push(...proxies_HK_001)
+        proxies_HK.push(...proxies_HK_01)
+        proxies_HK.push(...proxies_HK_05)
+        proxies_HK.push(...proxies_HK_Other)
+    }
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
     let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳'))
