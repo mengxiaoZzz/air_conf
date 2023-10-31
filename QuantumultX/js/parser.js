@@ -29,14 +29,14 @@ function operator(proxies) {
     } else if (name === 'To2') {
         proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
     } else if (name === 'SYN') {
-        let name = '🇱🇺 LU 硝酸二甲酯 0.01x'
-        let type = proxies_All[0].type
-        let server = proxies_All[0].server
-        let port = 50009
-        let cipher = proxies_All[0].cipher
-        let password = proxies_All[0].password
-        let udp = true
-        proxies_All.push({name, type, server, port, cipher, password, udp})
+        // let name = '🇱🇺 LU 硝酸二甲酯 0.01x'
+        // let type = proxies_All[0].type
+        // let server = proxies_All[0].server
+        // let port = 50009
+        // let cipher = proxies_All[0].cipher
+        // let password = proxies_All[0].password
+        // let udp = true
+        // proxies_All.push({name, type, server, port, cipher, password, udp})
     }
 
     let sortProxies = []
@@ -58,8 +58,8 @@ function operator(proxies) {
         proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
     }
     if (name === 'VAE') {
-        proxies_First = proxies_All.filter(e => e.name.includes('0.1'))
-        proxies_All = proxies_All.filter(e => !e.name.includes('0.1'))
+        proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
+        proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
     }
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
