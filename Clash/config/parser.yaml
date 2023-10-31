@@ -25,19 +25,24 @@ parsers: # array
           name = 'To2'
         } else if (proxies_Name.includes("🇭🇰HK 酥皮菠蘿包")) {
           name = 'VAE'
+        } else if (proxies_Name.includes("🇭🇰 HK 乙酰氨基酚")) {
+          name = 'SYN'
         }
     
         if (name === 'Nexitally') {
           proxies_All = proxies_All.filter(e => !e.name.includes('Premium'))
         }
-          if (name === '守候') {
+        if (name === '守候') {
           proxies_All.forEach(e => e.name = e.name.replace(" | 视频", "").replace(" | 游戏", ""))
         }
-          if (name === 'Lend') {
+        if (name === 'Lend') {
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "HK 喵呜"))
         }
-          if (name === 'To2') {
+        if (name === 'To2') {
           proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
+        }
+        if (name === 'SYN') {
+          proxies_All.push({ name: '🇱🇺 LU 硝酸二甲酯 x 0.01', type: 'ss', server: 'traffic-in-01.811920.xyz', port: 50009, cipher: 'aes-128-gcm', password: 'cb6e3d36-1bd9-40aa-bf73-70f35ee6d6a8', udp: true })
         }
     
         let sortProxies = []
@@ -46,7 +51,7 @@ parsers: # array
           proxies_First = proxies_All.filter(e => e.name.includes('0.2X'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.2X'))
         }
-          if (name === 'Lend') {
+        if (name === 'Lend') {
           proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
           
@@ -54,13 +59,17 @@ parsers: # array
           proxies_All = proxies_All.filter(e => !e.name.includes('DIRECT'))
           proxies_First.push(...proxies_DIRECT)
         }
-          if (name === 'To2') {
+        if (name === 'To2') {
           proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
         }
-          if (name === 'VAE') {
+        if (name === 'VAE') {
           proxies_First = proxies_All.filter(e => e.name.includes('0.1'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.1'))
+        }
+        if (name === 'SYN') {
+          proxies_All.push({ name: '🇱🇺 LU 硝酸二甲酯 x 0.01', type: 'ss', server: 'traffic-in-01.811920.xyz', 
+          port: 50009, cipher: 'aes-128-gcm', password: <password>, udp: true })
         }
     
         let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
