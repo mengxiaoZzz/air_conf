@@ -42,9 +42,11 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
         }
         if (name === 'SYN') {
+          let type = proxies_All[0].type
+          let server = proxies_All[0].server
+          let cipher = proxies_All[0].cipher
           let password = proxies_All[0].password
-          proxies_All.push({ name: '🇱🇺 LU 硝酸二甲酯 0.01x', type: 'ss', server: 'traffic-in-01.811920.xyz', 
-          port: 50009, cipher: 'aes-128-gcm', password: password, udp: true })
+          proxies_All.push({ name: '🇱🇺 LU 硝酸二甲酯 0.01x', type, server, port: 50009, cipher, password, udp: true })
         }
     
         let sortProxies = []
