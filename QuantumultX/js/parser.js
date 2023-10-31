@@ -62,8 +62,6 @@ function operator(proxies) {
         proxies_All = proxies_All.filter(e => !e.name.includes('0.1'))
     }
 
-    proxies_All.forEach(e => e.name = e.name.replace("🇨🇳", "🇹🇼"))
-
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
