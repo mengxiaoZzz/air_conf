@@ -65,8 +65,8 @@ function operator(proxies) {
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
-    let proxies_TW = proxies_All.filter(e => e.name.includes('🇹🇼'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('🇹🇼'))
+    let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('🇨🇳'))
 
     let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇸🇬'))
