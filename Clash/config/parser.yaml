@@ -42,7 +42,7 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
         }
         if (name === 'SYN') {
-          proxies_All.push({ name: '🇱🇺 LU 硝酸二甲酯 x 0.01', type: 'ss', server: 'traffic-in-01.811920.xyz', 
+          proxies_All.push({ name: '🇱🇺 LU 硝酸二甲酯 0.01x', type: 'ss', server: 'traffic-in-01.811920.xyz', 
           port: 50009, cipher: 'aes-128-gcm', password: 'cb6e3d36-1bd9-40aa-bf73-70f35ee6d6a8', udp: true })
         }
     
@@ -73,11 +73,13 @@ parsers: # array
           port: 50009, cipher: 'aes-128-gcm', password: <password>, udp: true })
         }
     
+        proxies_All.forEach(e => e.name = e.name.replace("🇨🇳", "🇹🇼"))
+
         let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
         proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
     
-        let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳') || e.name.includes('🇹🇼'))
-        proxies_All = proxies_All.filter(e => !e.name.includes('🇨🇳') && !e.name.includes('🇹🇼'))
+        let proxies_TW = proxies_All.filter(e => e.name.includes('🇹🇼'))
+        proxies_All = proxies_All.filter(e => !e.name.includes('🇹🇼'))
     
         let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
         proxies_All = proxies_All.filter(e => !e.name.includes('🇸🇬'))
