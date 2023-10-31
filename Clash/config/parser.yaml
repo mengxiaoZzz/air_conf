@@ -23,7 +23,7 @@ parsers: # array
           name = 'Lend'
         } else if (proxies_Name.includes("HongKong 🇭🇰 Wcloud")) {
           name = '子墨'
-        } else if (proxies_Name.includes("🇭🇰 HK 香港Hkbn家寬 500M 0.3x")) {
+        } else if (proxies_Name.includes("🇭🇰 HK 香港猪猪侠")) {
           name = 'To2'
         } else if (proxies_Name.includes("🇭🇰HK 酥皮菠蘿包")) {
           name = 'VAE'

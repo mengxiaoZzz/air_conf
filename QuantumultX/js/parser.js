@@ -12,7 +12,7 @@ function operator(proxies) {
         name = 'Metaverse'
     } else if (proxies_Name.includes("🇭🇰HK QC 3×")) {
         name = 'Lend'
-    } else if (proxies_Name.includes("🇭🇰 HK 香港Hkbn家寬 500M 0.3x")) {
+    } else if (proxies_Name.includes("🇭🇰 HK 香港猪猪侠")) {
         name = 'To2'
     } else if (proxies_Name.includes("🇭🇰HK 酥皮菠蘿包")) {
         name = 'VAE'
@@ -28,15 +28,6 @@ function operator(proxies) {
         proxies_All.forEach(e => e.name = e.name.replace("Daily", "HK 喵呜"))
     } else if (name === 'To2') {
         proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
-    } else if (name === 'SYN') {
-        // let name = '🇱🇺 LU 硝酸二甲酯 0.01x'
-        // let type = proxies_All[0].type
-        // let server = proxies_All[0].server
-        // let port = 50009
-        // let cipher = proxies_All[0].cipher
-        // let password = proxies_All[0].password
-        // let udp = true
-        // proxies_All.push({name, type, server, port, cipher, password, udp})
     }
 
     let sortProxies = []
