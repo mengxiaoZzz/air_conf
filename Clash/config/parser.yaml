@@ -42,15 +42,6 @@ parsers: # array
           return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})
         } else if (name === 'To2') {
           proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
-        } else if (name === 'SYN') {
-          let name = '🇱🇺 LU 硝酸二甲酯 0.01x'
-          let type = proxies_All[0].type
-          let server = proxies_All[0].server
-          let port = 50009
-          let cipher = proxies_All[0].cipher
-          let password = proxies_All[0].password
-          let udp = true
-          proxies_All.push({ name, type, server, port, cipher, password, udp })
         }
     
         let sortProxies = []
@@ -100,6 +91,16 @@ parsers: # array
     
         let proxies_US = proxies_All.filter(e => e.name.includes('🇺🇸'))
         proxies_All = proxies_All.filter(e => !e.name.includes('🇺🇸'))
+      
+        if (name === 'SYN') {
+          let type = proxies_HK[0].type
+          let server = proxies_HK[0].server
+          let cipher = proxies_HK[0].cipher
+          let password = proxies_HK[0].password
+          let udp = true
+          proxies_All.push({ name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server, port: 50012, cipher, password, udp })
+          proxies_All.push({ name:'🇱🇺 LU 硝酸二甲酯 0.01x', type, server, port: 50009, cipher, password, udp })
+        }
     
         sortProxies.push(...proxies_First)
         sortProxies.push(...proxies_HK)
