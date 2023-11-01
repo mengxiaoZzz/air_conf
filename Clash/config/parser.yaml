@@ -6,41 +6,22 @@
 parsers: # array
   - reg: ^.*$                 # ^.*$ 匹配所有订阅，或  - url: https://example.com/profile.yaml 指定订阅
     code: |                   # 删除服务商提供的策略组和规则
-      module.exports.parse = (raw, {yaml}) => {
+      module.exports.parse = (raw, {yaml,console}, metadata) => {
         const rawObj = yaml.parse(raw)
         let otherCharArray = ['剩余', '套餐', '官', '网', 'GB', 'Traffic', 'Expire']
         let proxies_All = rawObj.proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0)
-        let proxies_Name = proxies_All.map(e => e.name)
-    
-        let name = ''
-        if (proxies_Name.includes("🇭🇰 Hong Kong 20 [Premium]")) {
-          name = 'Nexitally'
-        } else if (proxies_Name.includes("🇭🇰 HK 2.00x [EIP | 游戏]")) {
-          name = '守候'
-        } else if (proxies_Name.includes("🇭🇰 HK2 Eons")) {
-          name = 'Metaverse'
-        } else if (proxies_Name.includes("🇭🇰HK QC 3×")) {
-          name = 'Lend'
-        } else if (proxies_Name.includes("HongKong 🇭🇰 Wcloud")) {
-          name = '子墨'
-        } else if (proxies_Name.includes("🇭🇰 HK 香港猪猪侠")) {
-          name = 'To2'
-        } else if (proxies_Name.includes("🇭🇰HK 酥皮菠蘿包")) {
-          name = 'VAE'
-        } else if (proxies_Name.includes("🇭🇰 HK 乙酰氨基酚")) {
-          name = 'SYN'
-        }
-    
+        let name = metadata.name
+
         if (name === 'Nexitally') {
           proxies_All = proxies_All.filter(e => !e.name.includes('Premium'))
         } else if (name === '守候') {
           proxies_All.forEach(e => e.name = e.name.replace(" | 视频", "").replace(" | 游戏", ""))
-        } else if (name === 'Lend') {
+        } else if (name === 'Lend喵呜') {
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "HK 喵呜"))
         } else if (name === '子墨') {
           rawObj.proxies = proxies_All
           return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})
-        } else if (name === 'To2') {
+        } else if (name === 'To2 Network') {
           proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
         }
     
@@ -49,14 +30,14 @@ parsers: # array
         if (name === 'Metaverse') {
           proxies_First = proxies_All.filter(e => e.name.includes('0.2X'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.2X'))
-        } else if (name === 'Lend') {
+        } else if (name === 'Lend喵呜') {
           proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
           
           let proxies_DIRECT = proxies_All.filter(e => e.name.includes('DIRECT'))
           proxies_All = proxies_All.filter(e => !e.name.includes('DIRECT'))
           proxies_First.push(...proxies_DIRECT)
-        } else if (name === 'To2') {
+        } else if (name === 'To2 Network') {
           proxies_First = proxies_All.filter(e => e.name.includes('0.1'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.1'))
         } else if (name === 'VAE') {
