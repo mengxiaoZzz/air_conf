@@ -60,9 +60,9 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇺🇸'))
 
     if (subName === 'SYN') {
-        let type = proxies_HK[0].type
-        let server = proxies_HK[0].server
-        let cipher = proxies_HK[0].cipher
+        let server = "traffic-in-01.811920.xyz"
+        let type = "ss"
+        let cipher = "aes-128-gcm"
         let password = proxies_HK[0].password
         let udp = true
         proxies_All.push({name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server, port: 50012, cipher, password, udp})
