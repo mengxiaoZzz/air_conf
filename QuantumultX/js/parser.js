@@ -59,16 +59,6 @@ function operator(proxies) {
     let proxies_US = proxies_All.filter(e => e.name.includes('🇺🇸'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇺🇸'))
 
-    if (subName === 'SYN') {
-        let server = "traffic-in-01.811920.xyz"
-        let type = "ss"
-        let cipher = "aes-128-gcm"
-        let password = proxies_HK[0].password
-        let udp = true
-        proxies_All.unshift({name: '🇱🇺 LU 硝酸二甲酯 0.01x', type, server, port: 50009, cipher, password, udp})
-        proxies_All.unshift({name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server, port: 50012, cipher, password, udp})
-    }
-
     sortProxies.push(...proxies_First)
     sortProxies.push(...proxies_HK)
     sortProxies.push(...proxies_TW)
@@ -76,6 +66,16 @@ function operator(proxies) {
     sortProxies.push(...proxies_JP)
     sortProxies.push(...proxies_US)
     sortProxies.push(...proxies_All)
+
+    if (subName === 'SYN') {
+        let server = "traffic-in-01.811920.xyz"
+        let type = "ss"
+        let cipher = "aes-128-gcm"
+        let password = proxies_HK[0].password
+        let udp = true
+        sortProxies.unshift({name: '🇱🇺 LU 硝酸二甲酯 0.01x', type, server, port: 50009, cipher, password, udp})
+        sortProxies.unshift({name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server, port: 50012, cipher, password, udp})
+    }
 
     return sortProxies;
 }
