@@ -65,8 +65,8 @@ function operator(proxies) {
         let cipher = "aes-128-gcm"
         let password = proxies_HK[0].password
         let udp = true
-        proxies_All.push({name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server, port: 50012, cipher, password, udp})
-        proxies_All.push({name: '🇱🇺 LU 硝酸二甲酯 0.01x', type, server, port: 50009, cipher, password, udp})
+        proxies_All.unshift({name: '🇱🇺 LU 硝酸二甲酯 0.01x', type, server, port: 50009, cipher, password, udp})
+        proxies_All.unshift({name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server, port: 50012, cipher, password, udp})
     }
 
     sortProxies.push(...proxies_First)
