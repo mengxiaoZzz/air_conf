@@ -18,7 +18,7 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace(" | 视频", "").replace(" | 游戏", ""))
         } else if (name === 'Lend喵呜') {
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "HK 喵呜"))
-        } else if (name === '子墨') {
+        } else if (name === 'Ayanami') {
           rawObj.proxies = proxies_All
           return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})
         } else if (name === 'To2 Network') {
