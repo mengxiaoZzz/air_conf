@@ -55,15 +55,5 @@ function operator(proxies) {
     sortProxies.push(...proxies_US)
     sortProxies.push(...proxies_All)
 
-    if (subName === 'SYN') {
-        let server = "traffic-in-01.811920.xyz"
-        let type = "ss"
-        let cipher = "aes-128-gcm"
-        let password = proxies_HK[0].password
-        let udp = true
-        sortProxies.unshift({name: '🇱🇺 LU 硝酸二甲酯 0.01x', type, server, port: 50009, cipher, password, udp})
-        sortProxies.unshift({name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server, port: 50012, cipher, password, udp})
-    }
-
     return sortProxies;
 }
