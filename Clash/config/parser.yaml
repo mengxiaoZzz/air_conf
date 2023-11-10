@@ -20,12 +20,11 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜"))
         } else if (name === 'Ayanami') {
           proxies_All.forEach(e => {
-            e.name = e.name.replace("🇹🇼", "🇨🇳")
             if (e.name.includes('🇭🇰')) {
                 e.name = '🇭🇰 ' + e.name.replace("🇭🇰", "")
             }
-            if (e.name.includes('🇨🇳')) {
-                e.name = '🇨🇳 ' + e.name.replace("🇨🇳", "")
+            if (e.name.includes('🇹🇼')) {
+                e.name = '🇹🇼 ' + e.name.replace("🇹🇼", "")
             }
             if (e.name.includes('🇯🇵')) {
                 e.name = '🇯🇵 ' + e.name.replace("🇯🇵", "")
