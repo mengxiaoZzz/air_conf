@@ -4,25 +4,25 @@ function operator(proxies) {
     proxies_All.forEach(e => {
         e.name = e.name.replace("🇹🇼", "🇨🇳")
         if (e.name.includes('🇭🇰')) {
-            e.name = '🇭🇰' + e.name.replace("🇭🇰", "")
+            e.name = '🇭🇰 ' + e.name.replace("🇭🇰", "")
         }
         if (e.name.includes('🇨🇳')) {
-            e.name = '🇨🇳' + e.name.replace("🇨🇳", "")
+            e.name = '🇨🇳 ' + e.name.replace("🇨🇳", "")
         }
         if (e.name.includes('🇯🇵')) {
-            e.name = '🇯🇵' + e.name.replace("🇯🇵", "")
+            e.name = '🇯🇵 ' + e.name.replace("🇯🇵", "")
         }
         if (e.name.includes('🇸🇬')) {
-            e.name = '🇸🇬' + e.name.replace("🇸🇬", "")
+            e.name = '🇸🇬 ' + e.name.replace("🇸🇬", "")
         }
         if (e.name.includes('🇲🇴')) {
-            e.name = '🇲🇴' + e.name.replace("🇲🇴", "")
+            e.name = '🇲🇴 ' + e.name.replace("🇲🇴", "")
         }
         if (e.name.includes('🇺🇸')) {
-            e.name = '🇺🇸' + e.name.replace("🇺🇸", "")
+            e.name = '🇺🇸 ' + e.name.replace("🇺🇸", "")
         }
         if (e.name.includes('🇦🇷')) {
-            e.name = '🇦🇷' + e.name.replace("🇦🇷", "")
+            e.name = '🇦🇷 ' + e.name.replace("🇦🇷", "")
         }
     })
     return proxies_All;

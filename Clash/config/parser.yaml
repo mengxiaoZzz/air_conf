@@ -19,6 +19,30 @@ parsers: # array
         } else if (name === 'Lend喵呜') {
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜"))
         } else if (name === 'Ayanami') {
+          proxies_All.forEach(e => {
+            e.name = e.name.replace("🇹🇼", "🇨🇳")
+            if (e.name.includes('🇭🇰')) {
+                e.name = '🇭🇰 ' + e.name.replace("🇭🇰", "")
+            }
+            if (e.name.includes('🇨🇳')) {
+                e.name = '🇨🇳 ' + e.name.replace("🇨🇳", "")
+            }
+            if (e.name.includes('🇯🇵')) {
+                e.name = '🇯🇵 ' + e.name.replace("🇯🇵", "")
+            }
+            if (e.name.includes('🇸🇬')) {
+                e.name = '🇸🇬 ' + e.name.replace("🇸🇬", "")
+            }
+            if (e.name.includes('🇲🇴')) {
+                e.name = '🇲🇴 ' + e.name.replace("🇲🇴", "")
+            }
+            if (e.name.includes('🇺🇸')) {
+                e.name = '🇺🇸 ' + e.name.replace("🇺🇸", "")
+            }
+            if (e.name.includes('🇦🇷')) {
+                e.name = '🇦🇷 ' + e.name.replace("🇦🇷", "")
+            }
+          })
           rawObj.proxies = proxies_All
           return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})
         } else if (name === 'To2 Network') {
