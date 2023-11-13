@@ -8,7 +8,7 @@ parsers: # array
     code: |                   # 删除服务商提供的策略组和规则
       module.exports.parse = (raw, {yaml,console}, metadata) => {
         const rawObj = yaml.parse(raw)
-        let otherCharArray = ['剩余', '套餐', '官网', '网址', 'GB', 'Traffic', 'Expire']
+        let otherCharArray = ['剩余', '套餐', '官网', '网址', '官址', 'GB', 'Traffic', 'Expire']
         let proxies_All = rawObj.proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0)
         let name = metadata.name
 
