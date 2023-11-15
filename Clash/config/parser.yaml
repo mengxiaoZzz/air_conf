@@ -10,6 +10,7 @@ parsers: # array
         const rawObj = yaml.parse(raw)
         let otherCharArray = ['剩余', '套餐', '官网', '网址', '官址', 'GB', 'Traffic', 'Expire']
         let proxies_All = rawObj.proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0)
+        proxies_All.forEach(e => e.name = e.name.replace("🇨🇳", "🇹🇼"))
         let name = metadata.name
 
         if (name === 'Nexitally') {
@@ -45,7 +46,7 @@ parsers: # array
           rawObj.proxies = proxies_All
           return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})
         } else if (name === 'To2 Network') {
-          proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
+          proxies_All.forEach(e => e.name = e.name.replace(" - Shopping", "").replace(" - Douyin", ""))
         }
     
         let sortProxies = []
@@ -61,14 +62,12 @@ parsers: # array
           proxies_All = proxies_All.filter(e => !e.name.includes('DIRECT'))
           proxies_First.push(...proxies_DIRECT)
         } else if (name === 'To2 Network') {
-          proxies_First = proxies_All.filter(e => e.name.includes('0.1'))
-          proxies_All = proxies_All.filter(e => !e.name.includes('0.1'))
+          proxies_First = proxies_All.filter(e => e.name.includes('0.3'))
+          proxies_All = proxies_All.filter(e => !e.name.includes('0.3'))
         } else if (name === 'VAE') {
           proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
         }
-    
-        proxies_All.forEach(e => e.name = e.name.replace("🇨🇳", "🇹🇼"))
 
         let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
         if (name === '守候') {

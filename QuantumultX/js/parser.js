@@ -9,7 +9,7 @@ function operator(proxies) {
     } else if (subName === 'Lend') {
         proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜").replace("RELAY", "喵呜"))
     } else if (subName === 'To2') {
-        proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
+        proxies_All.forEach(e => e.name = e.name.replace(" - Shopping", "").replace(" - Douyin", ""))
     }
 
     let sortProxies = []
@@ -25,8 +25,8 @@ function operator(proxies) {
         proxies_All = proxies_All.filter(e => !e.name.includes('DIRECT'))
         proxies_First.push(...proxies_DIRECT)
     } else if (subName === 'To2') {
-        proxies_First = proxies_All.filter(e => e.name.includes('0.1'))
-        proxies_All = proxies_All.filter(e => !e.name.includes('0.1'))
+        proxies_First = proxies_All.filter(e => e.name.includes('0.3'))
+        proxies_All = proxies_All.filter(e => !e.name.includes('0.3'))
     } else if (subName === 'VAE') {
         proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
         proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
