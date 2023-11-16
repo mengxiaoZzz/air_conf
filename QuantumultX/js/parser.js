@@ -9,7 +9,7 @@ function operator(proxies) {
     } else if (subName === 'Lend') {
         proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜").replace("RELAY", "喵呜"))
     } else if (subName === 'To2') {
-        proxies_All.forEach(e => e.name = e.name.replace(" - Shopping", "").replace(" - Douyin", ""))
+        proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
     }
 
     let sortProxies = []

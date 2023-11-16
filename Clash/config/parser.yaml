@@ -46,7 +46,7 @@ parsers: # array
           rawObj.proxies = proxies_All
           return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})
         } else if (name === 'To2 Network') {
-          proxies_All.forEach(e => e.name = e.name.replace(" - Shopping", "").replace(" - Douyin", ""))
+          proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
         }
     
         let sortProxies = []
