@@ -45,7 +45,7 @@ parsers: # array
           })
           rawObj.proxies = proxies_All
           return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})
-        } else if (name === 'To2 Network') {
+        } else if (name === 'To2') {
           proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
         }
     
@@ -61,7 +61,7 @@ parsers: # array
           let proxies_DIRECT = proxies_All.filter(e => e.name.includes('DIRECT'))
           proxies_All = proxies_All.filter(e => !e.name.includes('DIRECT'))
           proxies_First.push(...proxies_DIRECT)
-        } else if (name === 'To2 Network') {
+        } else if (name === 'To2') {
           proxies_First = proxies_All.filter(e => e.name.includes('0.3'))
           proxies_All = proxies_All.filter(e => !e.name.includes('0.3'))
         } else if (name === 'VAE') {
