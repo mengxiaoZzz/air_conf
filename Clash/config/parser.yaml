@@ -42,6 +42,9 @@ parsers: # array
             if (e.name.includes('🇦🇷')) {
                 e.name = '🇦🇷 ' + e.name.replace("🇦🇷 ", "")
             }
+            if (e.name.includes('🇲🇾')) {
+                e.name = '🇲🇾 ' + e.name.replace("🇲🇾 ", "")
+            }
           })
           rawObj.proxies = proxies_All
           return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})

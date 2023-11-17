@@ -24,6 +24,9 @@ function operator(proxies) {
         if (e.name.includes('🇦🇷')) {
             e.name = '🇦🇷 ' + e.name.replace("🇦🇷 ", "")
         }
+        if (e.name.includes('🇲🇾')) {
+            e.name = '🇲🇾 ' + e.name.replace("🇲🇾 ", "")
+        }
     })
     return proxies_All;
 }
