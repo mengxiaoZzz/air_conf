@@ -228,7 +228,7 @@ parsers: # array
 
         - name: ⚠ 故障转移
           type: fallback # select/url-test/fallback/load-balance
-          url: http://www.gstatic.com/generate_204
+          url: http://cp.cloudflare.com
           interval: 300
           tolerance: 100
           proxies:
