@@ -15,8 +15,6 @@ parsers: # array
 
         if (name === 'Nexitally') {
           proxies_All = proxies_All.filter(e => !e.name.includes('Premium'))
-        } else if (name === '守候') {
-          proxies_All.forEach(e => e.name = e.name.replace(" | 视频", "").replace(" | 游戏", ""))
         } else if (name === 'Lend喵呜') {
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜"))
         } else if (name === 'Ayanami') {
