@@ -11,15 +11,13 @@ function operator(proxies) {
 
     let proxies_HK_001 = proxies_HK.filter(e => e.name.includes('0.01'))
     let proxies_HK_01 = proxies_HK.filter(e => e.name.includes('0.1'))
-    let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('京港'))
-    let proxies_HK_Random = proxies_HK.filter(e => e.name.includes('Random'))
+    let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('0.2'))
     let proxies_HK_Other = proxies_HK.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1')
-        && !e.name.includes('京港') && !e.name.includes('Random'))
+        && !e.name.includes('Random'))
     proxies_HK = []
     proxies_HK.push(...proxies_HK_001)
     proxies_HK.push(...proxies_HK_01)
     proxies_HK.push(...proxies_HK_02)
-    proxies_HK.push(...proxies_HK_Random)
     proxies_HK.push(...proxies_HK_Other)
 
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
