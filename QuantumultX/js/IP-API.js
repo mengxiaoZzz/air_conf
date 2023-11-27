@@ -77,11 +77,10 @@ function simplified(str) {
     }).join('');
 }
 
-
 let body = $response.body;
 let obj = JSON.parse(body);
 
-let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']);
+let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']) + ' ' + simplified(obj['regionName']);
 if (obj['country'] !== obj['city']) {
     title += '  ' + simplified(obj['city']);
 }
