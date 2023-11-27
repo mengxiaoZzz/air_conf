@@ -70,6 +70,9 @@ function simplified(str) {
     if (length === 0) {
         return str;
     }
+    if (str === '中华民国') {
+        return '台湾';
+    }
     let array = Array.from(str);
     return array.map(e => {
         let index = traditionalCodes.indexOf(e);
@@ -80,9 +83,9 @@ function simplified(str) {
 let body = $response.body;
 let obj = JSON.parse(body);
 
-let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']) + ' ' + simplified(obj['city']);
+let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']);
 if (obj['country'] !== obj['city']) {
-    title += '  ' + simplified(obj['city']);
+    title += ' ' + simplified(obj['city']);
 }
 
 let subtitle = obj['org'];
