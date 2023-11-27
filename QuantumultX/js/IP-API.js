@@ -1,6 +1,8 @@
 if ($response.statusCode !== 200) {
     $done(null);
 }
+let city0 = "M78星云";
+let isp0 = "Cross-GFW.org";
 
 // 简体字
 const simplifiedCodes = '皑蔼碍爱翱袄奥坝罢摆败颁办绊帮绑镑谤剥饱宝报鲍辈贝钡狈备惫绷笔毕毙闭边编贬变辩辫鳖瘪濒滨宾摈饼拨钵铂驳卜补参蚕残惭惨灿苍舱仓沧厕侧册测层诧搀掺蝉馋谗缠铲产' +
@@ -65,13 +67,34 @@ let flags = new Map([["AC", "🇦🇨"], ["AD", "🇦🇩"], ["AE", "🇦🇪"],
     ["VC", "🇻🇨"], ["VE", "🇻🇪"], ["VG", "🇻🇬"], ["VI", "🇻🇮"], ["VN", "🇻🇳"], ["VU", "🇻🇺"], ["WS", "🇼🇸"], ["YE", "🇾🇪"],
     ["YT", "🇾🇹"], ["ZA", "🇿🇦"], ["ZM", "🇿🇲"], ["ZW", "🇿🇼"]])
 
+function City_ValidCheck(para) {
+    if (para) {
+        return simplified(para)
+    } else {
+        return simplified(city0)
+    }
+}
+
+function ISP_ValidCheck(para) {
+    if (para) {
+        return para
+    } else {
+        return isp0
+    }
+}
+
+function Area_check(para) {
+    if (para === "中华民国") {
+        return "台湾"
+    } else {
+        return simplified(para)
+    }
+}
+
 function simplified(str) {
     let length = str.length;
     if (length === 0) {
         return str;
-    }
-    if (str.contains('中华民国')) {
-        str = str.replace('中华民国', '台湾')
     }
     let array = Array.from(str);
     return array.map(e => {
@@ -83,12 +106,12 @@ function simplified(str) {
 let body = $response.body;
 let obj = JSON.parse(body);
 
-let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']);
+let title = flags.get(obj['countryCode']) + ' ' + Area_check(obj['country']);
 if (obj['country'] !== obj['city']) {
-    title += ' ' + simplified(obj['city']);
+    title += ' ' + City_ValidCheck(obj['city']);
 }
 
-let subtitle = obj['org'];
+let subtitle = ISP_ValidCheck(obj['org']);
 let ip = obj['query'];
 let description = '服务商:' + obj['isp'] + '\n' + '地区:' + obj['regionName'] + '\n' + 'IP:' + obj['query'] + '\n' + '时区:' + obj['timezone'];
 $done({title, subtitle, ip, description});
