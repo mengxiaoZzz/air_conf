@@ -70,8 +70,8 @@ function simplified(str) {
     if (length === 0) {
         return str;
     }
-    if (str === '中华民国') {
-        return '台湾';
+    if (str.contains('中华民国')) {
+        str = str.replace('中华民国', '台湾')
     }
     let array = Array.from(str);
     return array.map(e => {
