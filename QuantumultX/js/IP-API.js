@@ -80,7 +80,7 @@ function simplified(str) {
 let body = $response.body;
 let obj = JSON.parse(body);
 
-let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']) + ' ' + simplified(obj['regionName']);
+let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']) + ' ' + simplified(obj['city']);
 if (obj['country'] !== obj['city']) {
     title += '  ' + simplified(obj['city']);
 }
