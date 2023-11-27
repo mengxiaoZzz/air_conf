@@ -71,7 +71,7 @@ function City_ValidCheck(para) {
     if (para) {
         return simplified(para)
     } else {
-        return simplified(city0)
+        return city0
     }
 }
 
@@ -110,6 +110,7 @@ let title = flags.get(obj['countryCode']) + ' ' + Area_check(obj['country']);
 if (obj['country'] !== obj['city']) {
     title += ' ' + City_ValidCheck(obj['city']);
 }
+title = title.replace('中华民国', '台湾')
 
 let subtitle = ISP_ValidCheck(obj['org']);
 let ip = obj['query'];
