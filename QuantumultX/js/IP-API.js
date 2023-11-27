@@ -114,5 +114,5 @@ title = title.replace('中华民国', '台湾')
 
 let subtitle = ISP_ValidCheck(obj['org']);
 let ip = obj['query'];
-let description = '服务商:' + obj['isp'] + '\n' + '地区:' + obj['regionName'] + '\n' + 'IP:' + obj['query'] + '\n' + '时区:' + obj['timezone'];
+let description = '服务商:' + obj['isp'] + '\n' + '地区:' + obj['regionName'] + '\n' + 'IP:' + ip + '\n' + '时区:' + obj['timezone'];
 $done({title, subtitle, ip, description});
