@@ -24,9 +24,6 @@ function operator(proxies) {
         let proxies_DIRECT = proxies_All.filter(e => e.name.includes('DIRECT'))
         proxies_All = proxies_All.filter(e => !e.name.includes('DIRECT'))
         proxies_First.push(...proxies_DIRECT)
-    } else if (subName === 'To2') {
-        proxies_First = proxies_All.filter(e => e.name.includes('0.3'))
-        proxies_All = proxies_All.filter(e => !e.name.includes('0.3'))
     } else if (subName === 'VAE') {
         proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
         proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
