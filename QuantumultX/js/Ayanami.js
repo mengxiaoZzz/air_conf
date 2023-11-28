@@ -66,7 +66,7 @@ function operator(proxies) {
     sortProxies.push(...proxies_SG)
     sortProxies.push(...proxies_JP)
     sortProxies.push(...proxies_US)
-    sortProxies.push(...proxies04)
+    //sortProxies.push(...proxies04)
     sortProxies.push(...proxies_All)
 
     return sortProxies;
