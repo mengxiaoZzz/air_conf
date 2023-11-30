@@ -1,3 +1,4 @@
-let body = $response.body
+let body = JSON.parse($response.body);
 body.data.ad_video = ""
-$done({ body });
+body = JSON.stringify(body);
+$done({body});
