@@ -402,6 +402,7 @@ parsers: # array
           interval: 86400
 
       append-rules: # 添加规则
+        - DOMAIN,rjptcl.lol,DIRECT
         - RULE-SET,Direct,DIRECT
         - RULE-SET,Lan,DIRECT
         - RULE-SET,Download,DIRECT
