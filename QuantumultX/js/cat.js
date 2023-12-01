@@ -15,7 +15,6 @@ if (url.includes("/api/wechat_v2/user")) {
     body.svip = 1
     body.residue_time = "2099-12-31 23:59"
     body.data.is_svip = 1
-    body.data.avatarurl = "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/picture/cat.jpg"
 }
 body = JSON.stringify(body);
 $done({body});
