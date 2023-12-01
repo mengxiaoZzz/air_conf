@@ -7,6 +7,10 @@ if (url.includes("/api/wechat_v2/index")) {
     body.data.index.is_pay = 1
     body.data.index.invite_num = 999
     body.data.index.level = 999
+    body.data.index.vip_ad = "unchecked"
+}
+if (url.includes("/api/wechat_v2/stars")) {
+    body.data.ad = ""
 }
 if (url.includes("/api/wechat_v2/user")) {
     body.name = "一只猫去水印Pro"
