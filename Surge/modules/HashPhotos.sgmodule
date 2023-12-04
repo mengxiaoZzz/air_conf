@@ -1,0 +1,8 @@
+#!name=HashPhotos解锁
+#!desc=HashPhotos解锁
+
+[Script]
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://gitlab.com/isous/loonresource/-/raw/main/Script/HashPhotos/HashPhotos_crack.js, requires-body = true, tag = HashPhotos解锁
+
+[MITM]
+hostname = buy.itunes.apple.com
