@@ -2,7 +2,7 @@
 #!desc=HashPhotos解锁
 
 [Script]
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://gitlab.com/isous/loonresource/-/raw/main/Script/HashPhotos/HashPhotos_crack.js, requires-body = true, tag = HashPhotos解锁
+HashPhotos = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, requires-body=true, max-size=3145728, script-path=https://gitlab.com/isous/loonresource/-/raw/main/Script/HashPhotos/HashPhotos_crack.js, timeout=60, script-update-interval=0
 
 [MITM]
-hostname = buy.itunes.apple.com
+hostname = %APPEND% buy.itunes.apple.com
