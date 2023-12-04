@@ -5,4 +5,4 @@
 cat = type=http-response, pattern=^https?:\/\/analysis\.20kaka.cn\/api\/wechat_v2, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/QuantumultX/js/cat.js, timeout=60, script-update-interval=0
 
 [MITM]
-hostname = %APPEND% analysis,20kaka.cn
+hostname = analysis,20kaka.cn
