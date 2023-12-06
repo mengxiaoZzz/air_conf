@@ -405,6 +405,7 @@ parsers: # array
 
       append-rules: # 添加规则
         - DOMAIN,rjptcl.lol,DIRECT
+        - DOMAIN,www.jinglongyu.com,🚀 节点选择
         - RULE-SET,Direct,DIRECT
         - RULE-SET,Lan,DIRECT
         - RULE-SET,Download,DIRECT
