@@ -17,6 +17,8 @@ parsers: # array
           proxies_All = proxies_All.filter(e => !e.name.includes('Premium'))
         } else if (name === 'Lend喵呜') {
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜").replace("RELAY", "喵呜"))
+        } else if (name === 'LinkCube') {
+          proxies_All.forEach(e => e.name = e.name.replace("专线 深圳-", ""))
         } else if (name === 'Ayanami') {
           proxies_All.forEach(e => {
             if (e.name.includes('🇭🇰')) {
