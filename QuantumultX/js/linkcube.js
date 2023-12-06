@@ -3,11 +3,6 @@ function operator(proxies) {
     let proxies_All = proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0)
     proxies_All.forEach(e => {
         e.name = e.name.replace("专线 深圳-", "")
-        e.name = e.name.replace("香港", "HK")
-        e.name = e.name.replace("台湾", "TW")
-        e.name = e.name.replace("狮城", "SG")
-        e.name = e.name.replace("日本", "JP")
-        e.name = e.name.replace("美国", "US")
     })
 
     let sortProxies = []
