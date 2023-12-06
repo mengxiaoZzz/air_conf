@@ -4,7 +4,8 @@ function operator(proxies) {
     proxies_All.forEach(function (e, index) {
         e.name = e.name.replace("🇹🇼", "🇨🇳")
         e.name = e.name.replace("[", "")
-        e.name = e.name.substring(0, 16)
+        let nameIndex = e.name.indexOf(' | ')
+        e.name = e.name.substring(0, nameIndex)
         if (e.name.includes('台湾')) {
             e.name = e.name + (index % 2 + 1)
         }
