@@ -17,6 +17,16 @@ parsers: # array
           proxies_All = proxies_All.filter(e => !e.name.includes('Premium'))
         } else if (name === 'Lend喵呜') {
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜").replace("RELAY", "喵呜"))
+        } else if (name === '守候') {
+          proxies_All.forEach(function (e, index) {
+            e.name = e.name.replace("🇹🇼", "🇨🇳")
+            e.name = e.name.replace("[", "")
+            let nameIndex = e.name.indexOf(' | ')
+            e.name = e.name.substring(0, nameIndex)
+            if (e.name.includes('台湾')) {
+                e.name = e.name + (index % 2 + 1)
+            }
+          })
         } else if (name === 'LinkCube') {
           proxies_All.forEach(e => e.name = e.name.replace("专线 深圳-", ""))
         } else if (name === 'Ayanami') {
