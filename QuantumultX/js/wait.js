@@ -6,9 +6,6 @@ function operator(proxies) {
         e.name = e.name.replace("[", "")
         let nameIndex = e.name.indexOf(' | ')
         e.name = e.name.substring(0, nameIndex)
-        if (e.name.includes('台湾')) {
-            e.name = e.name + (index % 2 + 1)
-        }
     })
 
     let sortProxies = []
@@ -30,6 +27,9 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
     let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳'))
+    proxies_TW.forEach(function (e, index) {
+        e.name = e.name + (index + 1)
+    })
     proxies_All = proxies_All.filter(e => !e.name.includes('🇨🇳'))
 
     let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
