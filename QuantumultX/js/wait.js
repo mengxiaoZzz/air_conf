@@ -14,7 +14,6 @@ function operator(proxies) {
     let sortProxies = []
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
-
     let proxies_HK_001 = proxies_HK.filter(e => e.name.includes('0.01'))
     let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('0.2'))
     let proxies_HK_Other = proxies_HK.filter(e => !e.name.includes('0.01') && !e.name.includes('0.2'))
@@ -29,6 +28,13 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇨🇳'))
 
     let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
+    let proxies_SG_001 = proxies_HK.filter(e => e.name.includes('0.01'))
+    let proxies_SG_01 = proxies_HK.filter(e => e.name.includes('0.1'))
+    let proxies_SG_Other = proxies_SG.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1'))
+    proxies_SG = []
+    proxies_SG.push(...proxies_SG_001)
+    proxies_SG.push(...proxies_SG_01)
+    proxies_SG.push(...proxies_SG_Other)
     proxies_All = proxies_All.filter(e => !e.name.includes('🇸🇬'))
 
     let proxies_JP = proxies_All.filter(e => e.name.includes('🇯🇵'))
