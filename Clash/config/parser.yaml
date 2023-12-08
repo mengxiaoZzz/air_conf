@@ -19,7 +19,6 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜").replace("RELAY", "喵呜"))
         } else if (name === '守候') {
           proxies_All.forEach(function (e, index) {
-            e.name = e.name.replace("🇹🇼", "🇨🇳")
             e.name = e.name.replace("[", "")
             let nameIndex = e.name.indexOf(' | ')
             e.name = e.name.substring(0, nameIndex)
@@ -122,12 +121,10 @@ parsers: # array
         let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
         if (name === '守候') {
           let proxies_HK_001 = proxies_HK.filter(e => e.name.includes('0.01'))
-          let proxies_HK_01 = proxies_HK.filter(e => e.name.includes('0.1'))
           let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('0.2'))
-          let proxies_HK_Other = proxies_HK.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1') && !e.name.includes('0.2'))
+          let proxies_HK_Other = proxies_HK.filter(e => !e.name.includes('0.01') && !e.name.includes('0.2'))
           proxies_HK = []
           proxies_HK.push(...proxies_HK_001)
-          proxies_HK.push(...proxies_HK_01)
           proxies_HK.push(...proxies_HK_02)
           proxies_HK.push(...proxies_HK_Other)
         }
@@ -137,6 +134,15 @@ parsers: # array
         proxies_All = proxies_All.filter(e => !e.name.includes('🇹🇼'))
     
         let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
+        if (name === '守候') {
+          let proxies_SG_001 = proxies_SG.filter(e => e.name.includes('0.01'))
+          let proxies_SG_01 = proxies_SG.filter(e => e.name.includes('0.1'))
+          let proxies_SG_Other = proxies_SG.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1'))
+          proxies_SG = []
+          proxies_SG.push(...proxies_SG_001)
+          proxies_SG.push(...proxies_SG_01)
+          proxies_SG.push(...proxies_SG_Other)
+        }
         proxies_All = proxies_All.filter(e => !e.name.includes('🇸🇬'))
     
         let proxies_JP = proxies_All.filter(e => e.name.includes('🇯🇵'))
