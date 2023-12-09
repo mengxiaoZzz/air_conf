@@ -1,0 +1,13 @@
+#!name=开屏广告Guard
+#!desc=开屏广告Guard
+
+[Rule]
+# > 斗鱼
+URL-REGEX,^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo,REJECT
+# > 虎牙
+URL-REGEX,^https?:\/\/business\.msstatic\.com\/advertiser\/material,REJECT
+
+[Script]
+
+[MITM]
+hostname = %APPEND% rtbapi.douyucdn.cn,business.msstatic.com
