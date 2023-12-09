@@ -6,24 +6,17 @@ function operator(proxies) {
         e.name = e.name.replace("[", "")
         let nameIndex = e.name.indexOf(' | ')
         e.name = e.name.substring(0, nameIndex)
+        e.name = e.name.replace("0.20x", "0.2x").replace("1.00x", "1.0x").replace("2.00x", "2.0x").replace("30.0x", "30x")
     })
 
     let sortProxies = []
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
-    let proxies_HK_001 = proxies_HK.filter(e => e.name.includes('0.01'))
-    let proxies_HK_01 = proxies_HK.filter(e => e.name.includes('0.1'))
-    let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('0.2'))
-    proxies_HK_02.forEach(function (e, index) {
-        e.name = e.name + (index + 1)
+    proxies_HK.forEach(function (e, index) {
+        if (e.name.includes('深港')) {
+            e.name = e.name + (index + 1)
+        }
     })
-    let proxies_HK_Other = proxies_HK.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1') && !e.name.includes('0.2'))
-    proxies_HK = []
-    proxies_HK.push(...proxies_HK_001)
-    proxies_HK.push(...proxies_HK_01)
-    proxies_HK.push(...proxies_HK_02)
-    proxies_HK.push(...proxies_HK_Other)
-
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
     let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳'))
@@ -33,13 +26,6 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇨🇳'))
 
     let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
-    let proxies_SG_001 = proxies_SG.filter(e => e.name.includes('0.01'))
-    let proxies_SG_01 = proxies_SG.filter(e => e.name.includes('0.1'))
-    let proxies_SG_Other = proxies_SG.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1'))
-    proxies_SG = []
-    proxies_SG.push(...proxies_SG_001)
-    proxies_SG.push(...proxies_SG_01)
-    proxies_SG.push(...proxies_SG_Other)
     proxies_All = proxies_All.filter(e => !e.name.includes('🇸🇬'))
 
     let proxies_JP = proxies_All.filter(e => e.name.includes('🇯🇵'))
