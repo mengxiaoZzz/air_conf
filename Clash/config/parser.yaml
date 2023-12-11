@@ -18,13 +18,20 @@ parsers: # array
         } else if (name === 'Lend喵呜') {
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜").replace("RELAY", "喵呜"))
         } else if (name === '守候') {
-          proxies_All.forEach(function (e, index) {
+           proxies_All.forEach(function (e, index) {
+            e.name = e.name.replace("🇹🇼", "🇨🇳")
             e.name = e.name.replace("[", "")
-            let nameIndex = e.name.indexOf(' | ')
-            e.name = e.name.substring(0, nameIndex)
-            if (e.name.includes('台湾')) {
-                e.name = e.name + (index % 2 + 1)
-            }
+            e.name = e.name.replace("]", "")
+            e.name = e.name.replace(" | ", "|")
+            e.name = e.name.replace("0.20x", "0.2x").replace("1.00x", "1.0x").replace("2.00x", "2.0x").replace("30.0x", "30x")
+            e.name = e.name.replace("香港", "HK").replace("台湾", "TW").replace("狮城", "SG").replace("日本", "JP").replace("美国", "US")
+      
+            let name = e.name.substring(5);
+            let flag = e.name.substring(0, 4);
+            let country = name.split(' ')[0]
+            let rate = name.split(' ')[1]
+            let line = name.split(' ')[2]
+            e.name = flag + ' ' + country + ' ' + line + ' ' + rate;
           })
         } else if (name === 'LinkCube') {
           proxies_All.forEach(e => e.name = e.name.replace("专线 深圳-", ""))
@@ -119,35 +126,12 @@ parsers: # array
         }
 
         let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
-        if (name === '守候') {
-          let proxies_HK_001 = proxies_HK.filter(e => e.name.includes('0.01'))
-          let proxies_HK_01 = proxies_HK.filter(e => e.name.includes('0.1'))
-          let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('0.2'))
-          proxies_HK_02.forEach(function (e, index) {
-            e.name = e.name + (index + 1)
-          })
-          let proxies_HK_Other = proxies_HK.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1') && !e.name.includes('0.2'))
-          proxies_HK = []
-          proxies_HK.push(...proxies_HK_001)
-          proxies_HK.push(...proxies_HK_01)
-          proxies_HK.push(...proxies_HK_02)
-          proxies_HK.push(...proxies_HK_Other)
-        }
         proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
     
         let proxies_TW = proxies_All.filter(e => e.name.includes('🇹🇼'))
         proxies_All = proxies_All.filter(e => !e.name.includes('🇹🇼'))
     
         let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
-        if (name === '守候') {
-          let proxies_SG_001 = proxies_SG.filter(e => e.name.includes('0.01'))
-          let proxies_SG_01 = proxies_SG.filter(e => e.name.includes('0.1'))
-          let proxies_SG_Other = proxies_SG.filter(e => !e.name.includes('0.01') && !e.name.includes('0.1'))
-          proxies_SG = []
-          proxies_SG.push(...proxies_SG_001)
-          proxies_SG.push(...proxies_SG_01)
-          proxies_SG.push(...proxies_SG_Other)
-        }
         proxies_All = proxies_All.filter(e => !e.name.includes('🇸🇬'))
     
         let proxies_JP = proxies_All.filter(e => e.name.includes('🇯🇵'))
