@@ -9,9 +9,8 @@ function operator(proxies) {
     })
 
     let sortProxies = []
-    let proxies_First = []
 
-    proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
+    let proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
     proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
