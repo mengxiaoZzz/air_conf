@@ -19,6 +19,9 @@ function operator(proxies) {
 
     let sortProxies = []
 
+    let proxies_EIP = proxies_All.filter(e => e.name.includes('EIP'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('EIP'))
+
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
@@ -40,6 +43,7 @@ function operator(proxies) {
     sortProxies.push(...proxies_JP)
     sortProxies.push(...proxies_US)
     sortProxies.push(...proxies_All)
+    sortProxies.push(...proxies_EIP)
 
     return sortProxies;
 }
