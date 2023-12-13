@@ -19,7 +19,6 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace("Daily", "喵呜").replace("RELAY", "喵呜"))
         } else if (name === '守候') {
            proxies_All.forEach(function (e, index) {
-            e.name = e.name.replace("🇹🇼", "🇨🇳")
             e.name = e.name.replace("[", "")
             e.name = e.name.replace("]", "")
             e.name = e.name.replace(" | ", "|")
