@@ -1,10 +1,9 @@
-#!name=B站净化
-#!desc=B站官方App净化
+#!name=B站去除开屏
+#!desc=B站去除开屏
 #!system=ios
-# h2下走grpc.biliapi.net(Surge TF2332以上版本可正常解析) h1时走app.bilibili.com
 
 [Script]
-B站净化 = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/bilibili-screen.js,script-update-interval=0
+B站净化 = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/bilibili-screen.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% app.bilibili.com
