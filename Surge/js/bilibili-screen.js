@@ -20,10 +20,10 @@ if (!body.data) {
     if (url.includes("x/v2/splash")) {
         console.log('开屏页' + (url.includes("splash/show") ? 'show' : 'list'));
         if (body.data.show) {
-            delete body.data.show;
+            body.data.show = []
         }
         if (body.data.splash_request_id) {
-            delete body.data.splash_request_id;
+            body.data.splash_request_id = ""
         }
         // if (!body.data.show) {
         //     // 有时候返回的数据没有show字段
