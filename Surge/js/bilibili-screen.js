@@ -19,13 +19,19 @@ if (!body.data) {
 } else {
     if (url.includes("x/v2/splash")) {
         console.log('开屏页' + (url.includes("splash/show") ? 'show' : 'list'));
-        if (!body.data.show) {
-            // 有时候返回的数据没有show字段
-            console.log('数据无show字段');
-        } else {
+        if (body.data.show) {
             delete body.data.show;
-            console.log('成功');
         }
+        if (body.data.splash_request_id) {
+            delete body.data.splash_request_id;
+        }
+        // if (!body.data.show) {
+        //     // 有时候返回的数据没有show字段
+        //     console.log('数据无show字段');
+        // } else {
+        //     delete body.data.show;
+        //     console.log('成功');
+        // }
     }
 }
 
