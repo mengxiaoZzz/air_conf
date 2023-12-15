@@ -19,17 +19,16 @@ function operator(proxies) {
 
     let sortProxies = []
 
-    // let proxies_EIP = proxies_All.filter(e => e.name.includes('EIP'))
-    // proxies_All = proxies_All.filter(e => !e.name.includes('EIP'))
-
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
     let proxies_HK_20 = proxies_HK.filter(e => e.name.includes('2.0'))
     let proxies_HK_10 = proxies_HK.filter(e => e.name.includes('1.0'))
     let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('0.2'))
+    let proxies_HK_EIP = proxies_HK.filter(e => e.name.includes('EIP'))
     proxies_HK = []
     proxies_HK.push(...proxies_HK_20)
     proxies_HK.push(...proxies_HK_10)
     proxies_HK.push(...proxies_HK_02)
+    proxies_HK.push(...proxies_HK_EIP)
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
     let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳'))
@@ -76,7 +75,6 @@ function operator(proxies) {
     sortProxies.push(...proxies_JP)
     sortProxies.push(...proxies_US)
     sortProxies.push(...proxies_All)
-    //sortProxies.push(...proxies_EIP)
 
     return sortProxies;
 }
