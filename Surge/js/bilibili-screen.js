@@ -17,20 +17,9 @@ if (!body.data) {
     // console.log(`body:${$response.body}`);
     $notification.post(notifyTitle, url, "data字段错误");
 } else {
-    if (url.includes("x/v2/splash/show")) {
+    if (url.includes("x/v2/splash/show") || url.includes("x/v2/splash/list")) {
         if (body.data.show) {
             body.data.show = []
-        }
-        if (body.data.splash_request_id) {
-            body.data.splash_request_id = ""
-        }
-    }
-    if (url.includes("x/v2/splash/list")) {
-        if (body.data.show) {
-            body.data.show = []
-        }
-        if (body.data.splash_request_id) {
-            body.data.splash_request_id = ""
         }
     }
 }
