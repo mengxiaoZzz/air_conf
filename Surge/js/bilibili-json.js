@@ -23,7 +23,7 @@ if (!body.data) {
             // 有时候返回的数据没有show字段
             console.log('数据无show字段');
         } else {
-            delete body.data.show;
+            body.data.show = []
             console.log('成功');
         }
     } else if (url.includes("resource/show/tab/v2")) {
