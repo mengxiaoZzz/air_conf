@@ -34,11 +34,11 @@ function operator(proxies) {
     let proxies02 = proxies_All.filter(e => e.name.includes('0.2x'))
     proxies_All = proxies_All.filter(e => !e.name.includes('0.2x'))
 
-    let proxiesWcloud = proxies_All.filter(e => e.name.includes('Wcloud'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('Wcloud'))
-
     let proxies04 = proxies_All.filter(e => e.name.includes('0.4x'))
     proxies_All = proxies_All.filter(e => !e.name.includes('0.4x'))
+
+    let proxiesWcloud = proxies_All.filter(e => e.name.includes('Wcloud'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('Wcloud'))
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
@@ -59,6 +59,7 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇺🇸'))
 
     sortProxies.push(...proxies02)
+    sortProxies.push(...proxies04)
     sortProxies.push(...proxiesWcloud)
     sortProxies.push(...proxies_HK)
     sortProxies.push(...proxies_TW)
@@ -66,7 +67,6 @@ function operator(proxies) {
     sortProxies.push(...proxies_SG)
     sortProxies.push(...proxies_JP)
     sortProxies.push(...proxies_US)
-    //sortProxies.push(...proxies04)
     sortProxies.push(...proxies_All)
 
     return sortProxies;
