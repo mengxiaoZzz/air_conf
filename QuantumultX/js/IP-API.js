@@ -73,25 +73,18 @@ function ISP_ValidCheck(para) {
     }
 }
 
-function Area_check(para) {
-    if (para === "中华民国") {
-        return "台湾"
-    } else {
-        return simplified(para)
-    }
-}
-
 function simplified(str) {
     let length = str.length;
     if (length === 0) {
         return str;
     }
-    str = str.replace('中华民国', '台湾')
     let array = Array.from(str);
-    return array.map(e => {
+    str = array.map(e => {
         let index = traditionalCodes.indexOf(e);
         return index >= 0 ? simplifiedCodes.charAt(index) : e;
     }).join('');
+    str = str.replace('中华民国', '台湾')
+    return str
 }
 
 let body = $response.body;
