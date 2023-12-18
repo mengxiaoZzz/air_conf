@@ -4,7 +4,7 @@ function operator(proxies) {
     proxies_All.forEach(e => {
         e.name = e.name.replace("🇹🇼", "🇨🇳").replace("HongKong", "HK")
             .replace("Hong Kong", "HK").replace("(MTel)", "")
-            .replace("United States", "US")
+            .replace("United States", "US").replace("Singapore", "SG")
         if (e.name.includes('🇭🇰')) {
             e.name = '🇭🇰 ' + e.name.replace("🇭🇰 ", "")
         }
