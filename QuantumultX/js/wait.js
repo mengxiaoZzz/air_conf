@@ -5,6 +5,7 @@ function operator(proxies) {
         e.name = e.name.replace("🇹🇼", "🇨🇳")
         e.name = e.name.replace("[", "")
         e.name = e.name.replace("]", "")
+        e.name = e.name.replace("  | ", "|")
         e.name = e.name.replace(" | ", "|")
         e.name = e.name.replace("0.20x", "0.2x").replace("1.00x", "1.0x").replace("2.00x", "2.0x").replace("30.0x", "30x")
         e.name = e.name.replace("香港", "HK").replace("台湾", "TW").replace("狮城", "SG").replace("日本", "JP").replace("美国", "US")
