@@ -21,7 +21,7 @@ function operator(proxies) {
     let sortProxies = []
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
-    let proxies_HK_20 = proxies_HK.filter(e => e.name.includes('2x'))
+    let proxies_HK_20 = proxies_HK.filter(e => e.name.includes(' 2x'))
     let proxies_HK_10 = proxies_HK.filter(e => e.name.includes('1x'))
     let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('0.2x'))
     let proxies_HK_EIP = proxies_HK.filter(e => e.name.includes('EIP'))
@@ -41,7 +41,7 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇨🇳'))
 
     let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
-    let proxies_SG_20 = proxies_SG.filter(e => e.name.includes('2x'))
+    let proxies_SG_20 = proxies_SG.filter(e => e.name.includes(' 2x'))
     let proxies_SG_10 = proxies_SG.filter(e => e.name.includes('1x'))
     let proxies_SG_02 = proxies_SG.filter(e => e.name.includes('0.2x'))
     proxies_SG = []
@@ -51,7 +51,7 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇸🇬'))
 
     let proxies_JP = proxies_All.filter(e => e.name.includes('🇯🇵'))
-    let proxies_JP_20 = proxies_JP.filter(e => e.name.includes('2x'))
+    let proxies_JP_20 = proxies_JP.filter(e => e.name.includes(' 2x'))
     let proxies_JP_10 = proxies_JP.filter(e => e.name.includes('1x'))
     let proxies_JP_02 = proxies_JP.filter(e => e.name.includes('0.2x'))
     proxies_JP = []
@@ -61,7 +61,7 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇯🇵'))
 
     let proxies_US = proxies_All.filter(e => e.name.includes('🇺🇸'))
-    let proxies_US_20 = proxies_US.filter(e => e.name.includes('2x'))
+    let proxies_US_20 = proxies_US.filter(e => e.name.includes(' 2x'))
     let proxies_US_10 = proxies_US.filter(e => e.name.includes('1x'))
     let proxies_US_02 = proxies_US.filter(e => e.name.includes('0.2x'))
     proxies_US = []
