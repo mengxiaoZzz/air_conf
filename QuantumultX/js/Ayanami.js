@@ -3,7 +3,11 @@ function operator(proxies) {
     let proxies_All = proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0)
     proxies_All.forEach(e => {
         e.name = e.name.replace("🇹🇼", "🇨🇳").replace("HongKong", "HK")
-            .replace("Hong Kong", "HK").replace("(MTel)", "")
+            .replace("Hong Kong", "HK")
+            .replace("Taiwan", "TW")
+            .replace("Japan", "JP")
+            .replace("Macao", "MO")
+            .replace("(MTel)", "")
             .replace("United States", "US").replace("Singapore", "SG")
         if (e.name.includes('🇭🇰')) {
             e.name = '🇭🇰 ' + e.name.replace("🇭🇰 ", "")
