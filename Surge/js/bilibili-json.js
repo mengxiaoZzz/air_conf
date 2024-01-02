@@ -15,7 +15,7 @@ let body = JSON.parse($response.body);
 if (!body.data) {
     // console.log(url);
     // console.log(`body:${$response.body}`);
-    $notification.post(notifyTitle, url, "data字段错误");
+    // $notification.post(notifyTitle, url, "data字段错误");
 } else {
     if (url.includes("x/v2/splash")) {
         console.log('开屏页' + (url.includes("splash/show") ? 'show' : 'list'));
