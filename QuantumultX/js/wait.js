@@ -1,5 +1,5 @@
 function operator(proxies) {
-    let otherCharArray = ['剩余', '套餐', '官', 'GB', 'Traffic', 'Expire']
+    let otherCharArray = ['剩余', '套餐']
     let proxies_All = proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0)
     proxies_All.forEach(function (e, index) {
         e.name = e.name.replace("🇹🇼", "🇨🇳")
