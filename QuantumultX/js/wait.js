@@ -7,7 +7,7 @@ function operator(proxies) {
         e.name = e.name.replace("]", "")
         e.name = e.name.replace("  | ", "·")
         e.name = e.name.replace(" | ", "·")
-        e.name = e.name.replace("0.20x", "0.2x").replace("1.00x", "1x").replace("2.00x", "2x").replace("30.0x", "30x")
+        e.name = e.name.replace("0.20x", "0.2x").replace("1.00x", "1x").replace("2.00x", "2x").replace("50.0x", "50x")
         e.name = e.name.replace("香港", "HK").replace("台湾", "TW").replace("狮城", "SG").replace("日本", "JP").replace("美国", "US")
 
         let name = e.name.substring(5);
@@ -33,11 +33,6 @@ function operator(proxies) {
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
     let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳'))
-    let proxies_TW_CN2 = proxies_TW.filter(e => e.name.includes('CN2'))
-    let proxies_TW_SU = proxies_TW.filter(e => e.name.includes('苏移'))
-    proxies_TW = []
-    proxies_TW.push(...proxies_TW_CN2)
-    proxies_TW.push(...proxies_TW_SU)
     proxies_All = proxies_All.filter(e => !e.name.includes('🇨🇳'))
 
     let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
