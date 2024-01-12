@@ -5,10 +5,14 @@ function operator(proxies) {
         e.name = e.name.replace("🇹🇼", "🇨🇳")
         e.name = e.name.replace("[", "")
         e.name = e.name.replace("]", "")
-        e.name = e.name.replace("  | ", "·")
-        e.name = e.name.replace(" | ", "·")
-        e.name = e.name.replace("0.20x", "0.2x").replace("1.00x", "1x").replace("2.00x", "2x").replace("50.0x", "50x")
-        e.name = e.name.replace("香港", "HK").replace("台湾", "TW").replace("狮城", "SG").replace("日本", "JP").replace("美国", "US")
+        e.name = e.name.replace("  | ", "-")
+        e.name = e.name.replace(" | ", "-")
+        e.name = e.name.replace("0.20x", "0.2x")
+            .replace("1.00x", "1x")
+            .replace("2.00x", "2x")
+            .replace("50.0x", "50x")
+        e.name = e.name.replace("香港", "HK").replace("台湾", "TW")
+            .replace("狮城", "SG").replace("日本", "JP").replace("美国", "US")
 
         let name = e.name.substring(5);
         let flag = e.name.substring(0, 4);
