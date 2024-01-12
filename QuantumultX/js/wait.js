@@ -12,7 +12,8 @@ function operator(proxies) {
             .replace("2.00x", "2x")
             .replace("50.0x", "50x")
         e.name = e.name.replace("香港", "HK").replace("台湾", "TW")
-            .replace("狮城", "SG").replace("日本", "JP").replace("美国", "US")
+            .replace("狮城", "SG").replace("日本", "JP")
+            .replace("美国", "US").replace("韩国", "KR")
 
         let name = e.name.substring(5);
         let flag = e.name.substring(0, 4);
