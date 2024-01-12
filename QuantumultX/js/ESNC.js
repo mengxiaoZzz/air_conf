@@ -6,17 +6,6 @@ function operator(proxies) {
     })
 
     let sortProxies = []
-    let proxies_Gcore = proxies_All.filter(e => e.name.includes('Gcore'))
-    if (proxies_Gcore.length === 1) {
-        proxies_Gcore.forEach(e => {
-            e.name = '🇭🇰 HK Gcoreˣ⁰˙⁵'
-        })
-    } else {
-        proxies_Gcore.forEach(function (e, index) {
-            e.name = '🇭🇰 HK Gcoreˣ⁰˙⁵ ' + (index + 1)
-        })
-    }
-    proxies_All = proxies_All.filter(e => !e.name.includes('Gcore'))
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
@@ -33,7 +22,6 @@ function operator(proxies) {
     let proxies_US = proxies_All.filter(e => e.name.includes('🇺🇸'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇺🇸'))
 
-    sortProxies.push(...proxies_Gcore)
     sortProxies.push(...proxies_HK)
     sortProxies.push(...proxies_TW)
     sortProxies.push(...proxies_SG)
