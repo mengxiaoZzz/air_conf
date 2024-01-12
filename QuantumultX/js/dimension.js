@@ -1,7 +1,6 @@
 function operator(proxies) {
     let otherCharArray = ['剩余', '套餐', '官网']
     let proxies_All = proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0)
-    proxies_All.forEach(e => e.name = e.name.substring(0, 5) + e.name.substring(8))
 
     let sortProxies = []
 
