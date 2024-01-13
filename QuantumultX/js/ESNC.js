@@ -1,7 +1,5 @@
 function operator(proxies) {
-    proxies_All.forEach(e => {
-        e.name = e.name.replace("HK Gcore 01", "HK Gcore")
-    })
+    let proxies_All = proxies
 
     let sortProxies = []
 

@@ -4,23 +4,23 @@ function operator(proxies) {
 
     let sortProxies = []
 
-    let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
+    let proxies_HK = proxies_All.filter(e => e.name.includes('香港'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('香港'))
 
-    let proxies_TW = proxies_All.filter(e => e.name.includes('🇨🇳'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('🇨🇳'))
+    let proxies_TW = proxies_All.filter(e => e.name.includes('台湾'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('台湾'))
 
-    let proxies_MO = proxies_All.filter(e => e.name.includes('🇲🇴'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('🇲🇴'))
+    let proxies_MO = proxies_All.filter(e => e.name.includes('澳门'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('澳门'))
 
-    let proxies_SG = proxies_All.filter(e => e.name.includes('🇸🇬'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('🇸🇬'))
+    let proxies_SG = proxies_All.filter(e => e.name.includes('新加坡'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('新加坡'))
 
-    let proxies_JP = proxies_All.filter(e => e.name.includes('🇯🇵'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('🇯🇵'))
+    let proxies_JP = proxies_All.filter(e => e.name.includes('日本'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('日本'))
 
-    let proxies_US = proxies_All.filter(e => e.name.includes('🇺🇸'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('🇺🇸'))
+    let proxies_US = proxies_All.filter(e => e.name.includes('美国'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('美国'))
 
     sortProxies.push(...proxies_HK)
     sortProxies.push(...proxies_TW)

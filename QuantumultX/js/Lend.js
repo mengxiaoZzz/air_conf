@@ -1,15 +1,13 @@
 function operator(proxies) {
+    let proxies_All = proxies
     proxies_All.forEach(e => {
-        e.name = e.name.replace("🇹🇼", "🇨🇳").replace("Mo", "MO")
+        e.name = e.name.replace("Mo", "MO")
     })
 
     let sortProxies = []
-    let proxies_First = proxies_All.filter(e => e.name.includes('0.01'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('0.01'))
 
     let proxies_DIRECT = proxies_All.filter(e => e.name.includes('DIRECT'))
     proxies_All = proxies_All.filter(e => !e.name.includes('DIRECT'))
-    proxies_First.push(...proxies_DIRECT)
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('HK'))
     proxies_All = proxies_All.filter(e => !e.name.includes('HK'))
@@ -29,7 +27,7 @@ function operator(proxies) {
     let proxies_US = proxies_All.filter(e => e.name.includes('US'))
     proxies_All = proxies_All.filter(e => !e.name.includes('US'))
 
-    sortProxies.push(...proxies_First)
+    sortProxies.push(...proxies_DIRECT)
     sortProxies.push(...proxies_HK)
     sortProxies.push(...proxies_TW)
     sortProxies.push(...proxies_MO)
