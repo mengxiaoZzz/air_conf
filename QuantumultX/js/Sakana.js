@@ -20,11 +20,19 @@ function operator(proxies) {
     let proxies_US = proxies_All.filter(e => e.name.includes('🇺🇸'))
     proxies_All = proxies_All.filter(e => !e.name.includes('🇺🇸'))
 
+    let proxies_KR = proxies_All.filter(e => e.name.includes('🇰🇷'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('🇰🇷'))
+
+    proxies_All.forEach(e => {
+        e.name = e.name.replace("01", "")
+    })
+
     sortProxies.push(...proxies_HK)
     sortProxies.push(...proxies_TW)
     sortProxies.push(...proxies_SG)
     sortProxies.push(...proxies_JP)
     sortProxies.push(...proxies_US)
+    sortProxies.push(...proxies_KR)
     sortProxies.push(...proxies_All)
 
     return sortProxies;
