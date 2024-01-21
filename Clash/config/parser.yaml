@@ -100,6 +100,13 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace("专线 深圳-", ""))
         } else if (name === 'Ayanami') {
           proxies_All.forEach(e => {
+            e.name = e.name.replace("HongKong", "HK")
+                .replace("Hong Kong", "HK")
+                .replace("Taiwan", "TW")
+                .replace("Japan", "JP")
+                .replace("Macao", "MO")
+                .replace("(MTel)", "")
+                .replace("United States", "US").replace("Singapore", "SG")
             if (e.name.includes('🇭🇰')) {
                 e.name = '🇭🇰 ' + e.name.replace("🇭🇰 ", "")
             }
