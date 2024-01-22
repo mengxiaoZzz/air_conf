@@ -32,15 +32,17 @@ function operator(proxies) {
     let udp = true
 
     let lowProxies = []
-    lowProxies.push({name: '🇭🇰 HK 丁香酰氧胺 0.01x', type, server: "traffic-in-lite.811920.xyz", port: 50013, cipher, password, udp})
-    lowProxies.push({name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server: "traffic-in-lite.811920.xyz", port: 50012, cipher, password, udp})
-    lowProxies.push({name: '🇱🇺 LU 硝酸二甲酯 0.01x', type, server: "traffic-in-lite.811920.xyz", port: 50009, cipher, password, udp})
+    let lowServer = "traffic-in-lite.811920.xyz"
+    lowProxies.push({name: '🇭🇰 HK 丁香酰氧胺 0.01x', type, server: lowServer, port: 50013, cipher, password, udp})
+    lowProxies.push({name: '🇸🇬 SG 苯巴比妥钠 0.01x', type, server: lowServer, port: 50012, cipher, password, udp})
+    lowProxies.push({name: '🇱🇺 LU 硝酸二甲酯 0.01x', type, server: lowServer, port: 50009, cipher, password, udp})
 
     let extraProxies = []
-    extraProxies.push({name: '🇸🇬 TG 碳酸二甲酯 1x', type, server: "traffic-in-a.811920.xyz", port: 54001, cipher, password, udp})
-    extraProxies.push({name: '🇲🇴 TK 澳士蛋白酶 3x', type, server: "traffic-in-a.811920.xyz", port: 54002, cipher, password, udp})
-    extraProxies.push({name: '🇯🇵 TK 日库木糖醇 3x', type, server: "traffic-in-a.811920.xyz", port: 54003, cipher, password, udp})
-    extraProxies.push({name: '🇺🇸 TK 美罗培南素 3x', type, server: "traffic-in-a.811920.xyz", port: 54005, cipher, password, udp})
+    let extraServer = "traffic-in-a.811920.xyz"
+    extraProxies.push({name: '🇸🇬 TG 碳酸二甲酯 1x', type, server: extraServer, port: 54001, cipher, password, udp})
+    extraProxies.push({name: '🇲🇴 TK 澳士蛋白酶 3x', type, server: extraServer, port: 54002, cipher, password, udp})
+    extraProxies.push({name: '🇯🇵 TK 日库木糖醇 3x', type, server: extraServer, port: 54003, cipher, password, udp})
+    extraProxies.push({name: '🇺🇸 TK 美罗培南素 3x', type, server: extraServer, port: 54005, cipher, password, udp})
 
     return lowProxies.concat(extraProxies).concat(sortProxies);
 }
