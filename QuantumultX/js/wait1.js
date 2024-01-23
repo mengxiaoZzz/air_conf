@@ -10,10 +10,10 @@ function operator(proxies) {
 
     let proxies_HK = proxies_All.filter(e => e.name.includes('🇭🇰'))
     let proxies_HK_02 = proxies_HK.filter(e => e.name.includes('0.2x'))
-    let proxies_HK_S2_Misaka = proxies_HK.filter(e => e.name.includes('S2-Misaka'))
-    let proxies_HK_N_Misaka = proxies_HK.filter(e => e.name.includes('N-Misaka'))
-    let proxies_HK_other = proxies_HK.filter(e => !e.name.includes('0.2x') && !e.name.includes('S2-Misaka')
-        && !e.name.includes('N-Misaka'))
+    let proxies_HK_S2_Misaka = proxies_HK.filter(e => e.name.includes('S2 Misaka'))
+    let proxies_HK_N_Misaka = proxies_HK.filter(e => e.name.includes('N Misaka'))
+    let proxies_HK_other = proxies_HK.filter(e => !e.name.includes('0.2x') && !e.name.includes('S2 Misaka')
+        && !e.name.includes('N Misaka'))
     proxies_HK = proxies_HK_02.concat(proxies_HK_S2_Misaka).concat(proxies_HK_N_Misaka).concat(proxies_HK_other)
     proxies_All = proxies_All.filter(e => !e.name.includes('🇭🇰'))
 
