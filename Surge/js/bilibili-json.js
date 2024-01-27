@@ -16,8 +16,9 @@ if (body.data) {
     if (url.includes("x/v2/splash")) {
         console.log('url' + url);
         console.log('开屏页' + (url.includes("splash/show") ? 'show' : 'list'));
-        console.log(body.data);
-        delete body.data.show;
+        console.log('开屏页11111' + body.data);
+        body.data.show = null
+        console.log('开屏页22222' + body.data);
     } else if (url.includes("resource/show/tab/v2")) {
         console.log('tab修改');
         // 顶部右上角
@@ -42,7 +43,7 @@ if (body.data) {
             body.data.bottom = body.data.bottom.filter(item => {
                 if (item.name === '发布') {
                     console.log('去除发布');
-                    //return false;
+                    return false;
                 } else if (item.name === '会员购' || item.tab_id === '会员购Bottom') {
                     console.log('去除会员购');
                     //return false;
@@ -95,8 +96,6 @@ if (body.data) {
                 return true;
             });
         }
-    } else {
-        $notification.post(notifyTitle, "路径匹配错误:", url);
     }
 }
 
