@@ -14,7 +14,9 @@ let body = JSON.parse($response.body);
 
 if (body.data) {
     if (url.includes("x/v2/splash")) {
+        console.log('url' + url);
         console.log('开屏页' + (url.includes("splash/show") ? 'show' : 'list'));
+        console.log(body.data);
         delete body.data.show;
     } else if (url.includes("resource/show/tab/v2")) {
         console.log('tab修改');
