@@ -19,6 +19,10 @@ parsers: # array
           proxies_All.forEach(e => e.name = e.name.replace(" 購物", ""))
         } else if (name === 'LinkCube') {
           proxies_All.forEach(e => e.name = e.name.replace("专线 深圳-", ""))
+        } else if (name === 'NewYun') {
+          proxies_All.forEach(e => e.name = e.name.replace("IEPL       ", "IEPL "))
+          rawObj.proxies = proxies_All
+          return yaml.stringify({...rawObj, 'proxy-groups': [], 'rules': []})
         } else if (name === 'Ayanami') {
           proxies_All.forEach(e => {
             e.name = e.name.replace("HongKong", "Hong Kong").replace("(MTel)", "")

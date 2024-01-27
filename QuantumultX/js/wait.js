@@ -38,11 +38,3 @@ function operator(proxies) {
     return sortProxies;
 }
 
-
-function operator(proxies) {
-    proxies_All.forEach(function (e, index) {
-        e.name = e.name.replace("IEPL       ", "IEPL ")
-    })
-    return proxies_All;
-}
-
