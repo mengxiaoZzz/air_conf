@@ -176,60 +176,60 @@ parsers: # array
 
       append-proxy-groups: # 建立策略组
 
-        - name: 🚀 通透世界
+        - name: ⚡ 通透世界
           type: select
 
-        - name: 🍎 苹果服务
+        - name: 🍎 Apple
           type: select
-          proxies: [DIRECT, 🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [DIRECT, ⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 📺 Bilibili
           type: select
-          proxies: [ DIRECT, 🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点]
+          proxies: [ DIRECT, ⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点]
 
         - name: 🧩 微软服务
           type: select
-          proxies: [DIRECT, 🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [DIRECT, ⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 🌌 Google
           type: select
-          proxies: [🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 📟 Telegram
           type: select
-          proxies: [🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 🐦 Twitter
           type: select
-          proxies: [🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 🎥 PikPak
+        - name: 🎆 PikPak
           type: select
-          proxies: [🇸🇬 新加坡节点, 🚀 通透世界]
+          proxies: [🇸🇬 新加坡节点, ⚡ 通透世界]
 
         - name: 🤖 OpenAI
           type: select
-          proxies: [🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 📹 国际媒体
           type: select
-          proxies: [🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
         - name: 🎮 Game
           type: select
-          proxies: [DIRECT, 🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [DIRECT, ⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 🌏 国外网站
+        - name: 🃏 国外网站
           type: select
-          proxies: [🚀 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
+          proxies: [⚡ 通透世界, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, ⚠ 故障转移]
 
-        - name: 🆎 AdBlock
+        - name: ☣️ AdBlock
           type: select
           proxies: [REJECT, DIRECT]
 
-        - name: 🐟 漏网之鱼
+        - name: 🦈 漏网之鱼
           type: select
-          proxies: [DIRECT, 🚀 通透世界, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, ⚠ 故障转移]
+          proxies: [⚡ 通透世界, DIRECT, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, ⚠ 故障转移]
 
         - name: 🇭🇰 香港节点
           type: select    # select/url-test/fallback/load-balance
@@ -265,7 +265,7 @@ parsers: # array
             - DIRECT
 
       commands:
-        - proxy-groups.🚀 通透世界.proxies=[]proxyNames
+        - proxy-groups.⚡ 通透世界.proxies=[]proxyNames
         - proxy-groups.🇭🇰 香港节点.proxies.0+[]proxyNames|(🇭🇰|香港|HK|Hong)
         - proxy-groups.🇹🇼 台湾节点.proxies.0+[]proxyNames|(🇨🇳|🇹🇼|台湾|台灣|TW|Taiwan)
         - proxy-groups.🇸🇬 新加坡节点.proxies.0+[]proxyNames|(🇸🇬|新加坡|狮城|SG|Singapore)
@@ -397,25 +397,23 @@ parsers: # array
       append-rules: # 添加规则
         - DOMAIN,rjptcl.lol,DIRECT
         - RULE-SET,Direct,DIRECT
+        - DOMAIN,www.jinglongyu.com,⚡ 通透世界
+        - DOMAIN,tianjiyunke.com,DIRECT
         - RULE-SET,Lan,DIRECT
         - RULE-SET,Download,DIRECT
-        - DOMAIN,www.jinglongyu.com,🚀 通透世界
-        - DOMAIN,tianjiyunke.com,DIRECT
-        - RULE-SET,Anti-AD,🆎 AdBlock
-        - RULE-SET,Apple,🍎 苹果服务
+        - RULE-SET,Anti-AD,☣️ AdBlock
+        - RULE-SET,Apple,🍎 Apple
         - RULE-SET,BiliBili,📺 Bilibili
         - RULE-SET,Microsoft,🧩 微软服务
         - RULE-SET,Youtube,🌌 Google
         - RULE-SET,Google,🌌 Google
         - RULE-SET,Telegram,📟 Telegram
         - RULE-SET,Twitter,🐦 Twitter
-        - RULE-SET,PikPak,🎥 PikPak
+        - RULE-SET,PikPak,🎆 PikPak
         - RULE-SET,OpenAI,🤖 OpenAI
         - RULE-SET,Game,🎮 Game
         - RULE-SET,ChinaIP,DIRECT
         - RULE-SET,GlobalMedia,📹 国际媒体
-        - RULE-SET,Global,🌏 国外网站
+        - RULE-SET,Global,🃏 国外网站
         - GEOIP,CN,DIRECT
-        - MATCH,🐟 漏网之鱼
-
-
+        - MATCH,🦈 漏网之鱼
