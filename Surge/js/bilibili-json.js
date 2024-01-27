@@ -12,20 +12,10 @@ if (method !== "GET") {
 }
 let body = JSON.parse($response.body);
 
-if (!body.data) {
-    // console.log(url);
-    // console.log(`body:${$response.body}`);
-    // $notification.post(notifyTitle, url, "data字段错误");
-} else {
+if (body.data) {
     if (url.includes("x/v2/splash")) {
         console.log('开屏页' + (url.includes("splash/show") ? 'show' : 'list'));
-        if (!body.data.show) {
-            // 有时候返回的数据没有show字段
-            console.log('数据无show字段');
-        } else {
-            delete body.data.show;
-            console.log('成功');
-        }
+        delete body.data.show;
     } else if (url.includes("resource/show/tab/v2")) {
         console.log('tab修改');
         // 顶部右上角
