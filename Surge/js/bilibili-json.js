@@ -2,23 +2,12 @@ const url = $request.url;
 const method = $request.method;
 const notifyTitle = "bilibili-json";
 //console.log(`b站json-2023.10.22`);
-if (!$response.body) {
-    // 有undefined的情况
-    // console.log(`$response.body为undefined:${url}`);
-    $done({});
-}
-if (method !== "GET") {
-    $notification.post(notifyTitle, "method错误:", method);
-}
 let body = JSON.parse($response.body);
 
 if (body.data) {
     if (url.includes("x/v2/splash")) {
-        console.log('url' + url);
         console.log('开屏页' + (url.includes("splash/show") ? 'show' : 'list'));
-        console.log('开屏页11111' + body.data);
-        body.data.show = null
-        console.log('开屏页22222' + body.data);
+        delete body.data.show
     } else if (url.includes("resource/show/tab/v2")) {
         console.log('tab修改');
         // 顶部右上角
