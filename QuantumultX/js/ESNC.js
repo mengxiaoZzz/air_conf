@@ -1,5 +1,8 @@
 function operator(proxies) {
     let proxies_All = proxies
+    proxies_All.forEach(e =>
+        e.name = e.name.replace("ˣ⁰˙⁵", " 0.5x").replace("ˣ¹˙⁵", " 1.5x").replace("ˣ⁵", " 5x").replace("ˣ¹⁰", " 10x")
+    )
 
     let sortProxies = []
 
