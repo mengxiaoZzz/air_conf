@@ -5,8 +5,8 @@ function operator(proxies) {
 
     let sortProxies = []
 
-    let proxies_HK = proxies_All.filter(e => e.name.includes('香港') || e.name.includes('Hong'))
-    proxies_All = proxies_All.filter(e => !e.name.includes('香港') && !e.name.includes('Hong'))
+    let proxies_HK = proxies_All.filter(e => e.name.includes('香港') || e.name.includes('HK'))
+    proxies_All = proxies_All.filter(e => !e.name.includes('香港') && !e.name.includes('HK'))
 
     let proxies_TW = proxies_All.filter(e => e.name.includes('台湾'))
     proxies_All = proxies_All.filter(e => !e.name.includes('台湾'))
