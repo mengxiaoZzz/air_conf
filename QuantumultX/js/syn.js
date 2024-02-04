@@ -1,6 +1,6 @@
 function operator(proxies) {
     let proxies_All = proxies
-    proxies_All.forEach(e => e.name = e.name.replace("🇹🇼", "🇨🇳").replace("📽️", "🎆"))
+    proxies_All.forEach(e => e.name = e.name.replace("🇹🇼", "🇨🇳").replace("📽️", "🃏"))
 
     let sortProxies = []
 
