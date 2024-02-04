@@ -42,7 +42,7 @@ function operator(proxies) {
 
     let extraProxies = []
     let extraServer = "traffic-in-05.811920.xyz"
-    extraProxies.push({name: '🇸🇬 TG 碳酸二甲酯 1x', type, server: extraServer, port: 54001, cipher, password, udp})
+    extraProxies.push({name: '🇸🇬 TG 碳酸二甲酯', type, server: extraServer, port: 54001, cipher, password, udp})
     extraProxies.push({name: '🇲🇴 TK 澳士蛋白酶 3x', type, server: extraServer, port: 54002, cipher, password, udp})
     extraProxies.push({name: '🇯🇵 TK 日库木糖醇 3x', type, server: extraServer, port: 54003, cipher, password, udp})
     extraProxies.push({name: '🇺🇸 TK 美罗培南素 3x', type, server: extraServer, port: 54005, cipher, password, udp})
