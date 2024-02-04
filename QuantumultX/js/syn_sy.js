@@ -1,7 +1,7 @@
 function operator(proxies) {
     let proxies_All = proxies
     proxies_All.forEach(e => {
-        e.name = e.name.replace("🇹🇼", "🇨🇳")
+        e.name = e.name.replace("🇹🇼", "🇨🇳").replace("📽️", "🎆")
         e.server = 'traffic-in-04.811920.xyz'
     })
 
