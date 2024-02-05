@@ -2,7 +2,7 @@ function operator(proxies) {
     let otherCharArray = ['Traffic', 'Expire']
     let proxies_All = proxies.filter(e => otherCharArray.filter(v => e.name.includes(v)).length === 0)
     proxies_All.forEach(e => {
-        e.name = e.name.replace("专线 深圳-", "")
+        e.name = e.name.replace("专线 ", "")
     })
 
     let sortProxies = []
