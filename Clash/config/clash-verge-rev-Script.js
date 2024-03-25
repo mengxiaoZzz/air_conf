@@ -3,6 +3,7 @@ function main(params) {
     params.proxies.forEach(e => e.name = e.name.replace("🇨🇳", "🇼🇸").replace("🇹🇼", "🇼🇸"))
     let proxyNames = params.proxies.map(e => e.name)
     let proxyNames_HK = proxyNames.filter(e => e.includes('🇭🇰'))
+    let proxyNames_MO = proxyNames.filter(e => e.includes('🇲🇴'))
     let proxyNames_TW = proxyNames.filter(e => e.includes('🇼🇸'))
     let proxyNames_SG = proxyNames.filter(e => e.includes('🇸🇬'))
     let proxyNames_JP = proxyNames.filter(e => e.includes('🇯🇵'))
