@@ -92,7 +92,7 @@ let obj = JSON.parse(body);
 
 let title = flags.get(obj['countryCode']) + ' ' + simplified(obj['country']);
 
-let subtitle = ISP_ValidCheck(obj['org']);
+let subtitle = ISP_ValidCheck(obj['org'] || obj.as);
 let ip = obj['query'];
 let description = '服务商:' + obj['isp'] + '\n' + '地区:' + obj['regionName'] + '\n' + 'IP:' + ip + '\n' + '时区:' + obj['timezone'];
 $done({title, subtitle, ip, description});
