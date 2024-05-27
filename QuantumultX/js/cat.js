@@ -25,6 +25,7 @@ if (url.includes("/api/Mushroom/analysis")) {
         urlList = urlList.filter(e => !e.def === '原视频')
         urlList.push(...rawVideo)
     }
+    body.data.url_list = urlList
 }
 body = JSON.stringify(body);
 $done({body});
