@@ -21,7 +21,7 @@ if (url.includes("/api/Mushroom/analysis")) {
     let urlList = body.data.url_list
     // 原视频
     let rawVideo = urlList.filter(e => e.def === '原视频')
-    if (rawVideo.size > 0) {
+    if (rawVideo.length > 0) {
         urlList = urlList.filter(e => e.def !== '原视频')
         urlList.push(...rawVideo)
     }
