@@ -17,5 +17,14 @@ if (url.includes("/api/Mushroom/user")) {
     body.residue_time = "9999-12-31 23:59"
     body.data.is_svip = 1
 }
+if (url.includes("/api/Mushroom/analysis")) {
+    let urlList = body.data.url_list
+    // 原视频
+    let rawVideo = urlList.filter(e => e.def === '原视频')
+    if (rawVideo.size > 0) {
+        urlList = urlList.filter(e => !e.def === '原视频')
+        urlList.push(...rawVideo)
+    }
+}
 body = JSON.stringify(body);
 $done({body});
