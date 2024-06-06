@@ -1,0 +1,8 @@
+#!name=去水印
+#!desc=去水印去除广告
+
+[Script]
+cat = type=http-response, pattern=^https?:\/\/ooo\.muzzz.cn, requires-body=1, script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/QuantumultX/js/cat.js
+
+[MITM]
+hostname = %APPEND% ooo.muzzz.cn
