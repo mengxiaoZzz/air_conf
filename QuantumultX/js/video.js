@@ -15,7 +15,10 @@ if (url.includes("/api/v1/?act=detail")) {
     let videoList = body.data.videos.reverse()
     // 原画
     let rawVideo = videoList.filter(e => e.level.includes('原画'))
-    videoList.unshift(...rawVideo)
+    if (rawVideo.length > 0) {
+        videoList = videoList.filter(e => !e.level.includes('原画'))
+        videoList.unshift(...rawVideo)
+    }
     body.data.videos = videoList
 }
 body = JSON.stringify(body);
