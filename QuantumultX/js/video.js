@@ -11,7 +11,7 @@ if (url.includes("/api/v1/?act=user")) {
     body.data.user.vip = true
     body.data.user.vip_deltime = "2030-12-31 24:59:59"
 }
-if (url.includes("/api/v1/?act=detail")) {
+if (url.includes("/api/v1/?act=detail") && body.data.videos != null) {
     let videoList = body.data.videos.reverse()
     // 原画
     let rawVideo = videoList.filter(e => e.level.includes('原画'))
