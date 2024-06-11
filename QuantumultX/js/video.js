@@ -13,12 +13,16 @@ if (url.includes("/api/v1/?act=user")) {
 }
 if (url.includes("/api/v1/?act=detail") && body.data.videos !== undefined) {
     let videoList = body.data.videos.reverse()
-    // 原画
-    let rawVideo = videoList.filter(e => e.level.includes('原画'))
-    if (rawVideo.length > 0) {
-        videoList = videoList.filter(e => !e.level.includes('原画'))
-        videoList.unshift(...rawVideo)
+    videoList.sort((a, b) => {
+        return getNum(b) - getNum(a)
+    });
+
+    function getNum(video) {
+        let start = video["level"].indexOf("(")
+        let end = video["level"].indexOf("MB)")
+        return video["level"].substring(start + 1, end)
     }
+
     body.data.videos = videoList
 }
 body = JSON.stringify(body);
