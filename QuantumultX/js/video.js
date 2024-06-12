@@ -18,9 +18,18 @@ if (url.includes("/api/v1/?act=detail") && body.data.videos !== undefined) {
     });
 
     function getNum(video) {
-        let start = video["level"].indexOf("(")
-        let end = video["level"].indexOf("MB)")
-        return video["level"].substring(start + 1, end)
+        let level = video.level
+        if (level.includes("KB")) {
+            let start = level.indexOf("(")
+            let end = level.indexOf("KB)")
+            return level.substring(start + 1, end)
+        } else if (level.includes("MB")) {
+            let start = level.indexOf("(")
+            let end = level.indexOf("MB)")
+            return level.substring(start + 1, end) * 1024
+        } else {
+            return 1024 * 1024
+        }
     }
 
     body.data.videos = videoList
