@@ -1,0 +1,9 @@
+#!name=霸王茶姬小程序签到
+#!desc=霸王茶姬小程序签到
+
+[Script]
+
+霸王茶姬小程序签到 = type=cron,cronexp=00 40 10 * * *,script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% qmwebapi.qmai.cn, webapi.qmai.cn, webapi2.qmai.cn
