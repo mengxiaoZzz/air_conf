@@ -216,8 +216,8 @@ function main(config) {
             ]
         },
         {
-            "name": "Twitter",
-            "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png",
+            "name": "X",
+            "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/X.png",
             "type": "select",
             "proxies": [
                 "通透世界",
@@ -326,7 +326,7 @@ function main(config) {
         },
         {
             "name": "ADGuard",
-            "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png",
+            "icon": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/pokemon/092.png",
             "type": "select",
             "proxies": [
                 "REJECT",
@@ -484,7 +484,7 @@ function main(config) {
             "behavior": "classical",
             "interval": 86400
         },
-        "Twitter": {
+        "X": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml",
             "format": "text",
             "path": "./rule-providers/Twitter.yaml",
@@ -559,7 +559,7 @@ function main(config) {
         "RULE-SET,YouTube,Google",
         "RULE-SET,Google,Google",
         "RULE-SET,Telegram,Telegram",
-        "RULE-SET,Twitter,Twitter",
+        "RULE-SET,X,X",
         "RULE-SET,BiliBili,Bilibili",
         "RULE-SET,Game,Game",
         "RULE-SET,Emby,Emby",
