@@ -1,36 +1,34 @@
-// Define the `main` function
-function main(params) {
-    params.proxies.forEach(e => e.name = e.name.replace("🇹🇼", "🇨🇳"))
-    let proxyNames = params.proxies.map(e => e.name)
+// 程序入口
+function main(config) {
+    config.proxies.forEach(e => e.name = e.name.replace("🇹🇼", "🇨🇳"))
+    let proxyNames = config.proxies.map(e => e.name)
     let proxyNames_HK = proxyNames.filter(e => e.includes('🇭🇰'))
+    let proxyNames_MO = proxyNames.filter(e => e.includes('🇲🇴'))
     let proxyNames_TW = proxyNames.filter(e => e.includes('🇨🇳'))
     let proxyNames_SG = proxyNames.filter(e => e.includes('🇸🇬'))
     let proxyNames_JP = proxyNames.filter(e => e.includes('🇯🇵'))
     let proxyNames_US = proxyNames.filter(e => e.includes('🇺🇸'))
 
-    params["mixed-port"] = 7893
-    params["geodata-mode"] = true
-    params["tcp-concurrent"] = false
-    params["allow-lan"] = true
-    params["bind-address"] = "*"
-    params["find-process-mode"] = "strict"
-    params["ipv6"] = false
-    params["mode"] = "rule"
-    params["log-level"] = "info"
-    params["external-controller"] = "0.0.0.0:9093"
-    params["global-client-fingerprint"] = "chrome"
-    params["profile"] = {
-        "store-selected": true,
-        "store-fake-ip": true
-    }
-    params["dns"] = {
+    // 覆盖通用配置
+    config["mixed-port"] = "7893";
+    config["tcp-concurrent"] = true;
+    config["allow-lan"] = true;
+    config["ipv6"] = false;
+    config["mode"] = "rule";
+    config["log-level"] = "info";
+    config["find-process-mode"] = "strict";
+    config["global-client-fingerprint"] = "chrome";
+
+    // 覆盖 dns 配置
+    config["dns"] = {
         "enable": true,
-        "ipv6": false,
+        "listen": "0.0.0.0:1053",
+        "ipv6": true,
         "enhanced-mode": "fake-ip",
-        "listen": "0.0.0.0:53",
         "fake-ip-range": "198.18.0.1/16",
-        "fake-ip-filter": [
+        "fake-ip-filter":[
             "*.lan",
+            "*.direct",
             "cable.auth.com",
             "*.msftconnecttest.com",
             "*.msftncsi.com",
@@ -44,6 +42,10 @@ function main(params) {
             "stun.*",
             "global.turn.twilio.com",
             "global.stun.twilio.com",
+            "app.yinxiang.com",
+            "injections.adguard.org",
+            "local.adguard.org",
+            "cable.auth.com",
             "localhost.*.qq.com",
             "localhost.*.weixin.qq.com",
             "*.logon.battlenet.com.cn",
@@ -83,6 +85,7 @@ function main(params) {
             "*.icitymobile.mobi",
             "*.pingan.com.cn",
             "*.cmbchina.com",
+            "*.10099.com.cn",
             "pool.ntp.org",
             "*.pool.ntp.org",
             "ntp.*.com",
@@ -96,16 +99,53 @@ function main(params) {
             "DC._msDCS.*.*",
             "GC._msDCS.*.*"
         ],
-        "nameserver": [
-            "https://doh.pub/dns-query",
-            "https://dns.alidns.com/dns-query"
-        ]
-    }
+        "default-nameserver": ["223.5.5.5", "119.29.29.29"],
+        "nameserver": ["223.5.5.5", "119.29.29.29"],
+        "nameserver-policy":{
+            "geosite:cn": "system",
+            "geosite:gfw,geolocation-!cn": ["quic://223.5.5.5", "quic://223.6.6.6", "https://1.12.12.12/dns-query", "https://120.53.53.53/dns-query"]
+        }
+    };
 
-    params["proxy-groups"] = [
+    // 覆盖 geodata 配置
+    config["geodata-mode"] = true;
+    config["geox-url"] = {
+        "geoip": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat",
+        "geosite": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
+        "mmdb": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+    };
+
+    // 覆盖 sniffer 配置
+    config["sniffer"] = {
+        "enable": true,
+        "parse-pure-ip": true,
+        "sniff": {
+            "TLS": {
+                "ports": ["443", "8443"]
+            },
+            "HTTP": {
+                "ports": ["80", "8080-8880"],
+                "override-destination": true
+            },
+            "QUIC": {
+                "ports": ["443", "8443"]
+            }
+        }
+    };
+
+    // 覆盖 tun 配置
+    config["tun"] = {
+        "enable": true,
+        "stack": "mixed",
+        "dns-hijack": ["any:53"],
+        "auto-route": true,
+        "auto-detect-interface": true
+    };
+
+    config["proxy-groups"] = [
         {
             "name": "通透世界",
-            "icon": "https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src/assets/image/logo.png",
+            "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/other/Surge.png",
             "type": "select",
             "proxies": proxyNames
         },
@@ -295,7 +335,7 @@ function main(params) {
         },
         {
             "name": "地爆天星",
-            "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color//Final.png",
+            "icon": "https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Proxy.png",
             "type": "select",
             "proxies": [
                 "通透世界",
@@ -363,7 +403,7 @@ function main(params) {
             "proxies": proxyNames
         }
     ]
-    params["rule-providers"] = {
+    config["rule-providers"] = {
         "Lan": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml",
             "format": "text",
@@ -509,7 +549,7 @@ function main(params) {
             "interval": 86400
         }
     }
-    params["rules"] = [
+    config["rules"] = [
         "RULE-SET,Lan,DIRECT",
         "RULE-SET,AD,ADGuard",
         "RULE-SET,Apple,Apple",
@@ -530,5 +570,5 @@ function main(params) {
         "MATCH,地爆天星"
     ]
 
-    return params;
+    return config;
 }
