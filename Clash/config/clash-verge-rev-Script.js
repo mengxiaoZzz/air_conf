@@ -550,6 +550,7 @@ function main(config) {
         }
     }
     config["rules"] = [
+        "DOMAIN-KEYWORD,tianjiyunke,DIRECT",
         "RULE-SET,Lan,DIRECT",
         "RULE-SET,AD,ADGuard",
         "RULE-SET,Apple,Apple",
