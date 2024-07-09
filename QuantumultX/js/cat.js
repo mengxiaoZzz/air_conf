@@ -19,13 +19,15 @@ if (url.includes("/api/Mushroom/user")) {
 }
 if (url.includes("/api/Mushroom/analysis")) {
     let urlList = body.data.url_list
-    // 原视频
-    let rawVideo = urlList.filter(e => e.def === '原视频')
-    if (rawVideo.length > 0) {
-        urlList = urlList.filter(e => e.def !== '原视频')
-        urlList.push(...rawVideo)
+    if (urlList !== undefined) {
+        // 原视频
+        let rawVideo = urlList.filter(e => e.def === '原视频')
+        if (rawVideo.length > 0) {
+            urlList = urlList.filter(e => e.def !== '原视频')
+            urlList.push(...rawVideo)
+        }
+        body.data.url_list = urlList
     }
-    body.data.url_list = urlList
 }
 body = JSON.stringify(body);
 $done({body});
