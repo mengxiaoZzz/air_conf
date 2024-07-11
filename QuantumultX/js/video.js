@@ -6,6 +6,8 @@ if (url.includes("/api/v1/?act=get_config")) {
     body.data.user.vip_deltime = "2030-12-31 23:59:59"
     body.data.ad = {"ad1": null}
     body.data.stick = true
+    body.data.downtime = 100
+    body.data.cp_time = 100
 }
 if (url.includes("/api/v1/?act=user")) {
     body.data.user.vip = true
