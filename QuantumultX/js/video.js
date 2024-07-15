@@ -1,18 +1,18 @@
 const url = $request.url;
 let body = JSON.parse($response.body);
-if (url.includes("/api/v1/?act=get_config")) {
-    body.data.vipvalue = true
-    body.data.user.vip = true
-    body.data.user.vip_deltime = "2030-12-31 23:59:59"
-    body.data.ad = {"ad1": null}
-    body.data.stick = true
-    body.data.downtime = 100
-    body.data.cp_time = 100
-}
-if (url.includes("/api/v1/?act=user")) {
-    body.data.user.vip = true
-    body.data.user.vip_deltime = "2030-12-31 23:59:59"
-}
+// if (url.includes("/api/v1/?act=get_config")) {
+//     body.data.vipvalue = true
+//     body.data.user.vip = true
+//     body.data.user.vip_deltime = "2030-12-31 23:59:59"
+//     body.data.ad = {"ad1": null}
+//     body.data.stick = true
+//     body.data.downtime = 100
+//     body.data.cp_time = 100
+// }
+// if (url.includes("/api/v1/?act=user")) {
+//     body.data.user.vip = true
+//     body.data.user.vip_deltime = "2030-12-31 23:59:59"
+// }
 if (url.includes("/api/v1/?act=detail") && body.data !== undefined && body.data.videos !== undefined) {
     let videoList = body.data.videos
     videoList.sort((a, b) => {
