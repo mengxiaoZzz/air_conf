@@ -1,14 +1,14 @@
 const url = $request.url;
 let body = JSON.parse($response.body);
-// if (url.includes("/api/v1/?act=get_config")) {
-//     body.data.vipvalue = true
-//     body.data.user.vip = true
-//     body.data.user.vip_deltime = "2030-12-31 23:59:59"
-//     body.data.ad = {"ad1": null}
-//     body.data.stick = true
-//     body.data.downtime = 100
-//     body.data.cp_time = 100
-// }
+if (url.includes("/api/v1/?act=get_config")) {
+    // body.data.vipvalue = true
+    // body.data.user.vip = true
+    // body.data.user.vip_deltime = "2030-12-31 23:59:59"
+    // body.data.ad = {"ad1": null}
+    // body.data.stick = true
+    body.data.notice.home = "始终坚持免费.有问题请联系客服 \\n 始终坚持免费.有问题请联系客服 \\n 始终坚持免费.有问题请联系客服 \\n 始终坚持免费.有问题请联系客服 \\n 始终坚持免费.有问题请联系客服 \\n"
+    body.data.notice.info = "始终坚持免费.有问题请联系客服 \\n 始终坚持免费.有问题请联系客服 \\n 始终坚持免费.有问题请联系客服 \\n 始终坚持免费.有问题请联系客服 \\n 始终坚持免费.有问题请联系客服 \\n"
+}
 // if (url.includes("/api/v1/?act=user")) {
 //     body.data.user.vip = true
 //     body.data.user.vip_deltime = "2030-12-31 23:59:59"
