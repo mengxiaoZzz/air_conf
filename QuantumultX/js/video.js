@@ -20,13 +20,13 @@ if (url.includes("/api/v1/?act=detail") && body.data !== undefined && body.data.
     function getNum(video) {
         let level = video.level
         if (level.includes("KB")) {
-            let start = level.indexOf("(") + 1
+            let start = level.indexOf("(")
             let end = level.indexOf("KB)")
-            return level.substring(start, end)
+            return level.substring(start + 1, end)
         } else if (level.includes("MB")) {
             let start = level.indexOf("(")
             let end = level.indexOf("MB)")
-            return level.substring(start, end) * 1024
+            return level.substring(start + 1, end) * 1024
         } else {
             return 1024 * 1024
         }
