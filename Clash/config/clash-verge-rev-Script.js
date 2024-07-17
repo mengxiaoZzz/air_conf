@@ -334,19 +334,19 @@ function main(config) {
             ]
         },
         {
-            "name": "地爆天星",
-            "icon": "https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Proxy.png",
+            "name": "映照诸天",
+            "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/other/Final3.png",
             "type": "select",
             "proxies": [
                 "通透世界",
+                "DIRECT",
                 "香港节点",
                 "美国节点",
                 "狮城节点",
                 "日本节点",
                 "台湾节点",
                 "自动选择",
-                "故障转移",
-                "DIRECT"
+                "故障转移"
             ]
         },
         {
@@ -568,7 +568,7 @@ function main(config) {
         "RULE-SET,Global,国外网站",
         "RULE-SET,ChinaIP,国内网站",
         "GEOIP,CN,国内网站",
-        "MATCH,地爆天星"
+        "MATCH,映照诸天"
     ]
 
     return config;
