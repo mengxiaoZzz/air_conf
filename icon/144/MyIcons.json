@@ -1,0 +1,58 @@
+{
+  "name": "MyIcons",
+  "description": "个人图标",
+  "icons": [
+    {
+      "name": "Surge_Inky.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Surge_Inky.png"
+    },
+    {
+      "name": "Surge.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Surge.png"
+    },
+    {
+      "name": "Texon.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Texon.png"
+    },
+    {
+      "name": "Linkeless.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Linkeless.png"
+    },
+    {
+      "name": "JAS.AI.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/JAS.AI.png"
+    },
+    {
+      "name": "Unicorn.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Unicorn.png"
+    },
+    {
+      "name": "To2.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/To2.png"
+    },
+    {
+      "name": "ESNC.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/ESNC.png"
+    },
+    {
+      "name": "CTC.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/CTC.png"
+    },
+    {
+      "name": "CitrusLab.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/CitrusLab.png"
+    },
+    {
+      "name": "ntRRR.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/ntRRR.png"
+    },
+    {
+      "name": "GuGu.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/GuGu.png"
+    },
+    {
+      "name": "PikPak.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/PikPak.png"
+    }
+  ]
+}
