@@ -47,6 +47,10 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/CitrusLab.png"
     },
     {
+      "name": "PikPak.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/PikPak.png"
+    },
+    {
       "name": "ntRRR.png",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/ntRRR.png"
     },
@@ -55,8 +59,8 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/GuGu.png"
     },
     {
-      "name": "PikPak.png",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/PikPak.png"
+      "name": "CCEmby.png",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/CCEmby.png"
     }
   ]
 }
