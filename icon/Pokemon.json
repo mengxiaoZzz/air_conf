@@ -1,0 +1,14 @@
+{
+  "name": "PokemonIcons",
+  "description": "宝可梦图标",
+  "icons": [
+    {
+      "name": "密勒顿",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1008.png"
+    },
+    {
+      "name": "故勒顿",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1007.png"
+    }
+  ]
+}
