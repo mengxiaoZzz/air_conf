@@ -59,6 +59,10 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Apple1.png"
     },
     {
+      "name": "BiliBili",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/BiliBili.png"
+    },
+    {
       "name": "Telegram",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Telegram.png"
     },
@@ -67,8 +71,16 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Telegram1.png"
     },
     {
+      "name": "TikTok",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/TikTok.png"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/OpenAI.png"
+    },
+    {
       "name": "PikPak",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/PikPak.png"
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/PikPak.png"
     },
     {
       "name": "Instagram",
