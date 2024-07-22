@@ -51,6 +51,22 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/CitrusLab.png"
     },
     {
+      "name": "Apple",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Apple.png"
+    },
+    {
+      "name": "Apple1",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Apple1.png"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Telegram.png"
+    },
+    {
+      "name": "Telegram1",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Telegram1.png"
+    },
+    {
       "name": "PikPak",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/PikPak.png"
     },
@@ -61,6 +77,10 @@
     {
       "name": "Instagram1",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Instagram1.png"
+    },
+    {
+      "name": "Instagram2",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Instagram2.png"
     },
     {
       "name": "X/Twitter",
