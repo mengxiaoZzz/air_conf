@@ -3,12 +3,20 @@
   "description": "宝可梦图标",
   "icons": [
     {
-      "name": "密勒顿",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1008.png"
+      "name": "超级喷火龙Ｘ",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/004.png"
     },
     {
-      "name": "故勒顿",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1007.png"
+      "name": "烈焰马",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/009.png"
+    },
+    {
+      "name": "刺甲贝",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/013.png"
+    },
+    {
+      "name": "达克莱伊",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/100.png"
     }
   ]
 }
