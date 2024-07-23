@@ -135,64 +135,400 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/032.png"
     },
     {
-      "name": "033闪电鸟.png",
+      "name": "闪电鸟",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/033.png"
     },
     {
-      "name": "034闪电鸟 伽勒尔的样子.png",
+      "name": "闪电鸟 伽勒尔的样子",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/034.png"
     },
     {
-      "name": "035火焰鸟.png",
+      "name": "火焰鸟",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/035.png"
     },
     {
-      "name": "036火焰鸟 伽勒尔的样子.png",
+      "name": "火焰鸟 伽勒尔的样子",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/036.png"
     },
     {
-      "name": "037快龙.png",
+      "name": "快龙",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/037.png"
     },
     {
-      "name": "038超梦.png",
+      "name": "超梦",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/038.png"
     },
     {
-      "name": "039超级超梦X.png",
+      "name": "超级超梦X",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/039.png"
     },
     {
-      "name": "040超级超梦Y.png",
+      "name": "超级超梦Y",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/040.png"
     },
     {
-      "name": "041梦幻.png",
+      "name": "梦幻",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/041.png"
     },
     {
-      "name": "042太阳伊布.png",
+      "name": "太阳伊布",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/042.png"
     },
     {
-      "name": "043月亮伊布.png",
+      "name": "月亮伊布",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/043.png"
     },
     {
-      "name": "044黑暗鸦.png",
+      "name": "黑暗鸦",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/044.png"
     },
     {
-      "name": "045呆呆王.png",
+      "name": "呆呆王",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/045.png"
     },
     {
-      "name": "046呆呆王 伽勒尔的样子.png",
+      "name": "呆呆王 伽勒尔的样子",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/046.png"
+    },
+    {
+      "name": "超级大钢蛇",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/047.png"
+    },
+    {
+      "name": "超级巨钳螳螂",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/048.png"
+    },
+    {
+      "name": "多边兽2型",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/049.png"
+    },
+    {
+      "name": "雷公",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/050.png"
+    },
+    {
+      "name": "炎帝",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/051.png"
+    },
+    {
+      "name": "水君",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/052.png"
+    },
+    {
+      "name": "班基拉斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/053.png"
+    },
+    {
+      "name": "超级班基拉斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/054.png"
+    },
+    {
+      "name": "洛奇亚",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/055.png"
+    },
+    {
+      "name": "凤王",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/056.png"
+    },
+    {
+      "name": "时拉比",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/057.png"
+    },
+    {
+      "name": "狩猎凤蝶",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/058.png"
+    },
+    {
+      "name": "波士可多拉",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/059.png"
+    },
+    {
+      "name": "超级波士可多拉",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/060.png"
+    },
+    {
+      "name": "超级巨牙鲨",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/061.png"
+    },
+    {
+      "name": "吼鲸王",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/062.png"
+    },
+    {
+      "name": "月石",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/063.png"
+    },
+    {
+      "name": "太阳岩",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/064.png"
+    },
+    {
+      "name": "太古盔甲",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/065.png"
+    },
+    {
+      "name": "诅咒娃娃",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/066.png"
+    },
+    {
+      "name": "超级诅咒娃娃",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/067.png"
+    },
+    {
+      "name": "阿勃梭鲁",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/068.png"
+    },
+    {
+      "name": "超级阿勃梭鲁",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/069.png"
+    },
+    {
+      "name": "冰鬼护",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/070.png"
+    },
+    {
+      "name": "超级冰鬼护",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/071.png"
+    },
+    {
+      "name": "暴飞龙",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/072.png"
+    },
+    {
+      "name": "超级暴飞龙",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/073.png"
+    },
+    {
+      "name": "雷吉洛克",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/074.png"
+    },
+    {
+      "name": "雷吉艾斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/075.png"
+    },
+    {
+      "name": "雷吉斯奇鲁",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/076.png"
+    },
+    {
+      "name": "拉帝亚斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/077.png"
+    },
+    {
+      "name": "超级拉帝亚斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/078.png"
+    },
+    {
+      "name": "拉帝欧斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/079.png"
+    },
+    {
+      "name": "超级拉帝欧斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/080.png"
+    },
+    {
+      "name": "盖欧卡",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/081.png"
+    },
+    {
+      "name": "原始盖欧卡",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/082.png"
+    },
+    {
+      "name": "固拉多",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/083.png"
+    },
+    {
+      "name": "原始固拉多",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/084.png"
+    },
+    {
+      "name": "烈空坐",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/085.png"
+    },
+    {
+      "name": "超级烈空坐",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/086.png"
+    },
+    {
+      "name": "帝王拿波",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/087.png"
+    },
+    {
+      "name": "烈咬陆鲨",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/088.png"
+    },
+    {
+      "name": "超级烈咬陆鲨",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/089.png"
+    },
+    {
+      "name": "路卡利欧",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/090.png"
+    },
+    {
+      "name": "超级路卡利欧",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/091.png"
+    },
+    {
+      "name": "多边兽乙型",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/092.png"
+    },
+    {
+      "name": "帝牙卢卡",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/093.png"
+    },
+    {
+      "name": "帝牙卢卡 起源形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/094.png"
+    },
+    {
+      "name": "帕路奇亚",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/095.png"
+    },
+    {
+      "name": "帕路奇亚 起源形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/096.png"
+    },
+    {
+      "name": "骑拉帝纳别种形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/097.png"
+    },
+    {
+      "name": "骑拉帝纳起源形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/098.png"
+    },
+    {
+      "name": "克雷色利亚",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/099.png"
     },
     {
       "name": "达克莱伊",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/100.png"
+    },
+    {
+      "name": "阿尔宙斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/101.png"
+    },
+    {
+      "name": "水晶灯火灵",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/102.png"
+    },
+    {
+      "name": "几何雪花",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/103.png"
+    },
+    {
+      "name": "赤面龙",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/104.png"
+    },
+    {
+      "name": "龙卷云化身形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/105.png"
+    },
+    {
+      "name": "龙卷云灵兽形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/106.png"
+    },
+    {
+      "name": "雷电云化身形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/107.png"
+    },
+    {
+      "name": "雷电云灵兽形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/108.png"
+    },
+    {
+      "name": "莱希拉姆",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/109.png"
+    },
+    {
+      "name": "捷克罗姆",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/110.png"
+    },
+    {
+      "name": "土地云化身形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/111.png"
+    },
+    {
+      "name": "土地云灵兽形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/112.png"
+    },
+    {
+      "name": "酋雷姆 焰白酋雷姆",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/113.png"
+    },
+    {
+      "name": "酋雷姆 暗黑酋雷姆",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/114.png"
+    },
+    {
+      "name": "哲尔尼亚斯",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/115.png"
+    },
+    {
+      "name": "伊裴尔塔尔",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/116.png"
+    },
+    {
+      "name": "基格尔德 50%形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/117.png"
+    },
+    {
+      "name": "基格尔德完全体形态",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/118.png"
+    },
+    {
+      "name": "蒂安希",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/119.png"
+    },
+    {
+      "name": "超级蒂安希",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/120.png"
+    },
+    {
+      "name": "胡帕 解放胡帕",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/121.png"
+    },
+    {
+      "name": "波尔凯尼恩",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/122.png"
+    },
+    {
+      "name": "卡璞 • 蝶蝶",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/123.png"
+    },
+    {
+      "name": "卡璞•鳍鳍",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/124.png"
+    },
+    {
+      "name": "露奈雅拉",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/125.png"
+    },
+    {
+      "name": "恶食大王",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/126.png"
+    },
+    {
+      "name": "苍响 剑之王",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/127.png"
+    },
+    {
+      "name": "藏玛然特 盾之王",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/128.png"
+    },
+    {
+      "name": "无极汰那",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/129.png"
+    },
+    {
+      "name": "蕾冠王 骑白马的样子",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/130.png"
+    },
+    {
+      "name": "蕾冠王 骑黑马的样子",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/131.png"
     }
   ]
 }
