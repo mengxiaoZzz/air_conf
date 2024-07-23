@@ -3,8 +3,32 @@
   "description": "宝可梦图标",
   "icons": [
     {
+      "name": "皮卡丘",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/001.png"
+    },
+    {
+      "name": "皮卡丘 超极巨化",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/002.png"
+    },
+    {
+      "name": "雷丘",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/003.png"
+    },
+    {
       "name": "超级喷火龙Ｘ",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/004.png"
+    },
+    {
+      "name": "超级喷火龙Ｙ",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/005.png"
+    },
+    {
+      "name": "喷火龙 超极巨化",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/006.png"
+    },
+    {
+      "name": "风速狗",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/007.png"
     },
     {
       "name": "超级胡地",
@@ -13,6 +37,18 @@
     {
       "name": "烈焰马",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/009.png"
+    },
+    {
+      "name": "超级呆壳兽",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/010.png"
+    },
+    {
+      "name": "呆壳兽 伽勒尔的样子",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/011.png"
+    },
+    {
+      "name": "臭臭泥 阿罗拉的样子",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/012.png"
     },
     {
       "name": "刺甲贝",
