@@ -3,10 +3,6 @@
   "description": "宝可梦图标",
   "icons": [
     {
-      "name": "达克莱伊",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/0001.png"
-    },
-    {
       "name": "皮卡丘",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/001.png"
     },
@@ -533,6 +529,26 @@
     {
       "name": "蕾冠王 骑黑马的样子",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/131.png"
+    },
+    {
+      "name": "1001",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1001.png"
+    },
+    {
+      "name": "1002",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1002.png"
+    },
+    {
+      "name": "1003",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1003.png"
+    },
+    {
+      "name": "1004",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1004.png"
+    },
+    {
+      "name": "1005",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/1005.png"
     }
   ]
 }
