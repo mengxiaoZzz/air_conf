@@ -18,13 +18,19 @@ if (url.includes("/api/Mushroom/user")) {
     body.data.is_svip = 1
 }
 if (url.includes("/api/Mushroom/analysis")) {
+    console.log('body.data')
+    console.log(body.data)
     let urlList = body.data.url_list
     // 原视频
     let rawVideo = urlList.filter(e => e.def === '原视频')
+    console.log('rawVideo')
+    console.log(rawVideo)
     if (rawVideo.length > 0) {
         urlList = urlList.filter(e => e.def !== '原视频')
         urlList.push(...rawVideo)
     }
+    console.log('urlList')
+    console.log(urlList)
     body.data.url_list = urlList
     body.data.url = urlList[urlList.size - 1].url
 }
