@@ -27,6 +27,7 @@ if (url.includes("/api/Mushroom/analysis")) {
             urlList.push(...rawVideo)
         }
         body.data.url_list = urlList
+        body.data.url = urlList[0].url
     }
 }
 body = JSON.stringify(body);
