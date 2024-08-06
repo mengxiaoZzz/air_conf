@@ -18,6 +18,10 @@ if (url.includes("/api/Mushroom/user")) {
     body.residue_time = "9999-12-31 23:59"
     body.data.is_svip = 1
 }
+if (url.includes("/api/Mushroom/urlresult")) {
+    body.data.vip = 1
+    body.data.ad_video = ""
+}
 if (url.includes("/api/Mushroom/analysis")) {
     let urlList = body.data.url_list
     // // 原视频
@@ -42,6 +46,10 @@ if (url.includes("/api/wechat_v2/index")) {
     body.data.index.vip_ad_time = "2099-12-31 23:59"
     body.data.index.is_pay = 1
     body.data.index.vip_num = 1
+}
+if (url.includes("/api/wechat_v2/urlresult")) {
+    body.data.vip = 1
+    body.data.ad_video = ""
 }
 if (url.includes("/api/wechat_v2/user")) {
     body.name = "爱解析水印Pro"
