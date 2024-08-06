@@ -19,12 +19,17 @@ if (url.includes("/api/Mushroom/user")) {
 }
 if (url.includes("/api/Mushroom/analysis")) {
     let urlList = body.data.url_list
-    // 原视频
-    let rawVideo = urlList.filter(e => e.def === '原视频')
-    if (rawVideo.length > 0) {
-        urlList = urlList.filter(e => e.def !== '原视频')
-        urlList.push(...rawVideo)
-    }
+    // // 原视频
+    // let rawVideo = urlList.filter(e => e.def === '原视频')
+    // if (rawVideo.length > 0) {
+    //     urlList = urlList.filter(e => e.def !== '原视频')
+    //     urlList.push(...rawVideo)
+    // }
+
+    urlList.sort((a, b) => {
+        return a.size - b.size
+    });
+
     body.data.url_list = urlList
     body.data.url = urlList[urlList.length - 1].url
 }
