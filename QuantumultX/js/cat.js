@@ -20,11 +20,14 @@ if (url.includes("/api/Mushroom/user")) {
 if (url.includes("/api/Mushroom/analysis")) {
     if (body.data.url_list !== undefined) {
         let urlList = body.data.url_list
+        // urlList.sort((a, b) => {
+        //     return b.size - a.size
+        // });
         urlList.sort((a, b) => {
-            return b.size - a.size
+            return a.size - b.size
         });
         body.data.url_list = urlList
-        body.data.url = urlList[0].url
+        //body.data.url = urlList[0].url
     }
 }
 body = JSON.stringify(body);
