@@ -24,6 +24,7 @@ if (url.includes("/api/Mushroom/analysis")) {
             return b.size - a.size
         });
         body.data.url_list = urlList
+        body.data.url = urlList[0].url
     }
 }
 body = JSON.stringify(body);
