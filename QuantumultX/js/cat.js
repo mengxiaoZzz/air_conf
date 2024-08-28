@@ -23,8 +23,8 @@ if (url.includes("/api/Mushroom/urlresult")) {
     body.data.ad_video = ""
 }
 if (url.includes("/api/Mushroom/analysis")) {
-    let urlList = body.data.url_list
-    if (urlList != null) {
+    if (body.data != null && body.data.url_list != null) {
+        let urlList = body.data.url_list
         urlList.sort((a, b) => {
             return a.size - b.size
         });
