@@ -176,7 +176,7 @@ function main(config) {
         },
         {
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Youtube.png",
-            "name": "国际媒体",
+            "name": "Streaming",
             "type": "select",
             "proxies": ["通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
             ...groupBaseOption
@@ -262,155 +262,117 @@ function main(config) {
     config["rule-providers"] = {
         "Lan": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml",
-            "format": "text",
             "path": "./rule-providers/Lan.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Download": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml",
-            "format": "text",
             "path": "./rule-providers/Download.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "AD": {
             "url": "https://anti-ad.net/clash.yaml",
-            "format": "text",
             "path": "./rule-providers/AD.list",
-            "type": "http",
             "behavior": "domain",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Apple": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml",
-            "format": "text",
             "path": "./rule-providers/Apple.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "BiliBili": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml",
-            "format": "text",
             "path": "./rule-providers/BiliBili.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Github": {
             "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
-            "format": "text",
             "path": "./rule-providers/Github.list",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Microsoft": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml",
-            "format": "text",
             "path": "./rule-providers/Microsoft.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "YouTube": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml",
-            "format": "text",
             "path": "./rule-providers/YouTube.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Google": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml",
-            "format": "text",
             "path": "./rule-providers/Google.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Telegram": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
-            "format": "text",
             "path": "./rule-providers/Telegram.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Instagram": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Instagram.yaml",
-            "format": "text",
             "path": "./rule-providers/Instagram.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Twitter": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml",
-            "format": "text",
             "path": "./rule-providers/Twitter.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Game": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml",
-            "format": "text",
             "path": "./rule-providers/Game.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "OpenAI": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
-            "format": "text",
             "path": "./rule-providers/OpenAI.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "PikPak": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PikPak/PikPak.yaml",
-            "format": "text",
             "path": "./rule-providers/PikPak.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Emby": {
             "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
-            "format": "text",
             "path": "./rule-providers/Emby.list",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "ChinaIP": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml",
-            "format": "text",
             "path": "./rule-providers/China.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "GlobalMedia": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml",
-            "format": "text",
             "path": "./rule-providers/GlobalMedia.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         },
         "Global": {
             "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml",
-            "format": "text",
             "path": "./rule-providers/Global.yaml",
-            "type": "http",
             "behavior": "classical",
-            "interval": 86400
+            ...ruleProviderCommon
         }
     }
     config["rules"] = [
@@ -429,7 +391,7 @@ function main(config) {
         "RULE-SET,BiliBili,Bilibili",
         "RULE-SET,Game,Game",
         "RULE-SET,Emby,Emby",
-        "RULE-SET,GlobalMedia,通透世界",
+        "RULE-SET,GlobalMedia,Streaming",
         "RULE-SET,Global,通透世界",
         "RULE-SET,ChinaIP,DIRECT",
         "GEOIP,CN,DIRECT",
