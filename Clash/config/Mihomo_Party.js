@@ -1,3 +1,21 @@
+// #参考地址【https://github.com/Repcz/Tool/blob/X/Clash/Meta/Override.js】
+
+
+// 规则集通用配置
+const ruleProviderCommon = {
+    "type": "http",
+    "format": "text",
+    "interval": 86400
+};
+
+// 策略组通用配置
+const groupBaseOption = {
+    "interval": 300,
+    "url": "http://1.1.1.1/generate_204",
+    "max-failed-times": 3,
+};
+
+
 // 程序入口
 function main(config) {
     config.proxies.forEach(e => e.name = e.name.replace("🇹🇼", "🇨🇳"))
@@ -10,29 +28,28 @@ function main(config) {
     let proxyNames_US = proxyNames.filter(e => e.includes('🇺🇸'))
 
     // 覆盖通用配置
-    config["mixed-port"] = "7893";
+    config["mixed-port"] = "7890";
     config["tcp-concurrent"] = true;
     config["allow-lan"] = true;
     config["ipv6"] = false;
-    config["mode"] = "rule";
     config["log-level"] = "info";
     config["find-process-mode"] = "strict";
     config["global-client-fingerprint"] = "chrome";
+    config["external-controller"] = "127.0.0.1:9090";
+    config["external-ui"] = "ui";
+    config["external-ui-url"] = "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip";
 
     // 覆盖 dns 配置
     config["dns"] = {
         "enable": true,
         "listen": "0.0.0.0:1053",
-        "ipv6": true,
+        "ipv6": false,
         "enhanced-mode": "fake-ip",
         "fake-ip-range": "198.18.0.1/16",
-        "fake-ip-filter":[
-            "*.lan",
-            "*.direct"
-        ],
-        "default-nameserver": ["223.5.5.5", "119.29.29.29"],
+        "fake-ip-filter": ["*", "+.lan", "+.local", "+.direct", "+.msftconnecttest.com", "+.msftncsi.com"],
+        "default-nameserver": ["223.5.5.5", "119.29.29.29", "system"],
         "nameserver": ["223.5.5.5", "119.29.29.29"],
-        "nameserver-policy":{
+        "nameserver-policy": {
             "geosite:cn": "system",
             "geosite:gfw,geolocation-!cn": ["quic://223.5.5.5", "quic://223.6.6.6", "https://1.12.12.12/dns-query", "https://120.53.53.53/dns-query"]
         }
@@ -43,7 +60,8 @@ function main(config) {
     config["geox-url"] = {
         "geoip": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat",
         "geosite": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-        "mmdb": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+        "mmdb": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb",
+        "asn": "https://mirror.ghproxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
     };
 
     // 覆盖 sniffer 配置
@@ -64,263 +82,181 @@ function main(config) {
         }
     };
 
+    // 覆盖 tun 配置
+    config["tun"] = {
+        "enable": true,
+        "stack": "mixed",
+        "dns-hijack": ["any:53"]
+    };
+
     config["proxy-groups"] = [
         {
-            "name": "通透世界",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Surge_Inky.png",
+            "name": "通透世界",
             "type": "select",
-            "proxies": proxyNames
+            "proxies": proxyNames,
+            ...groupBaseOption
         },
         {
-            "name": "Apple",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Apple1.png",
+            "name": "Apple",
             "type": "select",
-            "proxies": [
-                "DIRECT",
-                "通透世界"
-            ]
+            "proxies": ["DIRECT", "通透世界"],
+            ...groupBaseOption
         },
         {
-            "name": "Bilibili",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Bilibili1.png",
+            "name": "Bilibili",
             "type": "select",
-            "proxies": [
-                "DIRECT",
-                "通透世界",
-                "香港节点",
-                "台湾节点"
-            ]
+            "proxies": ["DIRECT", "通透世界", "香港节点", "台湾节点"],
+            ...groupBaseOption
         },
         {
-            "name": "Microsoft",
             "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png",
+            "name": "Microsoft",
             "type": "select",
-            "proxies": [
-                "DIRECT",
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["DIRECT", "通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "Google",
             "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png",
+            "name": "Google",
             "type": "select",
-            "proxies": [
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "Telegram",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Telegram.png",
+            "name": "Telegram",
             "type": "select",
-            "proxies": [
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "Instagram",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Instagram1.png",
+            "name": "Instagram",
             "type": "select",
-            "proxies": [
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "Twitter",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Twitter.png",
+            "name": "Twitter",
             "type": "select",
-            "proxies": [
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "Pikpak",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/PikPak.png",
+            "name": "Pikpak",
             "type": "select",
-            "proxies": [
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "OpenAI",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/OpenAI.png",
+            "name": "OpenAI",
             "type": "select",
-            "proxies": [
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "Game",
             "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png",
+            "name": "Game",
             "type": "select",
-            "proxies": [
-                "DIRECT",
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["DIRECT", "通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "Emby",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/044.png",
+            "name": "Emby",
             "type": "select",
-            "proxies": [
-                "DIRECT",
-                "通透世界"
-            ]
+            "proxies": ["DIRECT", "通透世界"],
+            ...groupBaseOption
         },
         {
-            "name": "国际媒体",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Youtube.png",
+            "name": "国际媒体",
             "type": "select",
-            "proxies": [
-                "通透世界",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["通透世界", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "ADGuard",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/Pokemon/034.png",
+            "name": "ADGuard",
             "type": "select",
-            "proxies": [
-                "REJECT",
-                "DIRECT"
-            ]
+            "proxies": ["REJECT", "DIRECT"],
+            ...groupBaseOption
         },
         {
-            "name": "映照诸天",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Final.png",
+            "name": "映照诸天",
             "type": "select",
-            "proxies": [
-                "通透世界",
-                "DIRECT",
-                "香港节点",
-                "美国节点",
-                "狮城节点",
-                "日本节点",
-                "台湾节点",
-                "自动选择",
-                "故障转移"
-            ]
+            "proxies": ["通透世界", "DIRECT", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "自动选择", "故障转移"],
+            ...groupBaseOption
         },
         {
-            "name": "香港节点",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/world/HK.png",
+            "name": "香港节点",
             "type": "select",
             "url": "http://1.1.1.1/generate_204",
-            "proxies": [...proxyNames_HK, "DIRECT"]
+            "proxies": [...proxyNames_HK, "DIRECT"],
+            ...groupBaseOption
         },
         {
-            "name": "台湾节点",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/world/TW.png",
+            "name": "台湾节点",
             "type": "select",
             "url": "http://1.1.1.1/generate_204",
-            "proxies": [...proxyNames_TW, "DIRECT"]
+            "proxies": [...proxyNames_TW, "DIRECT"],
+            ...groupBaseOption
         },
         {
-            "name": "狮城节点",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/world/SG.png",
+            "name": "狮城节点",
             "type": "select",
             "url": "http://1.1.1.1/generate_204",
-            "proxies": [...proxyNames_SG, "DIRECT"]
+            "proxies": [...proxyNames_SG, "DIRECT"],
+            ...groupBaseOption
         },
         {
-            "name": "日本节点",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/world/JP.png",
+            "name": "日本节点",
             "type": "select",
             "url": "http://1.1.1.1/generate_204",
-            "proxies": [...proxyNames_JP, "DIRECT"]
+            "proxies": [...proxyNames_JP, "DIRECT"],
+            ...groupBaseOption
         },
         {
-            "name": "美国节点",
             "icon": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/world/US.png",
+            "name": "美国节点",
             "type": "select",
             "url": "http://1.1.1.1/generate_204",
-            "proxies": [...proxyNames_US, "DIRECT"]
+            "proxies": [...proxyNames_US, "DIRECT"],
+            ...groupBaseOption
         },
         {
-            "name": "自动选择",
             "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png",
+            "name": "自动选择",
             "type": "url-test",
             "lazy": true,
-            "url": "http://1.1.1.1/generate_204",
-            "interval": 900,
-            "proxies": proxyNames
+            "proxies": proxyNames,
+            ...groupBaseOption
         },
         {
-            "name": "故障转移",
             "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hijacking.png",
+            "name": "故障转移",
             "type": "fallback",
             "lazy": true,
-            "url": "http://1.1.1.1/generate_204",
-            "interval": 900,
-            "proxies": proxyNames
+            "proxies": proxyNames,
+            ...groupBaseOption
         },
         {
             icon: "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Final.png",
-            "include-all": true,
-            "proxies": proxyNames,
             name: "GLOBAL",
+            "include-all": true,
             type: "select",
+            ...groupBaseOption
         }
     ]
     config["rule-providers"] = {
