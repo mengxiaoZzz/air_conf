@@ -51,20 +51,12 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/To2.png"
     },
     {
-      "name": "SYN",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/SYN.png"
-    },
-    {
       "name": "ESNC",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/ESNC.png"
     },
     {
       "name": "ESNC",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/ESNC1.png"
-    },
-    {
-      "name": "CTC",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/CTC.png"
     },
     {
       "name": "Apple",
@@ -123,12 +115,8 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Twitter.png"
     },
     {
-      "name": "Magpie1",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Magpie1.png"
-    },
-    {
       "name": "Magpie2",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Magpie2.png"
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Magpie.png"
     },
     {
       "name": "Peach",
