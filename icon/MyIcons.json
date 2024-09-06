@@ -16,7 +16,11 @@
     },
     {
       "name": "Surge_Inky",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Surge_Inky.png"
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Surge_Inky.png"
+    },
+    {
+      "name": "Surge_Sapphire",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Surge_Sapphire.png"
     },
     {
       "name": "Surge",
