@@ -3,12 +3,16 @@
   "description": "个人图标",
   "icons": [
     {
-      "name": "Final",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Final.png"
-    },
-    {
       "name": "Surge_Classic",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Surge_Classic.png"
+    },
+    {
+      "name": "Surge3",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Surge3.png"
+    },
+    {
+      "name": "Surge5",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Surge5.png"
     },
     {
       "name": "Surge_Inky",
@@ -16,7 +20,11 @@
     },
     {
       "name": "Surge",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Surge.png"
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Surge.png"
+    },
+    {
+      "name": "Final",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Final.png"
     },
     {
       "name": "Texon",
