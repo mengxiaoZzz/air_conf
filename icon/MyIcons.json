@@ -79,8 +79,12 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Apple.png"
     },
     {
-      "name": "Apple1",
+      "name": "Apple",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Apple1.png"
+    },
+    {
+      "name": "Apple",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Apple2.png"
     },
     {
       "name": "BiliBili",
@@ -89,6 +93,10 @@
     {
       "name": "BiliBili",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Bilibili1.png"
+    },
+    {
+      "name": "BiliBili",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/Bilibili2.png"
     },
     {
       "name": "Telegram",
@@ -101,6 +109,10 @@
     {
       "name": "TikTok",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/TikTok.png"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/app/TikTok1.png"
     },
     {
       "name": "OpenAI",
