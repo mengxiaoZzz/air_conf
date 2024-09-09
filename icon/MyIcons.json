@@ -131,30 +131,6 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Twitter.png"
     },
     {
-      "name": "Magpie",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Magpie.png"
-    },
-    {
-      "name": "Peach",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Peach.png"
-    },
-    {
-      "name": "ntRRR",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/ntRRR.png"
-    },
-    {
-      "name": "ntRRR",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/ntRRR1.png"
-    },
-    {
-      "name": "GuGu",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/GuGu.png"
-    },
-    {
-      "name": "MooGuu",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MooGuu.png"
-    },
-    {
       "name": "Lyrebird",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Lyrebird.png"
     },
@@ -163,12 +139,32 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Lyrebird2.png"
     },
     {
+      "name": "Magpie",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Magpie.png"
+    },
+    {
+      "name": "Peach",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Peach.png"
+    },
+    {
+      "name": "GuGu",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/GuGu.png"
+    },
+    {
+      "name": "ntRRR",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/NTRRR.png"
+    },
+    {
+      "name": "MooGuu",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MooGuu.png"
+    },
+    {
       "name": "CCEmby",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/CCEmby.png"
     },
     {
       "name": "paper",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/paper.png"
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Paper.png"
     },
     {
       "name": "LaoDa",
