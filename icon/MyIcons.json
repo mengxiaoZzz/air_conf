@@ -227,6 +227,10 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MooGuu.png"
     },
     {
+      "name": "MooGuu",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MooGuu_HardDisk.png"
+    },
+    {
       "name": "JSQ",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/JSQ.png"
     },
@@ -245,6 +249,10 @@
     {
       "name": "Steven",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Steven2.png"
+    },
+    {
+      "name": "SaturDay",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.Lite.png"
     },
     {
       "name": "WorldLine",
