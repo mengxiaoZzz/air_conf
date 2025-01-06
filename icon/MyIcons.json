@@ -179,6 +179,14 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Magpie.png"
     },
     {
+      "name": "Aurora",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Aurora.png"
+    },
+    {
+      "name": "DaShu",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/DaShu.png"
+    },
+    {
       "name": "Misty",
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Misty.png"
     },
@@ -264,7 +272,7 @@
     },
     {
       "name": "SaturDay",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.Lite.png"
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.png"
     },
     {
       "name": "WorldLine",
