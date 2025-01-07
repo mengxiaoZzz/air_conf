@@ -271,8 +271,12 @@
       "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/ASK.png"
     },
     {
-      "name": "SaturDay",
-      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.png"
+      "name": "SaturDay.Premium",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.Premium.png"
+    },
+    {
+      "name": "SaturDay.Lite",
+      "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.Lite.png"
     },
     {
       "name": "WorldLine",
