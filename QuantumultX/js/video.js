@@ -18,7 +18,7 @@ if (url.includes("/api/v1/?act=detail") && body.data !== undefined && body.data.
     });
 
     function getNum(video) {
-        let level = video.level
+        let level = video.level.replace("Kb", "KB").replace("Mb", "MB")
         if (level.includes("KB")) {
             let start = level.indexOf("(")
             let end = level.indexOf("KB)")
