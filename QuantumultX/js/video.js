@@ -12,7 +12,7 @@ if (url.includes("/api/v1/?act=get_config")) {
 //     body.data.user.vip_deltime = "2030-12-31 23:59:59"
 // }
 if (url.includes("/api/v1/?act=detail") && body.data !== undefined && body.data.videos !== undefined) {
-    let videoList = body.data.videos
+    let videoList = body.data.video_list
     videoList.sort((a, b) => {
         return getNum(b) - getNum(a)
     });
