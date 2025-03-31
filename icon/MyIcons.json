@@ -216,7 +216,7 @@
         },
         {
             "name": "yomo",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/yomo2.png"
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/yomo.png"
         },
         {
             "name": "SaturDay.Xperience",
@@ -233,10 +233,6 @@
         {
             "name": "JSQ",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/JSQ2.png"
-        },
-        {
-            "name": "Youno",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Youno2.png"
         },
         {
             "name": "Youno",
@@ -271,10 +267,6 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/DaShu2.png"
         },
         {
-            "name": "OceanCloud",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/OceanCloud.png"
-        },
-        {
             "name": "Rainbow",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Rainbow.png"
         },
@@ -303,8 +295,8 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Peach.png"
         },
         {
-            "name": "Watermelon",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Watermelon.png"
+            "name": "ChilledMelon",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/ChilledMelon.png"
         },
         {
             "name": "NebulaMedia",
