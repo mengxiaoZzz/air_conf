@@ -263,11 +263,7 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Temby.png"
         },
         {
-            "name": "DaShu",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/DaShu.png"
-        },
-        {
-            "name": "DaShu",
+            "name": "ShuFu",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/DaShu2.png"
         },
         {
@@ -281,10 +277,6 @@
         {
             "name": "比比",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/BeeBI.png"
-        },
-        {
-            "name": "Goose",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Goose.png"
         },
         {
             "name": "WorldLine",
