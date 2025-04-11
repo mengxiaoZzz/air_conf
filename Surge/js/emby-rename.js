@@ -23,7 +23,7 @@ if (url.includes("younoyes.com")) {
     })
 }
 
-if (url.includes("lite.saturday.video")) {
+if (url.includes("saturday.video") || url.includes("106.53.76.122")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
         item.ForcedSortName = item.Name
