@@ -9,10 +9,24 @@ const renameMap = {
     "Variety Arts": "综艺节目"
 };
 
-$done({
-    body: JSON.stringify(
-        JSON.parse($response.body.Items).map(item => ({
-            ...item,
-            Name: renameMap[item.Name] || item.Name
-        })))
-});
+console.log('emby-rename');
+
+const url = $request.url;
+let body = JSON.parse($response.body);
+
+console.log('body');
+console.log(body);
+console.log(body.Items);
+
+body.Items.forEach(item => {
+    item.Name = renameMap[item.Name] || item.Name
+    item.ForcedSortName = renameMap[item.Name] || item.Name
+    item.SortName = renameMap[item.Name] || item.Name
+})
+
+body = JSON.stringify(body);
+
+console.log('body111');
+console.log(body);
+
+$done({body});
