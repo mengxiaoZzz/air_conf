@@ -31,6 +31,23 @@ if (url.includes("saturday.video") || url.includes("106.53.76.122")) {
     })
 }
 
+if (url.includes("free.28.al")) {
+    // 按此顺序排序
+    const customOrder = [
+        "本地热门",
+        "动漫",
+        "电视剧",
+        "日韩剧",
+        "欧美剧",
+        "电影",
+        "纪录片",
+        "待转移"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("tv.worldline.space")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(2)
