@@ -4,7 +4,7 @@
 [Script]
 Emby-Category-Rename1 = type=http-response,pattern=^https?://\w+\.younoyes\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename2 = type=http-response,pattern=^https?://cdn\.lyrebirdemby\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
-Emby-Category-Rename3 = type=http-response,pattern=^https?://lite\.saturday\.video/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
+Emby-Category-Rename3 = type=http-response,pattern=^https?://lite\.saturday\.video:8098/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename4 = type=http-response,pattern=^https?://tv\.worldline\.space/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 
 [MITM]
