@@ -2,8 +2,8 @@
 #!desc=emby分类名修改
 
 [Script]
-Emby-Category-Rename = type=http-response,pattern=^https?://\w+\.younoyes\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
-Emby-Category-Rename = type=http-response,pattern=^https?://lite\.saturday\.video/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
+Emby-Category-Rename1 = type=http-response,pattern=^https?://\w+\.younoyes\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
+Emby-Category-Rename2 = type=http-response,pattern=^https?://lite\.saturday\.video/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 
 [MITM]
 hostname = %APPEND% *.younoyes.com,lite.saturday.video
