@@ -37,6 +37,27 @@ if (url.includes("tv.worldline.space")) {
         item.ForcedSortName = item.Name
         item.SortName = item.Name
     })
+    // 按此顺序排序
+    const customOrder = [
+        "国漫",
+        "动漫",
+        "国产剧",
+        "日韩剧",
+        "欧美剧",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "记录电影",
+        "综艺",
+        "纪录片",
+        "日本中字",
+        "水果派",
+        "次元里番",
+        "经典三级"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
 }
 
 if (url.includes("cdn.lyrebirdemby.com")) {
