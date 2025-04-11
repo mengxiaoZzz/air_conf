@@ -12,6 +12,9 @@ const renameMap = {
 const url = $request.url;
 let body = JSON.parse($response.body);
 
+console.log('emby-rename');
+console.log('url==>' + url);
+
 if (url.includes("younoyes.com")) {
     body.Items.forEach(item => {
         item.Name = renameMap[item.Name] || item.Name
@@ -21,6 +24,7 @@ if (url.includes("younoyes.com")) {
 }
 
 if (url.includes("lite.saturday.video")) {
+    console.log('saturday');
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
         item.ForcedSortName = item.Name
