@@ -12,11 +12,21 @@ const renameMap = {
 const url = $request.url;
 let body = JSON.parse($response.body);
 
-body.Items.forEach(item => {
-    item.Name = renameMap[item.Name] || item.Name
-    item.ForcedSortName = renameMap[item.Name] || item.Name
-    item.SortName = renameMap[item.Name] || item.Name
-})
+if (url.includes("younoyes.com")) {
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = renameMap[item.Name] || item.Name
+        item.SortName = renameMap[item.Name] || item.Name
+    })
+}
+
+if (url.includes("lite.saturday.video")) {
+    body.Items.forEach(item => {
+        item.Name = item.Name.slice(3)
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+}
 
 body = JSON.stringify(body);
 $done({body});
