@@ -9,14 +9,8 @@ const renameMap = {
     "Variety Arts": "综艺节目"
 };
 
-console.log('emby-rename');
-
 const url = $request.url;
 let body = JSON.parse($response.body);
-
-console.log('body');
-console.log(body);
-console.log(body.Items);
 
 body.Items.forEach(item => {
     item.Name = renameMap[item.Name] || item.Name
@@ -25,8 +19,4 @@ body.Items.forEach(item => {
 })
 
 body = JSON.stringify(body);
-
-console.log('body111');
-console.log(body);
-
 $done({body});
