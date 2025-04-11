@@ -25,6 +25,14 @@ if (url.includes("younoyes.com")) {
 
 if (url.includes("lite.saturday.video")) {
     body.Items.forEach(item => {
+        item.Name = item.Name.slice(3)
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+}
+
+if (url.includes("tv.worldline.space")) {
+    body.Items.forEach(item => {
         item.Name = item.Name.slice(2)
         item.ForcedSortName = item.Name
         item.SortName = item.Name
