@@ -1,0 +1,8 @@
+#!name=emby分类名修改
+#!desc=emby分类名修改
+
+[Script]
+Emby-Category-Rename = type=http-response,pattern=^https?://*\.emby\.younoyes\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/QuantumultX/js/emby-rename.js
+
+[MITM]
+hostname = %APPEND% *.younoyes.com
