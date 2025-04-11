@@ -23,13 +23,38 @@ if (url.includes("younoyes.com")) {
     })
 }
 
-if (url.includes("cdn.lyrebirdemby.com")) {
-    console.log('saturday');
+if (url.includes("lite.saturday.video")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(2)
         item.ForcedSortName = item.Name
         item.SortName = item.Name
     })
+}
+
+if (url.includes("cdn.lyrebirdemby.com")) {
+    body.Items.forEach(item => {
+        if ("播放列表" !== item.Name) {
+            item.Name = item.Name.slice(2)
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+    })
+    // 按此顺序排序
+    const customOrder = [
+        "动漫",
+        "国产剧",
+        "日韩剧",
+        "欧美剧",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "综艺",
+        "纪录片",
+        "播放列表"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
 }
 
 body = JSON.stringify(body);
