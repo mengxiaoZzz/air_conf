@@ -11,8 +11,8 @@ const renameMap = {
 
 $done({
     body: JSON.stringify(
-        JSON.parse($response.body).map(item => ({
+        JSON.parse($response.body.Items).map(item => ({
             ...item,
-            Name: renameMap[item.Name.toLowerCase()] || item.Name
+            Name: renameMap[item.Name] || item.Name
         })))
 });
