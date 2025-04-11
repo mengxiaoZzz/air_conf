@@ -23,10 +23,10 @@ if (url.includes("younoyes.com")) {
     })
 }
 
-if (url.includes("lite.saturday.video")) {
+if (url.includes("cdn.lyrebirdemby.com")) {
     console.log('saturday');
     body.Items.forEach(item => {
-        item.Name = item.Name.slice(3)
+        item.Name = item.Name.slice(2)
         item.ForcedSortName = item.Name
         item.SortName = item.Name
     })
