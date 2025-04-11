@@ -15,8 +15,8 @@ let body = JSON.parse($response.body);
 if (url.includes("younoyes.com")) {
     body.Items.forEach(item => {
         item.Name = renameMap[item.Name] || item.Name
-        item.ForcedSortName = renameMap[item.Name] || item.Name
-        item.SortName = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
     })
 }
 
