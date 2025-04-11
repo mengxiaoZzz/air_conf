@@ -50,7 +50,7 @@ if (url.includes("free.28.al")) {
 
 if (url.includes("tv.worldline.space")) {
     body.Items.forEach(item => {
-        item.Name = item.Name.slice(2)
+        item.Name = item.Name.slice(3)
         item.ForcedSortName = item.Name
         item.SortName = item.Name
     })
