@@ -21,26 +21,35 @@ if (url.includes("/api/v1/?act=detail") && body.data !== undefined && body.data.
     console.log('videoList');
     console.log(videoList);
 
+    videoList.forEach(item => {
+        item.level = item.level.replace("Kb", "KB").replace("Mb", "MB")
+    })
+
+    // 定义优先级顺序
+    const priorityOrder = {
+        "原画": 1,
+        "1080p": 2,
+        "720p": 3,
+        "480p": 4
+    };
+
+    // 排序函数
     videoList.sort((a, b) => {
-        return getNum(b) - getNum(a)
+        const getKey = (str) => {
+            if (str.includes("原画")) return "原画";
+            if (str.includes("1080p")) return "1080p";
+            if (str.includes("720p")) return "720p";
+            if (str.includes("480p")) return "480p";
+            return str; // 其他情况
+        };
+
+        const keyA = getKey(a.level);
+        const keyB = getKey(b.level);
+
+        return (priorityOrder[keyA] || 5) - (priorityOrder[keyB] || 5);
     });
 
-    function getNum(video) {
-        let level = video.level.replace("Kb", "KB").replace("Mb", "MB")
-        if (level.includes("KB")) {
-            let start = level.indexOf("(")
-            let end = level.indexOf("KB)")
-            return level.substring(start + 1, end)
-        } else if (level.includes("MB")) {
-            let start = level.indexOf("(")
-            let end = level.indexOf("MB)")
-            return level.substring(start + 1, end) * 1024
-        } else {
-            return 1024 * 1024
-        }
-    }
-
-    body.data.videos = videoList
+    body.data.video_list = videoList
 }
 body = JSON.stringify(body);
 $done({body});
