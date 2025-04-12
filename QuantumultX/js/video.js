@@ -1,18 +1,26 @@
 const url = $request.url;
 let body = JSON.parse($response.body);
-if (url.includes("/api/v1/?act=get_config")) {
-    // body.data.vipvalue = true
-    // body.data.user.vip = true
-    // body.data.user.vip_deltime = "2030-12-31 23:59:59"
-    // body.data.ad = {"ad1": null}
-    // body.data.stick = true
-}
+
+console.log('body');
+console.log(body);
+
+// if (url.includes("/api/v1/?act=get_config")) {
+//     body.data.vipvalue = true
+//     body.data.user.vip = true
+//     body.data.user.vip_deltime = "2030-12-31 23:59:59"
+//     body.data.ad = {"ad1": null}
+//     body.data.stick = true
+// }
 // if (url.includes("/api/v1/?act=user")) {
 //     body.data.user.vip = true
 //     body.data.user.vip_deltime = "2030-12-31 23:59:59"
 // }
 if (url.includes("/api/v1/?act=detail") && body.data !== undefined && body.data.videos !== undefined) {
     let videoList = body.data.video_list
+
+    console.log('videoList');
+    console.log(videoList);
+
     videoList.sort((a, b) => {
         return getNum(b) - getNum(a)
     });
