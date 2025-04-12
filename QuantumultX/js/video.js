@@ -19,7 +19,7 @@ if (url.includes("/api/v1/?act=detail") && body.data && body.data.video_list) {
     let videoList = body.data.video_list
 
     videoList.forEach(item => {
-        item.level = item.level.replace("Kb", "KB").replace("Mb", "MB").replace("(", "<").replace(")", ">")
+        item.level = item.level.replace("Kb", "KB").replace("Mb", "MB").replace("(", "「").replace(")", "」")
     })
 
     // // 定义优先级顺序
