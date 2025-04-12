@@ -18,36 +18,32 @@ console.log(body);
 if (url.includes("/api/v1/?act=detail") && body.data && body.data.video_list) {
     let videoList = body.data.video_list
 
-    console.log('videoList');
-    console.log(videoList);
-
     videoList.forEach(item => {
-        item.level = item.level.replace("Kb", "KB").replace("Mb", "MB")
+        item.level = item.level.replace("Kb", "KB").replace("Mb", "MB").replace("(", "<").replace(")", ">")
     })
 
-    // 定义优先级顺序
-    const priorityOrder = {
-        "原画": 1,
-        "1080p": 2,
-        "720p": 3,
-        "480p": 4
-    };
-
-    // 排序函数
-    videoList.sort((a, b) => {
-        const getKey = (str) => {
-            if (str.includes("原画")) return "原画";
-            if (str.includes("1080p")) return "1080p";
-            if (str.includes("720p")) return "720p";
-            if (str.includes("480p")) return "480p";
-            return str; // 其他情况
-        };
-
-        const keyA = getKey(a.level);
-        const keyB = getKey(b.level);
-
-        return (priorityOrder[keyA] || 5) - (priorityOrder[keyB] || 5);
-    });
+    // // 定义优先级顺序
+    // const priorityOrder = {
+    //     "原画": 100,
+    //     "1080p": 90,
+    //     "720p": 80
+    // };
+    //
+    // // 排序函数
+    // videoList.sort((a, b) => {
+    //     const getKey = (str) => {
+    //         if (str.includes("原画")) return "原画";
+    //         if (str.includes("1080p")) return "1080p";
+    //         if (str.includes("720p")) return "720p";
+    //         if (str.includes("480p")) return "480p";
+    //         return str; // 其他情况
+    //     };
+    //
+    //     const keyA = getKey(a.level);
+    //     const keyB = getKey(b.level);
+    //
+    //     return (priorityOrder[keyA] || 10) - (priorityOrder[keyB] || 10);
+    // });
 
     body.data.video_list = videoList
 }
