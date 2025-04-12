@@ -31,6 +31,32 @@ if (url.includes("saturday.video") || url.includes("106.53.76.122")) {
     })
 }
 
+if (url.includes("cdn.lyrebirdemby.com")) {
+    body.Items.forEach(item => {
+        if ("播放列表" !== item.Name) {
+            item.Name = item.Name.slice(2)
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+    })
+    // 按此顺序排序
+    const customOrder = [
+        "动漫",
+        "国产剧",
+        "日韩剧",
+        "欧美剧",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "综艺",
+        "纪录片",
+        "播放列表"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("free.28.al")) {
     // 按此顺序排序
     const customOrder = [
@@ -77,26 +103,20 @@ if (url.includes("tv.worldline.space")) {
     });
 }
 
-if (url.includes("cdn.lyrebirdemby.com")) {
-    body.Items.forEach(item => {
-        if ("播放列表" !== item.Name) {
-            item.Name = item.Name.slice(2)
-            item.ForcedSortName = item.Name
-            item.SortName = item.Name
-        }
-    })
+if (url.includes("45.142.176.135")) {
     // 按此顺序排序
     const customOrder = [
-        "动漫",
+        "国漫",
+        "日番",
         "国产剧",
         "日韩剧",
         "欧美剧",
         "华语电影",
         "外语电影",
         "动画电影",
+        "儿童",
         "综艺",
-        "纪录片",
-        "播放列表"
+        "纪录片"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
