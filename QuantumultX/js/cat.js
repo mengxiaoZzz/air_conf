@@ -1,6 +1,8 @@
-// console.log(`一只猫去水印`);
 const url = $request.url;
 let body = JSON.parse($response.body);
+
+console.log('body');
+console.log(body);
 
 // 一只猫
 if (url.includes("/api/Mushroom/index") || url.includes("/api/wechat_v2/index")) {
@@ -23,6 +25,11 @@ if (url.includes("/api/Mushroom/urlresult") || url.includes("/api/wechat_v2/urlr
     body.data.ad_video = ""
 }
 if (url.includes("/api/Mushroom/analysis") || url.includes("/api/wechat_v2/analysis")) {
+    console.log('body.data');
+    console.log(body.data);
+    console.log(body.data.url_list);
+
+
     if (body.data != null && body.data.url_list != null) {
         let urlList = body.data.url_list
         urlList.sort((a, b) => {
