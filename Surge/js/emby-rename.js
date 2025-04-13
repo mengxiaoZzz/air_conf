@@ -1,14 +1,3 @@
-const renameMap = {
-    "Chinese Anime": "国漫",
-    "Anime": "动漫",
-    "Chinese Dramas": "国产剧集",
-    "K&J Dramas": "日韩剧集",
-    "Global Series": "欧美剧集",
-    "Movies": "电影",
-    "Documentary": "纪录片",
-    "Variety Arts": "综艺节目"
-};
-
 const url = $request.url;
 let body = JSON.parse($response.body);
 
@@ -16,6 +5,16 @@ console.log('emby-rename');
 console.log('url==>' + url);
 
 if (url.includes("younoyes.com")) {
+    const renameMap = {
+        "Chinese Anime": "国漫",
+        "Anime": "动漫",
+        "Chinese Dramas": "国产剧集",
+        "K&J Dramas": "日韩剧集",
+        "Global Series": "欧美剧集",
+        "Movies": "电影",
+        "Documentary": "纪录片",
+        "Variety Arts": "综艺节目"
+    };
     body.Items.forEach(item => {
         item.Name = renameMap[item.Name] || item.Name
         item.ForcedSortName = item.Name
@@ -51,6 +50,33 @@ if (url.includes("cdn.lyrebirdemby.com")) {
         "综艺",
         "纪录片",
         "播放列表"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
+if (url.includes("emby1.123456789.lol")) {
+    const renameMap = {
+        "国产动漫": "国漫"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+    // 按此顺序排序
+    const customOrder = [
+        "国漫",
+        "日番",
+        "国产剧",
+        "日韩剧",
+        "欧美剧",
+        "电影",
+        "儿童",
+        "综艺",
+        "纪录片",
+        "未分类"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
