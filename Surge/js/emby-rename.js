@@ -6,13 +6,13 @@ console.log('url==>' + url);
 
 if (url.includes("younoyes.com")) {
     const renameMap = {
-        "Chinese Anime": "国漫",
-        "Anime": "动漫",
+        "Chinese Anime": "国产动漫",
+        "Anime": "日韩美漫",
         "Chinese Dramas": "国产剧集",
         "K&J Dramas": "日韩剧集",
         "Global Series": "欧美剧集",
         "Movies": "电影",
-        "Documentary": "纪录片",
+        "Documentary": "纪录纪实",
         "Variety Arts": "综艺节目"
     };
     body.Items.forEach(item => {
