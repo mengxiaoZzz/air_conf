@@ -56,6 +56,22 @@ if (url.includes("cdn.lyrebirdemby.com")) {
     });
 }
 
+if (url.includes("bps8m.onyra.cc")) {
+    // 按此顺序排序
+    const customOrder = [
+        "精彩推荐",
+        "动漫",
+        "华语剧集",
+        "日韩剧集",
+        "欧美剧集",
+        "其他剧集",
+        "电影"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("emby1.123456789.lol")) {
     const renameMap = {
         "国产动漫": "国漫"
