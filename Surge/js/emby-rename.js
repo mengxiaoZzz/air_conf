@@ -30,7 +30,7 @@ if (url.includes("saturday.video") || url.includes("106.53.76.122")) {
     })
 }
 
-if (url.includes("cdn.lyrebirdemby.com")) {
+if (url.includes("lyrebirdemby.com")) {
     body.Items.forEach(item => {
         if ("播放列表" !== item.Name) {
             item.Name = item.Name.slice(2)
@@ -56,7 +56,7 @@ if (url.includes("cdn.lyrebirdemby.com")) {
     });
 }
 
-if (url.includes("bps8m.onyra.cc")) {
+if (url.includes("onyra.cc")) {
     // 按此顺序排序
     const customOrder = [
         "精彩推荐",
@@ -72,7 +72,7 @@ if (url.includes("bps8m.onyra.cc")) {
     });
 }
 
-if (url.includes("emby1.123456789.lol")) {
+if (url.includes("123456789.lol")) {
     const renameMap = {
         "国产动漫": "国漫"
     };
@@ -99,7 +99,7 @@ if (url.includes("emby1.123456789.lol")) {
     });
 }
 
-if (url.includes("free.28.al")) {
+if (url.includes("28.al")) {
     // 按此顺序排序
     const customOrder = [
         "本地热门",
@@ -116,7 +116,7 @@ if (url.includes("free.28.al")) {
     });
 }
 
-if (url.includes("tv.worldline.space")) {
+if (url.includes("worldline.space")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
         item.ForcedSortName = item.Name
