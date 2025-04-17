@@ -14,4 +14,4 @@ Emby-Category-Rename8 = type=http-response,pattern=^https?://bps8m\.onyra\.cc/em
 Emby-Category-Rename8 = type=http-response,pattern=^https?://emby\.echoflix\.vip/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 
 [MITM]
-hostname = %APPEND% *.younoyes.com,*.lyrebirdemby.com,*.worldline.space,*.saturday.video:0,free.28.al,106.53.76.122:0,45.142.176.135:0,emby1.123456789.lol,bps8m.onyra.cc,emby.echoflix.vip
+hostname = %APPEND% *.younoyes.com,*.lyrebirdemby.com,*.worldline.space,*.saturday.video:0,free.28.al,106.53.76.122:0,45.142.176.135:0,emby1.123456789.lol,bps8m.onyra.cc,emby.echoflix.vip:0
