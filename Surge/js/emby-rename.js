@@ -4,6 +4,17 @@ let body = JSON.parse($response.body);
 console.log('emby-rename');
 console.log('url==>' + url);
 
+if (url.includes("emby.echoflix.vip")) {
+    const renameMap = {
+        "外语动漫": "动漫"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+}
+
 if (url.includes("younoyes.com")) {
     const renameMap = {
         "Chinese Anime": "国产动漫",
@@ -59,13 +70,13 @@ if (url.includes("lyrebirdemby.com")) {
 if (url.includes("onyra.cc")) {
     // 按此顺序排序
     const customOrder = [
-        "精彩推荐",
         "动漫",
         "华语剧集",
         "日韩剧集",
         "欧美剧集",
         "其他剧集",
-        "电影"
+        "电影",
+        "精彩推荐"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
