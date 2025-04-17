@@ -6,7 +6,8 @@ console.log('url==>' + url);
 
 if (url.includes("emby.echoflix.vip")) {
     const renameMap = {
-        "外语动漫": "动漫"
+        "外语动漫": "动漫",
+        "儿童节目": "儿童"
     };
     body.Items.forEach(item => {
         item.Name = renameMap[item.Name] || item.Name
