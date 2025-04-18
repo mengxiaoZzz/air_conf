@@ -10,7 +10,8 @@ if (url.includes("emby.echoflix.vip")) {
         "国产剧": "国产剧集",
         "日韩剧": "日韩剧集",
         "欧美剧": "欧美剧集",
-        "儿童节目": "儿童"
+        "儿童节目": "儿童",
+        "综艺": "综艺节目"
     };
     body.Items.forEach(item => {
         item.Name = renameMap[item.Name] || item.Name
