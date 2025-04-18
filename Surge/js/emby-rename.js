@@ -4,6 +4,32 @@ let body = JSON.parse($response.body);
 console.log('emby-rename');
 console.log('url==>' + url);
 
+if (url.includes("emby.meowfly.net")) {
+    // 按此顺序排序
+    const customOrder = [
+        "国内动漫",
+        "国外动漫",
+        "华语剧集",
+        "亚太剧集",
+        "欧美剧集",
+        "特效剧集",
+        "华语电影",
+        "外语电影",
+        "特效电影",
+        "动画电影",
+        "综艺剧集",
+        "综艺电影",
+        "纪录片剧集",
+        "纪录片电影",
+        "儿童剧",
+        "演唱会",
+        "合集"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("emby.echoflix.vip")) {
     const renameMap = {
         "国漫": "国语动漫",

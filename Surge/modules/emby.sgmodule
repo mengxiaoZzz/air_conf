@@ -2,6 +2,7 @@
 #!desc=emby分类名修改
 
 [Script]
+Emby-Category-Rename11 = type=http-response,pattern=^https?://emby\.meowfly\.net/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename10 = type=http-response,pattern=^https?://emby\.echoflix\.vip/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename1 = type=http-response,pattern=^https?://\w+\.younoyes\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename2 = type=http-response,pattern=^https?://\w+\.lyrebirdemby\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
@@ -15,4 +16,4 @@ Emby-Category-Rename9 = type=http-response,pattern=^https?://bps8m\.onyra\.cc/em
 
 
 [MITM]
-hostname = %APPEND% emby.echoflix.vip:0,*.younoyes.com,*.lyrebirdemby.com,*.worldline.space,*.saturday.video:0,free.28.al,106.53.76.122:0,45.142.176.135:0,emby1.123456789.lol,bps8m.onyra.cc
+hostname = %APPEND% emby.meowfly.net:0,emby.echoflix.vip:0,*.younoyes.com,*.lyrebirdemby.com,*.worldline.space,*.saturday.video:0,free.28.al,106.53.76.122:0,45.142.176.135:0,emby1.123456789.lol,bps8m.onyra.cc
