@@ -42,6 +42,27 @@ if (url.includes("saturday.video") || url.includes("106.53.76.122")) {
     })
 }
 
+if (url.includes("mobaiemby.site") || url.includes("mygcn.204cloud.com")) {
+    // 按此顺序排序
+    const customOrder = [
+        "国漫",
+        "日番",
+        "国产剧",
+        "日韩剧",
+        "欧美剧",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "儿童",
+        "纪录片",
+        "综艺",
+        "合集"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("lyrebirdemby.com")) {
     body.Items.forEach(item => {
         if ("播放列表" !== item.Name) {
@@ -69,6 +90,14 @@ if (url.includes("lyrebirdemby.com")) {
 }
 
 if (url.includes("onyra.cc")) {
+    const renameMap = {
+        "儿童节目": "儿童"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
     // 按此顺序排序
     const customOrder = [
         "动漫",
@@ -77,6 +106,7 @@ if (url.includes("onyra.cc")) {
         "欧美剧集",
         "其他剧集",
         "电影",
+        "儿童",
         "精彩推荐"
     ];
     body.Items = body.Items.sort((a, b) => {
