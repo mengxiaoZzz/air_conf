@@ -82,8 +82,8 @@ if (url.includes("lyrebirdemby.com")) {
         "华语电影",
         "外语电影",
         "动画电影",
-        "综艺",
         "纪录片",
+        "综艺",
         "播放列表"
     ];
     body.Items = body.Items.sort((a, b) => {
