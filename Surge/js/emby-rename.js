@@ -5,10 +5,19 @@ console.log('emby-rename');
 console.log('url==>' + url);
 
 if (url.includes("emby.meowfly.net")) {
+    const renameMap = {
+        "国内动漫": "华语动漫",
+        "国外动漫": "外语动漫"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
     // 按此顺序排序
     const customOrder = [
-        "国内动漫",
-        "国外动漫",
+        "华语动漫",
+        "外语动漫",
         "华语剧集",
         "亚太剧集",
         "欧美剧集",
@@ -28,18 +37,6 @@ if (url.includes("emby.meowfly.net")) {
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
     });
-}
-
-if (url.includes("emby.echoflix.vip")) {
-    const renameMap = {
-        "国漫": "国语动漫",
-        "儿童节目": "儿童"
-    };
-    body.Items.forEach(item => {
-        item.Name = renameMap[item.Name] || item.Name
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
-    })
 }
 
 if (url.includes("younoyes.com")) {
