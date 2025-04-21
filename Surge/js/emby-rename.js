@@ -57,6 +57,18 @@ if (url.includes("younoyes.com")) {
     })
 }
 
+if (url.includes("emby.asubaka.top") || url.includes("www.stevenslab.top")) {
+    const renameMap = {
+        "动漫番剧": "动漫",
+        "综艺 记录": "综艺纪录"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+}
+
 if (url.includes("saturday.video") || url.includes("106.53.76.122")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
