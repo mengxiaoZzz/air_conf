@@ -77,6 +77,17 @@ if (url.includes("saturday.video") || url.includes("106.53.76.122")) {
     })
 }
 
+if (url.includes("embymv.link")) {
+    const renameMap = {
+        "韩日剧集": "日韩剧"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+}
+
 if (url.includes("lyrebirdemby.com")) {
     body.Items.forEach(item => {
         if ("播放列表" !== item.Name) {
