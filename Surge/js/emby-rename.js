@@ -176,7 +176,8 @@ if (url.includes("28.al")) {
         "欧美剧",
         "电影",
         "纪录片",
-        "待转移"
+        "待转移",
+        "播放列表"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
