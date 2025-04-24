@@ -187,7 +187,7 @@ if (url.includes("1024.name") || url.includes("1024.one")) {
         "合集",
         "AV-4K合集",
         "AV合集鉴赏",
-        "AV女友分选",
+        "AV女优分选",
         "AV无码流出",
         "AV无码破解",
         "AV原生无码",
