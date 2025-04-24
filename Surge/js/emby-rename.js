@@ -166,6 +166,38 @@ if (url.includes("123456789.lol")) {
     });
 }
 
+if (url.includes("1024.name") || url.includes("1024.one")) {
+    // 按此顺序排序
+    const customOrder = [
+        "国产动漫",
+        "日本动漫",
+        "短剧合集",
+        "沙雕动画",
+        "国产剧集",
+        "日韩剧集",
+        "欧美剧集",
+        "全球影视",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "儿童节目",
+        "纪录片集",
+        "综艺节目",
+        "音悦世界",
+        "合集",
+        "AV-4K合集",
+        "AV合集鉴赏",
+        "AV女友分选",
+        "AV无码流出",
+        "AV无码破解",
+        "AV原生无码",
+        "AV欧美成人"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("28.al")) {
     // 按此顺序排序
     const customOrder = [
