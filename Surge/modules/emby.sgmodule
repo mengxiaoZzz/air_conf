@@ -5,7 +5,7 @@
 Emby-Category-Rename0 = type=http-response,pattern=^https?://emby\.meowfly\.net/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename1 = type=http-response,pattern=^https?://\w+\.younoyes\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename2 = type=http-response,pattern=^https?://\w+\.lyrebirdemby\.com/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
-Emby-Category-Rename3 = type=http-response,pattern=^https?://\w+\.saturday\.video/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
+Emby-Category-Rename3 = type=http-response,pattern=^https?://lite\.saturdayvideo\.top/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename4 = type=http-response,pattern=^https?://106\.53\.76\.122/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename5 = type=http-response,pattern=^https?://\w+\.worldline\.space/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 Emby-Category-Rename6 = type=http-response,pattern=^https?://free\.28\.al/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
@@ -21,4 +21,4 @@ Emby-Category-Rename15 = type=http-response,pattern=^https?://\w+\.1024\.one/emb
 
 
 [MITM]
-hostname = %APPEND% emby.meowfly.net:0,emby.echoflix.vip:0,*.younoyes.com,emby.asubaka.top,www.stevenslab.top:0,*.lyrebirdemby.com,embymv.link:0,*.worldline.space,*.saturday.video:0,free.28.al,106.53.76.122:0,45.142.176.135:0,emby1.123456789.lol,bps8m.onyra.cc,1024.name:0,*.1024.name:0,*.1024.one:0
+hostname = %APPEND% emby.meowfly.net:0,emby.echoflix.vip:0,*.younoyes.com,emby.asubaka.top,www.stevenslab.top:0,*.lyrebirdemby.com,embymv.link:0,*.worldline.space,lite.saturdayvideo.top,free.28.al,106.53.76.122:0,45.142.176.135:0,emby1.123456789.lol,bps8m.onyra.cc,1024.name:0,*.1024.name:0,*.1024.one:0

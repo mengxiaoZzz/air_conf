@@ -69,7 +69,7 @@ if (url.includes("emby.asubaka.top") || url.includes("www.stevenslab.top")) {
     })
 }
 
-if (url.includes("saturday.video") || url.includes("106.53.76.122")) {
+if (url.includes("lite.saturdayvideo.top") || url.includes("106.53.76.122")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
         item.ForcedSortName = item.Name
