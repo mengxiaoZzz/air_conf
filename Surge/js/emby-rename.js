@@ -1,8 +1,8 @@
 const url = $request.url;
 let body = JSON.parse($response.body);
 
-console.log('emby-rename');
-console.log('url==>' + url);
+// console.log('emby-rename');
+// console.log('url==>' + url);
 
 if (url.includes("emby.meowfly.net")) {
     const renameMap = {
@@ -41,8 +41,8 @@ if (url.includes("emby.meowfly.net")) {
 
 if (url.includes("younoyes.com")) {
     const renameMap = {
-        "Chinese Anime": "国产动漫",
-        "Anime": "日韩美漫",
+        "Chinese Anime": "华语动漫",
+        "Anime": "外语动漫",
         "Chinese Dramas": "国产剧集",
         "K&J Dramas": "日韩剧集",
         "Global Series": "欧美剧集",
@@ -114,58 +114,6 @@ if (url.includes("lyrebirdemby.com")) {
     });
 }
 
-if (url.includes("onyra.cc")) {
-    const renameMap = {
-        "儿童节目": "儿童"
-    };
-    body.Items.forEach(item => {
-        item.Name = renameMap[item.Name] || item.Name
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
-    })
-    // 按此顺序排序
-    const customOrder = [
-        "动漫",
-        "华语剧集",
-        "日韩剧集",
-        "欧美剧集",
-        "其他剧集",
-        "电影",
-        "儿童",
-        "精彩推荐"
-    ];
-    body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
-    });
-}
-
-if (url.includes("123456789.lol")) {
-    const renameMap = {
-        "国产动漫": "国漫"
-    };
-    body.Items.forEach(item => {
-        item.Name = renameMap[item.Name] || item.Name
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
-    })
-    // 按此顺序排序
-    const customOrder = [
-        "国漫",
-        "日番",
-        "国产剧",
-        "日韩剧",
-        "欧美剧",
-        "电影",
-        "儿童",
-        "综艺",
-        "纪录片",
-        "未分类"
-    ];
-    body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
-    });
-}
-
 if (url.includes("1024.name") || url.includes("1024.one")) {
     // 按此顺序排序
     const customOrder = [
@@ -198,7 +146,34 @@ if (url.includes("1024.name") || url.includes("1024.one")) {
     });
 }
 
-if (url.includes("28.al")) {
+if (url.includes("emby1.123456789.lol")) {
+    const renameMap = {
+        "国产动漫": "国漫"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+    // 按此顺序排序
+    const customOrder = [
+        "国漫",
+        "日番",
+        "国产剧",
+        "日韩剧",
+        "欧美剧",
+        "电影",
+        "儿童",
+        "综艺",
+        "纪录片",
+        "未分类"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
+if (url.includes("free.28.al")) {
     // 按此顺序排序
     const customOrder = [
         "本地热门",
@@ -239,26 +214,6 @@ if (url.includes("worldline.space")) {
         "水果派",
         "次元里番",
         "经典三级"
-    ];
-    body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
-    });
-}
-
-if (url.includes("45.142.176.135")) {
-    // 按此顺序排序
-    const customOrder = [
-        "国漫",
-        "日番",
-        "国产剧",
-        "日韩剧",
-        "欧美剧",
-        "华语电影",
-        "外语电影",
-        "动画电影",
-        "儿童",
-        "综艺",
-        "纪录片"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
