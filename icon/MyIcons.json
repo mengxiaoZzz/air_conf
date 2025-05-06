@@ -179,6 +179,10 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MoonCake.png"
         },
         {
+            "name": "MoonCake",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MoonCake2.png"
+        },
+        {
             "name": "EchoFlix",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoFlix.png"
         },
@@ -329,6 +333,10 @@
         {
             "name": "ruji",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/ruji.png"
+        },
+        {
+            "name": "ruji",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/RuJi2.png"
         },
         {
             "name": "CineTrail",
