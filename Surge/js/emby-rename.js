@@ -146,6 +146,37 @@ if (url.includes("1024.name") || url.includes("1024.one")) {
     });
 }
 
+if (url.includes("rjemby.com")) {
+    const renameMap = {
+        "国产剧": "国产剧集"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+    // 按此顺序排序
+    const customOrder = [
+        "国漫",
+        "日漫",
+        "国产剧集",
+        "日韩剧集",
+        "欧美剧集",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "纪录片",
+        "综艺",
+        "儿童",
+        "未分类",
+        "起立试看生物学",
+        "里番限时放映"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("emby1.123456789.lol")) {
     const renameMap = {
         "国产动漫": "国漫"
