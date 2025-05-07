@@ -4,20 +4,11 @@ let body = JSON.parse($response.body);
 // console.log('emby-rename');
 // console.log('url==>' + url);
 
-if (url.includes("emby.meowfly.net")) {
-    const renameMap = {
-        "国内动漫": "华语动漫",
-        "国外动漫": "外语动漫"
-    };
-    body.Items.forEach(item => {
-        item.Name = renameMap[item.Name] || item.Name
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
-    })
+if (url.includes("emby.meowfly.net") || url.includes("gy.meowfly.de")) {
     // 按此顺序排序
     const customOrder = [
-        "华语动漫",
-        "外语动漫",
+        "国内动漫",
+        "国外动漫",
         "华语剧集",
         "亚太剧集",
         "欧美剧集",
@@ -69,7 +60,7 @@ if (url.includes("emby.asubaka.top") || url.includes("www.stevenslab.top")) {
     })
 }
 
-if (url.includes("lite.saturdayvideo.top") || url.includes("106.53.76.122")) {
+if (url.includes("lite.saturdayvideo.top")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
         item.ForcedSortName = item.Name
@@ -159,6 +150,7 @@ if (url.includes("rjemby.com")) {
     const customOrder = [
         "国漫",
         "日漫",
+        "短剧",
         "国产剧集",
         "日韩剧集",
         "欧美剧集",
