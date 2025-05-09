@@ -13,6 +13,7 @@ if (url.includes("emby.meowfly.net") || url.includes("gy.meowfly.de")) {
         "亚太剧集",
         "欧美剧集",
         "特效剧集",
+        "短剧",
         "华语电影",
         "外语电影",
         "特效电影",
@@ -162,7 +163,8 @@ if (url.includes("rjemby.com")) {
         "儿童",
         "未分类",
         "起立试看生物学",
-        "里番限时放映"
+        "里番限时放映",
+        "合集"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
