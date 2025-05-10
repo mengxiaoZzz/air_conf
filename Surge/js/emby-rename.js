@@ -161,10 +161,7 @@ if (url.includes("rjemby.com") || url.includes("hkdg.998903.xyz")) {
         "纪录片",
         "综艺",
         "儿童",
-        "未分类",
-        "起立试看生物学",
-        "里番限时放映",
-        "合集"
+        "未分类"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
