@@ -138,7 +138,7 @@ if (url.includes("1024.name") || url.includes("1024.one")) {
     });
 }
 
-if (url.includes("rjemby.com")) {
+if (url.includes("rjemby.com") || url.includes("hkdg.998903.xyz")) {
     const renameMap = {
         "国产剧": "国产剧集"
     };
