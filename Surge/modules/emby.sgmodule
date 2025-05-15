@@ -6,4 +6,4 @@ Emby-Category-Rename1 = type=http-response,pattern=^https?://\w+\.\w+/emby/Users
 Emby-Category-Rename2 = type=http-response,pattern=^https?://\w+\.\w+\.\w+/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 
 [MITM]
-hostname = %APPEND% emby.meowfly.net:0,gy.meowfly.de:0,emby.echoflix.vip:0,*.younoyes.com,emby.asubaka.top,www.stevenslab.top:0,lite.saturdayvideo.top,*.lyrebirdemby.com,embymv.link:0,*.worldline.space,emby1.123456789.lol,1024.name:0,*.1024.name:0,*.1024.one:0
+hostname = %APPEND% emby.meowfly.net:0,gy.meowfly.de:0,*.younoyes.com,emby.asubaka.top,www.stevenslab.top:0,lite.saturdayvideo.top,*.lyrebirdemby.com,embymv.link:0,*.worldline.space,1024.name:0,*.1024.name:0,*.1024.one:0
