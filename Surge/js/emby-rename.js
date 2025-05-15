@@ -140,7 +140,8 @@ if (url.includes("1024.name") || url.includes("1024.one")) {
 
 if (url.includes("rjemby.com") || url.includes("hkdg.998903.xyz")) {
     const renameMap = {
-        "国产剧": "国产剧集"
+        "国漫": "国内动漫",
+        "日漫": "国外动漫"
     };
     body.Items.forEach(item => {
         item.Name = renameMap[item.Name] || item.Name
@@ -149,19 +150,18 @@ if (url.includes("rjemby.com") || url.includes("hkdg.998903.xyz")) {
     })
     // 按此顺序排序
     const customOrder = [
-        "国漫",
-        "日漫",
-        "短剧",
-        "国产剧集",
+        "国内动漫",
+        "国外动漫",
+        "华语剧集",
         "日韩剧集",
         "欧美剧集",
+        "儿童剧集",
         "华语电影",
         "外语电影",
         "动画电影",
         "纪录片",
         "综艺",
-        "儿童",
-        "未分类"
+        "暂未分类"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
