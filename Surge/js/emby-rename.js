@@ -63,11 +63,9 @@ if (url.includes("emby.asubaka.top") || url.includes("www.stevenslab.top")) {
 
 if (url.includes("lite.saturdayvideo.top")) {
     body.Items.forEach(item => {
-        if (item.Name.size > 3) {
-            item.Name = item.Name.slice(3)
-            item.ForcedSortName = item.Name
-            item.SortName = item.Name
-        }
+        item.Name = item.Name.slice(3)
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
     })
 }
 
