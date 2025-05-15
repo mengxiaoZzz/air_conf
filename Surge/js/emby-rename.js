@@ -31,50 +31,9 @@ if (url.includes("emby.meowfly.net") || url.includes("gy.meowfly.de")) {
     });
 }
 
-if (url.includes("younoyes.com")) {
-    const renameMap = {
-        "Chinese Anime": "华语动漫",
-        "Anime": "外语动漫",
-        "Chinese Dramas": "国产剧集",
-        "K&J Dramas": "日韩剧集",
-        "Global Series": "欧美剧集",
-        "Movies": "电影",
-        "Documentary": "纪录纪实",
-        "Variety Arts": "综艺节目"
-    };
-    body.Items.forEach(item => {
-        item.Name = renameMap[item.Name] || item.Name
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
-    })
-}
-
-if (url.includes("emby.asubaka.top") || url.includes("www.stevenslab.top")) {
-    const renameMap = {
-        "动漫番剧": "动漫",
-        "综艺 记录": "综艺纪录"
-    };
-    body.Items.forEach(item => {
-        item.Name = renameMap[item.Name] || item.Name
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
-    })
-}
-
 if (url.includes("lite.saturdayvideo.top")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
-    })
-}
-
-if (url.includes("embymv.link")) {
-    const renameMap = {
-        "韩日剧集": "日韩剧"
-    };
-    body.Items.forEach(item => {
-        item.Name = renameMap[item.Name] || item.Name
         item.ForcedSortName = item.Name
         item.SortName = item.Name
     })
