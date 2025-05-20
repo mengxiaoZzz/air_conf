@@ -283,6 +283,10 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/PandaTV2.png"
         },
         {
+            "name": "SNTP",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SNTP.png"
+        },
+        {
             "name": "AWA",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/AWA.png"
         },
