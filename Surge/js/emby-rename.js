@@ -4,7 +4,7 @@ let body = JSON.parse($response.body);
 // console.log('emby-rename');
 // console.log('url==>' + url);
 
-if (url.includes("emby.meowfly.net") || url.includes("gy.meowfly.de")) {
+if (url.includes("meowfly")) {
     // 按此顺序排序
     const customOrder = [
         "国内动漫",
@@ -31,7 +31,7 @@ if (url.includes("emby.meowfly.net") || url.includes("gy.meowfly.de")) {
     });
 }
 
-if (url.includes("lite.saturdayvideo.top")) {
+if (url.includes("saturdayvideo")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
         item.ForcedSortName = item.Name
@@ -39,7 +39,7 @@ if (url.includes("lite.saturdayvideo.top")) {
     })
 }
 
-if (url.includes("lyrebirdemby.com")) {
+if (url.includes("lyrebirdemby")) {
     body.Items.forEach(item => {
         if ("播放列表" !== item.Name) {
             item.Name = item.Name.slice(2)
@@ -65,7 +65,7 @@ if (url.includes("lyrebirdemby.com")) {
     });
 }
 
-if (url.includes("1024.name") || url.includes("1024.one")) {
+if (url.includes("chilledmelon")) {
     // 按此顺序排序
     const customOrder = [
         "国产动漫",
@@ -97,7 +97,7 @@ if (url.includes("1024.name") || url.includes("1024.one")) {
     });
 }
 
-if (url.includes("worldline.space")) {
+if (url.includes("worldline")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
         item.ForcedSortName = item.Name
