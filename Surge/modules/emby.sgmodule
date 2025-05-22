@@ -2,7 +2,7 @@
 #!desc=emby分类名修改
 
 [Script]
-Emby-Category-Rename = type=http-response,pattern=^https?://\w+/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
+Emby-Category-Rename = type=http-response,pattern=^https?://\w+\.\w+\.\w+/emby/Users/\w+/Views,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
 
 [MITM]
 hostname = %APPEND% emby.meowfly.net:0,gy.meowfly.de:0,lite.saturdayvideo.top:0,*.lyrebirdemby.com:0,*.chilledmelon.com:0
