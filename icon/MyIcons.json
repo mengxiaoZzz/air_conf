@@ -287,15 +287,7 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SNTP.png"
         },
         {
-            "name": "AWA",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/AWA.png"
-        },
-        {
-            "name": "AWASF",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/AWASF.png"
-        },
-        {
-            "name": "AWASF",
+            "name": "pdx",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/pdx.png"
         },
         {
@@ -371,10 +363,6 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/ruji.png"
         },
         {
-            "name": "ruji",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/RuJi2.png"
-        },
-        {
             "name": "CineTrail",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/CineTrail.png"
         },
@@ -399,10 +387,6 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/LevildeLuminia.png"
         },
         {
-            "name": "JingZhe",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/JingZhe.png"
-        },
-        {
             "name": "July",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/July.png"
         },
@@ -413,18 +397,6 @@
         {
             "name": "CCEmby",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/CCEmby.png"
-        },
-        {
-            "name": "Plumber",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Plumber.png"
-        },
-        {
-            "name": "Plumber",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Plumber2.png"
-        },
-        {
-            "name": "Aurora",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Aurora.png"
         },
         {
             "name": "PrejuDice",
@@ -503,16 +475,8 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/PiliPili.png"
         },
         {
-            "name": "MilkyWay",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MilkyWay.png"
-        },
-        {
-            "name": "LaoDa",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/LaoDa.png"
-        },
-        {
-            "name": "LaoDa",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/LaoDa2.png"
+            "name": "JieShu",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/JieShu.png"
         },
         {
             "name": "HK/HongKong/香港",
