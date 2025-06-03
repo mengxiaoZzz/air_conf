@@ -39,7 +39,7 @@ if (url.includes("saturdayvideo")) {
     })
 }
 
-if (url.includes("lyrebirdemby")) {
+if (url.includes("lyrebirdemby") || url.includes("188.172.228.65")) {
     body.Items.forEach(item => {
         if ("播放列表" !== item.Name) {
             item.Name = item.Name.slice(2)
