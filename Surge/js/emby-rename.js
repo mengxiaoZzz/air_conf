@@ -31,6 +31,27 @@ if (url.includes("meowfly")) {
     });
 }
 
+if (url.includes("sexemby.com")) {
+    // 按此顺序排序
+    const customOrder = [
+        "国漫",
+        "日番",
+        "国产剧",
+        "欧美剧",
+        "日韩剧",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "纪录片",
+        "综艺",
+        "儿童剧",
+        "演唱会"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("saturdayvideo")) {
     body.Items.forEach(item => {
         item.Name = item.Name.slice(3)
