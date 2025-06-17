@@ -4,7 +4,7 @@ let body = JSON.parse($response.body);
 let items = body.Items;
 items.forEach(item => {
     // 筛选-剔除过低码率
-    let MediaSources = item.MediaSources.filter(e => e.Bitrate >= 1024);
+    let MediaSources = item.MediaSources.filter(e => e.Bitrate >= 1024 * 1024);
     if (MediaSources.length > 0) {
         item.MediaSources = MediaSources;
     }
