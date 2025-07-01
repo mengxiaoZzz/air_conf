@@ -31,6 +31,31 @@ if (url.includes("meowfly")) {
     });
 }
 
+if (url.includes("115cdn.de")) {
+    const renameMap = {
+        "国漫": "国内动漫",
+        "日番": "国外动漫"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+}
+
+if (url.includes("younoyes.com") || url.includes("567741.xyz")) {
+    const renameMap = {
+        "国产动漫": "国内动漫",
+        "动漫剧集": "国外动漫",
+        "亚太及小语种": "其他剧集"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+}
+
 if (url.includes("sexemby.com")) {
     // 按此顺序排序
     const customOrder = [
@@ -71,6 +96,18 @@ if (url.includes("cloud.s1.xxzi.top")) {
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
     });
+}
+
+if (url.includes("rjf37.com") || url.includes("xytx.org") || url.includes("120.53.89.215") || url.includes("211.159.153.75")) {
+    const renameMap = {
+        "国漫": "国内动漫",
+        "日番": "国外动漫"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
 }
 
 if (url.includes("saturdayvideo")) {
