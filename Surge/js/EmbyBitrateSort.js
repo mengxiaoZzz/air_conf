@@ -15,14 +15,14 @@ function stableSort(arr, compareFn) {
 
 let items = body.Items;
 items.forEach(item => {
-    // 筛选-剔除过低码率
-    let MediaSources = item.MediaSources.filter(e => e.Bitrate >= 1024 * 1024);
+    // 筛选-剔除1M以下的码率
+    let MediaSources = item.MediaSources.filter(e => e.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate > 1024 * 1024);
     if (MediaSources.length > 0) {
         item.MediaSources = MediaSources;
     }
 
     // 排序
-    item.MediaSources = stableSort(item.MediaSources, (a, b) => b.MediaStreams.filter( e => e.Type === 'Video')[0].BitRate - a.MediaStreams.filter( e => e.Type === 'Video')[0].BitRate);
+    item.MediaSources = stableSort(item.MediaSources, (a, b) => b.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate - a.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate);
 })
 body.Items = items;
 
