@@ -1,9 +1,6 @@
 const url = $request.url;
 let body = JSON.parse($response.body);
 
-// console.log('emby-rename');
-// console.log('url==>' + url);
-
 if (url.includes("meowfly")) {
     // 按此顺序排序
     const customOrder = [
