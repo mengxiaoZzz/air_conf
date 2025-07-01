@@ -22,7 +22,7 @@ items.forEach(item => {
     }
 
     // 排序
-    item.MediaSources = stableSort(item.MediaSources, (a, b) => b.Bitrate - a.Bitrate);
+    item.MediaSources = stableSort(item.MediaSources, (a, b) => b.MediaStreams.filter( e => e.Type === 'Video')[0].BitRate - a.MediaStreams.filter( e => e.Type === 'Video')[0].BitRate);
 })
 body.Items = items;
 
