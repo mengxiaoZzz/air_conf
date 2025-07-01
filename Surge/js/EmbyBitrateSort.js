@@ -23,9 +23,6 @@ items.forEach(item => {
 
     // 排序
     item.MediaSources = stableSort(item.MediaSources, (a, b) => b.Bitrate - a.Bitrate);
-    // item.MediaSources = item.MediaSources.sort((a, b) => {
-    //     return b.Bitrate - a.Bitrate;
-    // })
 })
 body.Items = items;
 
