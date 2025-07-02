@@ -28,10 +28,11 @@ if (url.includes("meowfly")) {
     });
 }
 
-if (url.includes("115cdn.de")) {
+if (url.includes("115cdn.de") || url.includes("roboemby.de") || url.includes("616626.xyz") || url.includes("asubaka.top") || url.includes("711.lol")) {
     const renameMap = {
         "国漫": "国内动漫",
-        "日番": "国外动漫"
+        "日番": "国外动漫",
+        "动漫番剧": "国外动漫"
     };
     body.Items.forEach(item => {
         item.Name = renameMap[item.Name] || item.Name
