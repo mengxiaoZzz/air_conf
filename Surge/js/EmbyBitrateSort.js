@@ -15,14 +15,23 @@ function stableSort(arr, compareFn) {
 
 let items = body.Items;
 items.forEach(item => {
+    // 筛选无媒体信息的视频
+    let MediaSources_NoMedia = item.MediaSources.filter(e => e.MediaStreams == null);
+
+    // 筛选有媒体信息的视频
+    let MediaSources_Media = item.MediaSources.filter(e => e.MediaStreams != null);
+
     // 筛选-剔除1M以下的码率
-    let MediaSources = item.MediaSources.filter(e => e.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate > 1024 * 1024);
-    if (MediaSources.length > 0) {
-        item.MediaSources = MediaSources;
+    let MediaSources_Media_Temp = MediaSources_Media.filter(e => e.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate > 1024 * 1024);
+    if (MediaSources_Media_Temp.length > 0) {
+        MediaSources_Media = MediaSources_Media_Temp;
     }
 
     // 排序
-    item.MediaSources = stableSort(item.MediaSources, (a, b) => b.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate - a.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate);
+    MediaSources_Media = stableSort(MediaSources_Media, (a, b) => b.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate - a.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate);
+
+    // 把无媒体信息的视频追加到最后
+    item.MediaSources = MediaSources_Media.concat(MediaSources_NoMedia);
 })
 body.Items = items;
 
