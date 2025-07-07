@@ -16,10 +16,10 @@ function stableSort(arr, compareFn) {
 let items = body.Items;
 items.forEach(item => {
     // 筛选无媒体信息的视频
-    let MediaSources_NoMedia = item.MediaSources.filter(e => e.MediaStreams == null);
+    let MediaSources_NoMedia = item.MediaSources.filter(e => e.MediaStreams == null || e.MediaStreams.filter(e => e.Type === 'Video').length === 0);
 
     // 筛选有媒体信息的视频
-    let MediaSources_Media = item.MediaSources.filter(e => e.MediaStreams != null);
+    let MediaSources_Media = item.MediaSources.filter(e => e.MediaStreams != null && e.MediaStreams.filter(e => e.Type === 'Video').length > 0);
 
     // 筛选-剔除1M以下的码率
     let MediaSources_Media_Temp = MediaSources_Media.filter(e => e.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate > 1024 * 1024);
