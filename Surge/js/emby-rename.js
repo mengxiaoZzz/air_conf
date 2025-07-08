@@ -28,7 +28,8 @@ if (url.includes("meowfly")) {
     });
 }
 
-if (url.includes("115cdn.de") || url.includes("roboemby.de") || url.includes("616626.xyz") || url.includes("asubaka.top") || url.includes("711.lol") || url.includes("mobaiemby.site")) {
+if (url.includes("115cdn.de") || url.includes("roboemby.de") || url.includes("616626.xyz") || url.includes("asubaka.top")
+    || url.includes("711.lol") || url.includes("mobaiemby.site")) {
     const renameMap = {
         "国漫": "国内动漫",
         "日番": "国外动漫",
