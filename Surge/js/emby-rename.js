@@ -55,6 +55,16 @@ if (url.includes("younoyes.com") || url.includes("567741.xyz")) {
     })
 }
 
+if (url.includes("5msky.com")) {
+    body.Items.forEach(item => {
+        if (item.Name.includes(".")) {
+            item.Name = item.Name.slice(3)
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+    })
+}
+
 if (url.includes("sexemby.com")) {
     // 按此顺序排序
     const customOrder = [
