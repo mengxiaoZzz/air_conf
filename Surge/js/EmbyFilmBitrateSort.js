@@ -13,29 +13,35 @@ function stableSort(arr, compareFn) {
     return indexedArr.map((item) => item.value);
 }
 
-let MediaSources = body.MediaSources;
+try {
+    let MediaSources = body.MediaSources;
 
-if (MediaSources) {
-    // 筛选无媒体信息的视频
-    let MediaSources_NoMedia = MediaSources.filter(e => e.MediaStreams == null || e.MediaStreams.filter(e => e.Type === 'Video').length === 0);
+    if (MediaSources) {
+        // 筛选无媒体信息的视频
+        let MediaSources_NoMedia = MediaSources.filter(e => e.MediaStreams == null || e.MediaStreams.filter(e => e.Type === 'Video').length === 0);
 
-    // 筛选有媒体信息的视频
-    let MediaSources_Media = MediaSources.filter(e => e.MediaStreams != null && e.MediaStreams.filter(e => e.Type === 'Video').length > 0);
+        // 筛选有媒体信息的视频
+        let MediaSources_Media = MediaSources.filter(e => e.MediaStreams != null && e.MediaStreams.filter(e => e.Type === 'Video').length > 0);
 
-    // 筛选-剔除1M以下的码率
-    let MediaSources_Media_Temp = MediaSources_Media.filter(e => e.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate > 1024 * 1024);
-    if (MediaSources_Media_Temp.length > 0) {
-        MediaSources_Media = MediaSources_Media_Temp;
+        // 筛选-剔除1M以下的码率
+        let MediaSources_Media_Temp = MediaSources_Media.filter(e => e.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate > 1024 * 1024);
+        if (MediaSources_Media_Temp.length > 0) {
+            MediaSources_Media = MediaSources_Media_Temp;
+        }
+
+        // 排序
+        MediaSources_Media = stableSort(MediaSources_Media, (a, b) => b.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate - a.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate);
+
+        // 把无媒体信息的视频追加到最后
+        MediaSources = MediaSources_Media.concat(MediaSources_NoMedia);
+
+        body.MediaSources = MediaSources
     }
 
-    // 排序
-    MediaSources_Media = stableSort(MediaSources_Media, (a, b) => b.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate - a.MediaStreams.filter(e => e.Type === 'Video')[0].BitRate);
-
-    // 把无媒体信息的视频追加到最后
-    MediaSources = MediaSources_Media.concat(MediaSources_NoMedia);
-
-    body.MediaSources = MediaSources
+    body = JSON.stringify(body);
+    $done({body});
+} catch (e) {
+    console.log(`Emby 码率排序失败: ${e}`);
+    body = JSON.stringify(body);
+    $done({body});
 }
-
-body = JSON.stringify(body);
-$done({body});
