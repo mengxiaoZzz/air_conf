@@ -121,9 +121,11 @@ if (url.includes("rjf37.com") || url.includes("xytx.org") || url.includes("120.5
 
 if (url.includes("saturdayvideo")) {
     body.Items.forEach(item => {
-        item.Name = item.Name.slice(3)
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
+        if ("播放列表" !== item.Name) {
+            item.Name = item.Name.slice(3)
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
     })
 }
 
