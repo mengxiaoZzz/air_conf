@@ -2,7 +2,7 @@
 #!desc=emby分类名修改
 
 [Script]
-Emby-Category-Rename = type=http-response,pattern=^https?://[^/]+/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js
+Emby-Category-Rename = type=http-response,pattern=^https?://[^/]+/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=1048576
 Emby-Episode-Bitrate-Sort = type=http-response,pattern=^https?://[^/]+/emby/Shows/\w+/Episodes,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/EmbyBitrateSort.js,max-size=1048576
 Emby-Film-Bitrate-Sort = type=http-response,pattern=^https?://[^/]+/emby/Users/\w+/Items/\w+,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/EmbyFilmBitrateSort.js,max-size=1048576
 
