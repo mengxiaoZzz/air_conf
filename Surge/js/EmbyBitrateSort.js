@@ -1,11 +1,6 @@
 const url = $request.url;
 let body = JSON.parse($response.body);
 
-if (url.includes("cloud.s1.xxzi.top")) {
-    body = JSON.stringify(body);
-    $done({body});
-}
-
 // 稳定排序
 function stableSort(arr, compareFn) {
     // 给每个元素附加原始索引
