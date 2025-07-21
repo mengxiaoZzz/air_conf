@@ -1,6 +1,11 @@
 const url = $request.url;
 let body = JSON.parse($response.body);
 
+if (url.includes("cloud.s1.xxzi.top")) {
+    body = JSON.stringify(body);
+    $done({body});
+}
+
 // 稳定排序
 function stableSort(arr, compareFn) {
     // 给每个元素附加原始索引
@@ -13,7 +18,7 @@ function stableSort(arr, compareFn) {
     return indexedArr.map((item) => item.value);
 }
 
-// try {
+try {
     let items = body.Items;
     items.forEach(item => {
         // 筛选无媒体信息的视频
@@ -38,8 +43,8 @@ function stableSort(arr, compareFn) {
 
     body = JSON.stringify(body);
     $done({body});
-// } catch (e) {
-//     console.log(`Emby 码率排序失败: ${e}`);
-//     body = JSON.stringify(body);
-//     $done({body});
-// }
+} catch (e) {
+    console.log(`Emby 码率排序失败: ${e}`);
+    body = JSON.stringify(body);
+    $done({body});
+}
