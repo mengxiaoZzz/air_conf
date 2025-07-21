@@ -13,7 +13,7 @@ function stableSort(arr, compareFn) {
     return indexedArr.map((item) => item.value);
 }
 
-try {
+// try {
     let items = body.Items;
     items.forEach(item => {
         // 筛选无媒体信息的视频
@@ -38,8 +38,8 @@ try {
 
     body = JSON.stringify(body);
     $done({body});
-} catch (e) {
-    console.log(`Emby 码率排序失败: ${e}`);
-    body = JSON.stringify(body);
-    $done({body});
-}
+// } catch (e) {
+//     console.log(`Emby 码率排序失败: ${e}`);
+//     body = JSON.stringify(body);
+//     $done({body});
+// }
