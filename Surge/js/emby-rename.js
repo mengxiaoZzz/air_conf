@@ -107,7 +107,8 @@ if (url.includes("cloud.s1.xxzi.top")) {
     });
 }
 
-if (url.includes("rjf37.com") || url.includes("xytx.org") || url.includes("120.53.89.215") || url.includes("211.159.153.75")) {
+if (url.includes("rjf37.com") || url.includes("xytx.org") || url.includes("120.53.89.215") || url.includes("211.159.153.75")
+    || url.includes("23.106.159.48") || url.includes("45.66.129.136")) {
     const renameMap = {
         "国漫": "国内动漫",
         "日番": "国外动漫"
