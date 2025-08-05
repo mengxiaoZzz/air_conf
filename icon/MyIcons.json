@@ -287,6 +287,10 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SNTP.png"
         },
         {
+            "name": "SNTPLite",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SNTPLite.png"
+        },
+        {
             "name": "pdx",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/pdx.png"
         },
