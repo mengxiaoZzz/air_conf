@@ -55,6 +55,26 @@ if (url.includes("younoyes.com") || url.includes("567741.xyz")) {
     })
 }
 
+if (url.includes("free.28.al")) {
+    body.Items.forEach(item => {
+        if (item.Name.includes("国漫")) {
+            item.Name = "国内动漫"
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+        if (item.Name.includes("日番")) {
+            item.Name = "国外动漫"
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+        if (item.Name.includes("HDD")) {
+            item.Name = item.Name.replace("-HDD", "")
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+    })
+}
+
 if (url.includes("mebimmer.de")) {
     // 按此顺序排序
     const customOrder = [
