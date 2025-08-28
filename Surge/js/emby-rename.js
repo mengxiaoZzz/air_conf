@@ -29,7 +29,7 @@ if (url.includes("meowfly")) {
 }
 
 if (url.includes("roboemby.de") || url.includes("616626.xyz") || url.includes("asubaka.top")
-    || url.includes("711.lol") || url.includes("mobaiemby.site")) {
+    || url.includes("711.lol") || url.includes("mobaiemby.site") || url.includes("115cdn.de")) {
     const renameMap = {
         "国漫": "国内动漫",
         "日番": "国外动漫",
@@ -53,6 +53,26 @@ if (url.includes("younoyes.com") || url.includes("567741.xyz")) {
         item.ForcedSortName = item.Name
         item.SortName = item.Name
     })
+}
+
+if (url.includes("mebimmer.de")) {
+    // 按此顺序排序
+    const customOrder = [
+        "动漫剧集",
+        "华语剧集",
+        "外语剧集",
+        "华语电影",
+        "外语电影",
+        "动漫电影",
+        "怀旧剧场",
+        "纪录片",
+        "综艺",
+        "演唱会",
+        "合集"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
 }
 
 if (url.includes("5msky.com")) {
