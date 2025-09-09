@@ -55,6 +55,39 @@ if (url.includes("younoyes.com") || url.includes("567741.xyz")) {
     })
 }
 
+if (url.includes("mjji.de")) {
+    body.Items.forEach(item => {
+        if (item.Name.includes("国漫")) {
+            item.Name = "国内动漫"
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+        if (item.Name.includes("日番")) {
+            item.Name = "国外动漫"
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+    })
+    // 按此顺序排序
+    const customOrder = [
+        "国内动漫",
+        "国外动漫",
+        "国产剧",
+        "欧美剧",
+        "日韩剧",
+        "未分类",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "纪录片",
+        "综艺",
+        "少儿"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 if (url.includes("free.28.al")) {
     body.Items.forEach(item => {
         if (item.Name.includes("国漫")) {
