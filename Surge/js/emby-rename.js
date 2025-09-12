@@ -139,10 +139,22 @@ if (url.includes("5msky.com")) {
 }
 
 if (url.includes("sexemby.com")) {
+    body.Items.forEach(item => {
+        if (item.Name.includes("国漫")) {
+            item.Name = "国内动漫"
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+        if (item.Name.includes("日番")) {
+            item.Name = "国外动漫"
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+    })
     // 按此顺序排序
     const customOrder = [
-        "国漫",
-        "日番",
+        "国内动漫",
+        "国外动漫",
         "国产剧",
         "欧美剧",
         "日韩剧",
@@ -180,8 +192,8 @@ if (url.includes("cloud.s1.xxzi.top")) {
     });
 }
 
-if (url.includes("rjf37.com") || url.includes("xytx.org") || url.includes("120.53.89.215") || url.includes("211.159.153.75")
-    || url.includes("23.106.159.48") || url.includes("45.66.129.136")) {
+if (url.includes("rjf37.com") || url.includes("xytx.org") || url.includes("xylyra.com") || url.includes("120.53.89.215")
+    || url.includes("211.159.153.75") || url.includes("45.66.129.136")) {
     const renameMap = {
         "国漫": "国内动漫",
         "日番": "国外动漫"
