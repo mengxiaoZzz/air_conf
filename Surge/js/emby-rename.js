@@ -273,5 +273,25 @@ if (url.includes("chilledmelon")) {
     });
 }
 
+if (url.includes("lilyemby.my")) {
+    // 按此顺序排序
+    const customOrder = [
+        "国产剧",
+        "日韩剧",
+        "欧美剧",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "纪录片",
+        "童趣乐园区",
+        "现场盛典演",
+        "精彩大集合",
+        "播放列表"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 body = JSON.stringify(body);
 $done({body});
