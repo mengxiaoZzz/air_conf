@@ -55,7 +55,7 @@ if (url.includes("younoyes.com") || url.includes("567741.xyz")) {
     })
 }
 
-if (url.includes("mjji.de")) {
+if (url.includes("mjji.de") || url.includes("apitron.net")) {
     body.Items.forEach(item => {
         if (item.Name.includes("国漫")) {
             item.Name = "国内动漫"
@@ -126,16 +126,6 @@ if (url.includes("mebimmer.de")) {
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
     });
-}
-
-if (url.includes("5msky.com")) {
-    body.Items.forEach(item => {
-        if (item.Name.includes(".")) {
-            item.Name = item.Name.slice(3)
-            item.ForcedSortName = item.Name
-            item.SortName = item.Name
-        }
-    })
 }
 
 if (url.includes("sexemby.com")) {
