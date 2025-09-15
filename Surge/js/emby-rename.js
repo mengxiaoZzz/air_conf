@@ -205,7 +205,7 @@ if (url.includes("saturdayvideo")) {
     })
 }
 
-if (url.includes("lyrebirdemby") || url.includes("188.172.228.65")) {
+if (url.includes("lyrebirdemby") || url.includes("188.172.228.65") || url.includes("cdn.2580852.xyz")) {
     body.Items.forEach(item => {
         if ("播放列表" !== item.Name) {
             item.Name = item.Name.slice(2)
