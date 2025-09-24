@@ -232,12 +232,19 @@ if (url.includes("lyrebirdemby") || url.includes("188.172.228.65") || url.includ
 }
 
 if (url.includes("chilledmelon")) {
+    const renameMap = {
+        "国产动漫": "华语动漫",
+        "日本动漫": "外语动漫"
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
     // 按此顺序排序
     const customOrder = [
-        "国产动漫",
-        "日本动漫",
-        "短剧合集",
-        "沙雕动画",
+        "华语动漫",
+        "外语动漫",
         "国产剧集",
         "日韩剧集",
         "欧美剧集",
@@ -245,6 +252,8 @@ if (url.includes("chilledmelon")) {
         "华语电影",
         "外语电影",
         "动画电影",
+        "短剧合集",
+        "沙雕动画",
         "纪录片集",
         "综艺节目",
         "儿童节目",
