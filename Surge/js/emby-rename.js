@@ -244,8 +244,8 @@ if (url.includes("lilyemby.my")) {
     const customOrder = [
         "动漫",
         "国产剧",
-        "日韩剧",
         "欧美剧",
+        "日韩剧",
         "其他剧集",
         "短剧",
         "华语电影",
