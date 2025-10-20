@@ -42,7 +42,7 @@ if (url.includes("mjji.de") || url.includes("apitron.net")) {
         "动画电影",
         "纪录片",
         "综艺",
-        "少儿"
+        "儿童"
     ];
     body.Items = body.Items.sort((a, b) => {
         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
