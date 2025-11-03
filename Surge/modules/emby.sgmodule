@@ -5,5 +5,5 @@
 Emby-Category-Rename = type=http-response,pattern=^https?://[^/]+/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 
 [MITM]
-hostname = %APPEND% *.meowfly.*:0,*.mjji.de:0,*.apitron.net:0,lite.saturdayvideo.top:0,*.lyrebirdemby.com:0,188.172.228.65:0,cdn.2580852.xyz:0,*.lilyemby.my:0
+hostname = %APPEND% *.meowfly.*:0,*.mjji.de:0,*.apitron.net:0,lite.saturdayvideo.top:0,*.lyrebirdemby.com:0,188.172.228.65:0,cdn.2580852.xyz:0
 

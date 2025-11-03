@@ -86,25 +86,5 @@ if (url.includes("lyrebirdemby") || url.includes("188.172.228.65") || url.includ
     });
 }
 
-if (url.includes("lilyemby.my")) {
-    // 按此顺序排序
-    const customOrder = [
-        "动漫",
-        "国产剧",
-        "欧美剧",
-        "日韩剧",
-        "其他剧集",
-        "短剧",
-        "华语电影",
-        "外语电影",
-        "动画电影",
-        "纪录片",
-        "综艺"
-    ];
-    body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
-    });
-}
-
 body = JSON.stringify(body);
 $done({body});
