@@ -6,3 +6,4 @@ Emby-Category-Rename = type=http-response,pattern=^https?://jjyyplexcc.paoluma.d
 
 [MITM]
 hostname = %APPEND% jjyyplexcc.paoluma.de
+https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/modules/Paolu.sgmodule
