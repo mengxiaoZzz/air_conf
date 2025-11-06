@@ -10,7 +10,8 @@ const customOrder = [
     "外语电影",
     "动画电影",
     "综艺",
-    "瑟瑟专区"
+    "瑟瑟专区",
+    "里番"
 ];
 body.MediaContainer.Directory = body.MediaContainer.Directory.sort((a, b) => {
     return customOrder.indexOf(a.title) - customOrder.indexOf(b.title);
