@@ -2,8 +2,9 @@
 #!desc=emby分类排序
 
 [Script]
-Emby-Category-Rename = type=http-response,pattern=^https?://[^/]+/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
+Emby-Category-Rename = type=http-response,pattern=^https?://gy.meowfly.de/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
+Emby-Category-Rename = type=http-response,pattern=^https?://wmu8.65194798.xyz/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 
 [MITM]
-hostname = %APPEND% *.meowfly.*:0
+hostname = %APPEND% gy.meowfly.de,wmu8.65194798.xyz
 
