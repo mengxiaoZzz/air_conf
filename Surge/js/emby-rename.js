@@ -28,6 +28,30 @@ if (url.includes("meowfly")) {
     });
 }
 
+if (url.includes("apitron.net")) {
+    // 按此顺序排序
+    const customOrder = [
+        "硬盘-电视剧",
+        "硬盘-电影",
+        "国漫",
+        "日番",
+        "国产剧",
+        "欧美剧",
+        "日韩剧",
+        "未分类",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "纪录片",
+        "综艺",
+        "儿童",
+        "播放列表"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 // if (url.includes("wmu8.1.xyz")) {
 //     // 按此顺序排序
 //     const customOrder = [
