@@ -4,7 +4,8 @@
 [Script]
 Emby-Category-Rename = type=http-response,pattern=^https?://gy.meowfly.de/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 Emby-Category-Rename = type=http-response,pattern=^https?://\w+.apitron.net/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
+Emby-Category-Rename = type=http-response,pattern=^https?://ness1.xxqqx.cn/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 
 [MITM]
-hostname = %APPEND% gy.meowfly.de,*.apitron.net
+hostname = %APPEND% gy.meowfly.de,*.apitron.net,ness1.xxqqx.cn
 
