@@ -2,7 +2,7 @@
 #!desc=Paolu Plex分类排序
 
 [Script]
-Emby-Category-Rename = type=http-response,pattern=^https?://jjyyplexcc.paoluma.de/library/sections,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/paolu.js,max-size=20971520
+Emby-Category-Rename = type=http-response,pattern=^https?://paoluplex.paoluma.de/library/sections,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/paolu.js,max-size=20971520
 
 [MITM]
 hostname = %APPEND% jjyyplexcc.paoluma.de
