@@ -52,30 +52,34 @@ if (url.includes("apitron.net") || url.includes("ness1.xxqqx.cn")) {
     });
 }
 
-// if (url.includes("wmu8.1.xyz")) {
-//     // 按此顺序排序
-//     const customOrder = [
-//         "国产动漫",
-//         "动漫剧集",
-//         "国产剧集",
-//         "欧美剧集",
-//         "日本剧集",
-//         "韩国剧集",
-//         "亚太及小语种",
-//         "华语电影",
-//         "外语电影",
-//         "动画电影",
-//         "记录纪实",
-//         "综艺节目",
-//         "儿童剧集",
-//         "特殊摄影",
-//         "演唱会",
-//         "合集"
-//     ];
-//     body.Items = body.Items.sort((a, b) => {
-//         return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
-//     });
-// }
+if (url.includes("dengao9527.cloud")) {
+    const renameMap = {
+        "国漫": "华语动漫",
+        "番剧": "外语动漫",
+        "电视剧": "华语剧集",
+        "国外热播": "外语剧集",
+        "儿童动画": "儿童",
+    };
+    body.Items.forEach(item => {
+        item.Name = renameMap[item.Name] || item.Name
+        item.ForcedSortName = item.Name
+        item.SortName = item.Name
+    })
+    // 按此顺序排序
+    const customOrder = [
+        "华语动漫",
+        "外语动漫",
+        "华语剧集",
+        "外语剧集",
+        "电影",
+        "动画电影",
+        "综艺",
+        "儿童",
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
 
 body = JSON.stringify(body);
 $done({body});
