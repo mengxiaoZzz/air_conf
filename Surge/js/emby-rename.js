@@ -81,5 +81,32 @@ if (url.includes("dengao9527.cloud")) {
     });
 }
 
+if (url.includes("niceduck.lol") || url.includes("irisnb.com")
+    || url.includes("5203166.xyz")) {
+    // 按此顺序排序
+    const customOrder = [
+        "国产动漫",
+        "日本番剧",
+        "欧美动漫",
+        "国产剧集",
+        "港台剧集",
+        "欧美剧集",
+        "日韩剧集",
+        "南亚剧集",
+        "国产电影",
+        "港台电影",
+        "欧美电影",
+        "日韩电影",
+        "动画电影",
+        "纪录影片",
+        "综艺节目",
+        "演出现场",
+        "播放列表",
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 body = JSON.stringify(body);
 $done({body});
