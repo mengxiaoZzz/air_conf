@@ -23,8 +23,20 @@ if (url.includes("meowfly")) {
         "演唱会",
         "合集"
     ];
+    // 创建一个映射以提高查找效率
+    const orderMap = new Map(customOrder.map((name, index) => [name, index]));
+
     body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+        const indexA = orderMap.get(a.Name) ?? Infinity; // 如果 a.Name 不在列表中，则返回无穷大
+        const indexB = orderMap.get(b.Name) ?? Infinity; // 如果 b.Name 不在列表中，则返回无穷大
+
+        // 如果两者都不在列表中，则保持原有顺序
+        if (indexA === Infinity && indexB === Infinity) {
+            return 0;
+        }
+
+        // 否则，按索引或无穷大值进行排序
+        return indexA - indexB;
     });
 }
 
@@ -47,8 +59,20 @@ if (url.includes("apitron.net") || url.includes("ness1.xxqqx.cn")) {
         "儿童",
         "播放列表"
     ];
+    // 创建一个映射以提高查找效率
+    const orderMap = new Map(customOrder.map((name, index) => [name, index]));
+
     body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+        const indexA = orderMap.get(a.Name) ?? Infinity; // 如果 a.Name 不在列表中，则返回无穷大
+        const indexB = orderMap.get(b.Name) ?? Infinity; // 如果 b.Name 不在列表中，则返回无穷大
+
+        // 如果两者都不在列表中，则保持原有顺序
+        if (indexA === Infinity && indexB === Infinity) {
+            return 0;
+        }
+
+        // 否则，按索引或无穷大值进行排序
+        return indexA - indexB;
     });
 }
 
@@ -76,8 +100,20 @@ if (url.includes("dengao9527.cloud")) {
         "综艺",
         "儿童",
     ];
+    // 创建一个映射以提高查找效率
+    const orderMap = new Map(customOrder.map((name, index) => [name, index]));
+
     body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+        const indexA = orderMap.get(a.Name) ?? Infinity; // 如果 a.Name 不在列表中，则返回无穷大
+        const indexB = orderMap.get(b.Name) ?? Infinity; // 如果 b.Name 不在列表中，则返回无穷大
+
+        // 如果两者都不在列表中，则保持原有顺序
+        if (indexA === Infinity && indexB === Infinity) {
+            return 0;
+        }
+
+        // 否则，按索引或无穷大值进行排序
+        return indexA - indexB;
     });
 }
 
@@ -103,8 +139,20 @@ if (url.includes("niceduck.lol") || url.includes("irisnb.com")
         "演出现场",
         "播放列表",
     ];
+    // 创建一个映射以提高查找效率
+    const orderMap = new Map(customOrder.map((name, index) => [name, index]));
+
     body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+        const indexA = orderMap.get(a.Name) ?? Infinity; // 如果 a.Name 不在列表中，则返回无穷大
+        const indexB = orderMap.get(b.Name) ?? Infinity; // 如果 b.Name 不在列表中，则返回无穷大
+
+        // 如果两者都不在列表中，则保持原有顺序
+        if (indexA === Infinity && indexB === Infinity) {
+            return 0;
+        }
+
+        // 否则，按索引或无穷大值进行排序
+        return indexA - indexB;
     });
 }
 
@@ -117,15 +165,27 @@ if (url.includes("mebimmer.de") || url.includes("mebimmer.de")) {
         "外语剧集",
         "华语电影",
         "外语电影",
-        "动画电影",
+        "动漫电影",
         "儿童剧场",
         "综艺节目",
         "纪录片",
         "演唱会",
         "播放列表"
     ];
+    // 创建一个映射以提高查找效率
+    const orderMap = new Map(customOrder.map((name, index) => [name, index]));
+
     body.Items = body.Items.sort((a, b) => {
-        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+        const indexA = orderMap.get(a.Name) ?? Infinity; // 如果 a.Name 不在列表中，则返回无穷大
+        const indexB = orderMap.get(b.Name) ?? Infinity; // 如果 b.Name 不在列表中，则返回无穷大
+
+        // 如果两者都不在列表中，则保持原有顺序
+        if (indexA === Infinity && indexB === Infinity) {
+            return 0;
+        }
+
+        // 否则，按索引或无穷大值进行排序
+        return indexA - indexB;
     });
 }
 
