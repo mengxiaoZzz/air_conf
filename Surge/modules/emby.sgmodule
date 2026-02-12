@@ -9,7 +9,8 @@ Emby-Category-Rename = type=http-response,pattern=^https?://dengao9527.cloud/emb
 Emby-Category-Rename = type=http-response,pattern=^https?://\w+.niceduck.lol/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 Emby-Category-Rename = type=http-response,pattern=^https?://\w+.irisnb.com/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 Emby-Category-Rename = type=http-response,pattern=^https?://\w+.5203166.xyz/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
+Emby-Category-Rename = type=http-response,pattern=^https?://\w+.mebimmer.de/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 
 [MITM]
-hostname = %APPEND% gy.meowfly.de,*.apitron.net,ness1.xxqqx.cn,dengao9527.cloud:0,*.niceduck.lol,*.irisnb.com,*.5203166.xyz
+hostname = %APPEND% gy.meowfly.de,*.apitron.net,ness1.xxqqx.cn,dengao9527.cloud:0,*.niceduck.lol,*.irisnb.com,*.5203166.xyz,*.mebimmer.de
 

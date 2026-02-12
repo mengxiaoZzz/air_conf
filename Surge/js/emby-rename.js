@@ -108,5 +108,26 @@ if (url.includes("niceduck.lol") || url.includes("irisnb.com")
     });
 }
 
+if (url.includes("mebimmer.de") || url.includes("mebimmer.de")) {
+    // 按此顺序排序
+    const customOrder = [
+        "华语动漫",
+        "外语动漫",
+        "华语剧集",
+        "外语剧集",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "儿童剧场",
+        "综艺节目",
+        "纪录片",
+        "演唱会",
+        "播放列表"
+    ];
+    body.Items = body.Items.sort((a, b) => {
+        return customOrder.indexOf(a.Name) - customOrder.indexOf(b.Name);
+    });
+}
+
 body = JSON.stringify(body);
 $done({body});
