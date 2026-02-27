@@ -40,7 +40,7 @@ if (url.includes("meowfly")) {
     });
 }
 
-if (url.includes("apitron.net") || url.includes("ness1.xxqqx.cn")) {
+if (url.includes("apitron.net") || url.includes("ness1.gbpgbp.cn")) {
     // 按此顺序排序
     const customOrder = [
         "硬盘-电视剧",
