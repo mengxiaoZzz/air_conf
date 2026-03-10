@@ -40,6 +40,73 @@ if (url.includes("meowfly")) {
     });
 }
 
+if (url.includes("sadchicktv.com")) {
+    // 按此顺序排序
+    const customOrder = [
+        "国漫",
+        "日番",
+        "国产剧",
+        "欧美剧",
+        "日韩剧",
+        "华语电影",
+        "外语电影",
+        "动画电影",
+        "综艺",
+        "纪录片",
+        "儿童剧",
+        "演唱会"
+    ];
+    // 创建一个映射以提高查找效率
+    const orderMap = new Map(customOrder.map((name, index) => [name, index]));
+
+    body.Items = body.Items.sort((a, b) => {
+        const indexA = orderMap.get(a.Name) ?? Infinity; // 如果 a.Name 不在列表中，则返回无穷大
+        const indexB = orderMap.get(b.Name) ?? Infinity; // 如果 b.Name 不在列表中，则返回无穷大
+
+        // 如果两者都不在列表中，则保持原有顺序
+        if (indexA === Infinity && indexB === Infinity) {
+            return 0;
+        }
+
+        // 否则，按索引或无穷大值进行排序
+        return indexA - indexB;
+    });
+}
+
+if (url.includes("zhezhi.art")) {
+    // 按此顺序排序
+    const customOrder = [
+        "动漫",
+        "国产剧集",
+        "港台剧集",
+        "欧美剧集",
+        "日韩剧集",
+        "短剧",
+        "华语电影",
+        "欧美电影",
+        "日韩电影",
+        "动画电影",
+        "综艺",
+        "纪录剧集",
+        "演唱会"
+    ];
+    // 创建一个映射以提高查找效率
+    const orderMap = new Map(customOrder.map((name, index) => [name, index]));
+
+    body.Items = body.Items.sort((a, b) => {
+        const indexA = orderMap.get(a.Name) ?? Infinity; // 如果 a.Name 不在列表中，则返回无穷大
+        const indexB = orderMap.get(b.Name) ?? Infinity; // 如果 b.Name 不在列表中，则返回无穷大
+
+        // 如果两者都不在列表中，则保持原有顺序
+        if (indexA === Infinity && indexB === Infinity) {
+            return 0;
+        }
+
+        // 否则，按索引或无穷大值进行排序
+        return indexA - indexB;
+    });
+}
+
 if (url.includes("apitron.net") || url.includes("ness1.gbpgbp.cn")) {
     // 按此顺序排序
     const customOrder = [
