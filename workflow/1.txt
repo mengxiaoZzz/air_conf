@@ -1,7 +1,7 @@
 
 
 #华语动漫
-(?i)(2160p.*).*(UBWEB.*深空彼岸|ADWeb.*牧神记|CHDWEB.*师兄啊师兄|UBWEB.*玄界之门|UBWEB.*光阴之外|HHWEB.*择天记)
+(?i)(2160p.*).*(UBWEB.*深空彼岸|ADWeb.*牧神记|CHDWEB.*师兄啊师兄|UBWEB.*玄界之门|CHDWEB.*光阴之外|HHWEB.*择天记)
 
 
 #外语动漫
