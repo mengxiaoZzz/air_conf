@@ -76,7 +76,8 @@ if (url.includes("sadchicktv.com")) {
 if (url.includes("zhezhi.art")) {
     // 按此顺序排序
     const customOrder = [
-        "动漫",
+        "国漫",
+        "日漫",
         "国产剧集",
         "港台剧集",
         "欧美剧集",
@@ -87,6 +88,7 @@ if (url.includes("zhezhi.art")) {
         "日韩电影",
         "动画电影",
         "综艺",
+        "儿童",
         "纪录剧集",
         "纪录片",
         "演唱会"
