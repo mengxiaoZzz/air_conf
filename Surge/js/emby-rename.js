@@ -146,7 +146,7 @@ if (url.includes("apitron.net") || url.includes("ness1.gbpgbp.cn")) {
     });
 }
 
-if (url.includes("dengao9527.cloud")) {
+if (url.includes("dengao9527.top")) {
     const renameMap = {
         "国漫": "华语动漫",
         "番剧": "外语动漫",
@@ -187,44 +187,6 @@ if (url.includes("dengao9527.cloud")) {
     });
 }
 
-if (url.includes("niceduck.lol") || url.includes("irisnb.com")
-    || url.includes("5203166.xyz")) {
-    // 按此顺序排序
-    const customOrder = [
-        "国产动漫",
-        "日本番剧",
-        "欧美动漫",
-        "国产剧集",
-        "港台剧集",
-        "欧美剧集",
-        "日韩剧集",
-        "南亚剧集",
-        "国产电影",
-        "港台电影",
-        "欧美电影",
-        "日韩电影",
-        "动画电影",
-        "纪录影片",
-        "综艺节目",
-        "演出现场",
-        "播放列表",
-    ];
-    // 创建一个映射以提高查找效率
-    const orderMap = new Map(customOrder.map((name, index) => [name, index]));
-
-    body.Items = body.Items.sort((a, b) => {
-        const indexA = orderMap.get(a.Name) ?? Infinity; // 如果 a.Name 不在列表中，则返回无穷大
-        const indexB = orderMap.get(b.Name) ?? Infinity; // 如果 b.Name 不在列表中，则返回无穷大
-
-        // 如果两者都不在列表中，则保持原有顺序
-        if (indexA === Infinity && indexB === Infinity) {
-            return 0;
-        }
-
-        // 否则，按索引或无穷大值进行排序
-        return indexA - indexB;
-    });
-}
 
 if (url.includes("mebimmer.de") || url.includes("mebimmer.de")) {
     // 按此顺序排序
