@@ -147,28 +147,18 @@ if (url.includes("apitron.net") || url.includes("ness1.gbpgbp.cn")) {
 }
 
 if (url.includes("dengao9527.top")) {
-    const renameMap = {
-        "国漫": "华语动漫",
-        "番剧": "外语动漫",
-        "电视剧": "华语剧集",
-        "国外热播": "外语剧集",
-        "儿童动画": "儿童",
-    };
-    body.Items.forEach(item => {
-        item.Name = renameMap[item.Name] || item.Name
-        item.ForcedSortName = item.Name
-        item.SortName = item.Name
-    })
     // 按此顺序排序
     const customOrder = [
-        "华语动漫",
-        "外语动漫",
-        "华语剧集",
-        "外语剧集",
-        "电影",
+        "国产动漫",
+        "日本番剧",
+        "国产剧集",
+        "国外热剧",
+        "华语电影",
+        "欧美电影",
         "动画电影",
         "综艺",
         "儿童",
+        "演唱会"
     ];
     // 创建一个映射以提高查找效率
     const orderMap = new Map(customOrder.map((name, index) => [name, index]));

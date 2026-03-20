@@ -1,7 +1,7 @@
 
 
 #华语动漫
-(?i)(2160p).*(UBWEB.*深空彼岸|ADWeb.*牧神记|CHDWEB.*师兄啊师兄|UBWEB.*玄界之门|CHDWEB.*光阴之外|HHWEB.*择天记)
+(?i)(2160p).*((UBWEB.*深空彼岸)|(ADWeb.*牧神记)|(MWeb.*师兄啊师兄)|(HQ.*CHDWEB.*师兄啊师兄)|(UBWEB.*玄界之门)|(MWeb.*光阴之外)|(HQ.*CHDWEB.*光阴之外)|(HHWEB.*择天记))
 
 
 #外语动漫
@@ -9,7 +9,9 @@
 
 
 #华语剧集
-(?i)(2160p).*(((HDR|DV).*ADWeb.*她的盛焰.*官方)|((HDR|DV).*CHDWEB.*你好1983.*官方)|(HDR.*ADWeb.*逐玉.*官方|DV.*HHWEB.*逐玉.*官方))
+(?i)(2160p).*(((HDR|DV).*ADWeb.*她的盛焰)|((HDR|DV).*CHDWEB.*你好1983)|((HDR|DV).*ADWeb.*隐身的名字)|(HDR.*ADWeb.*逐玉)|(DV.*HHWEB.*逐玉))
+
+
 
 #欧美剧集
 
@@ -27,7 +29,6 @@
 
 
 (?i)( 日语无字|先行|MiniBD|DIY原盘|iPad|UPSCALE|AV1|BDMV|RMVB|CAMRip|DVD|vcd|480p|OPUS|\bH&R\b| SubsPlease|Up to 21°C|VARYG|TELESYNC|NTb|sGnb|BHYS|DBD|HDH|COLLECTiVE|SRVFI|HDSPad| 去头尾|(全|共)\d+(集|期)|完结|合集|Complete )
-
 
 
 
