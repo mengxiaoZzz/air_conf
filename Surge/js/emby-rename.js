@@ -73,6 +73,16 @@ if (url.includes("sadchicktv.com")) {
     });
 }
 
+if (url.includes("cn2gias.uk")) {
+    body.Items.forEach(item => {
+        if (item.Name.includes(".")) {
+            item.Name = item.Name.slice(2)
+            item.ForcedSortName = item.Name
+            item.SortName = item.Name
+        }
+    })
+}
+
 if (url.includes("zhezhi.art")) {
     // 按此顺序排序
     const customOrder = [
