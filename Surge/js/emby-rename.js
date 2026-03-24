@@ -73,7 +73,7 @@ if (url.includes("sadchicktv.com")) {
     });
 }
 
-if (url.includes("cn2gias.uk")) {
+if (url.includes("cn2gias.uk") || url.includes("s2.array2026.cc") || url.includes("s3.array2026.com")) {
     body.Items.forEach(item => {
         if (item.Name.includes(".")) {
             item.Name = item.Name.replace(/\d+\.\s/, "");

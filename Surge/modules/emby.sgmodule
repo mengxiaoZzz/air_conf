@@ -10,7 +10,9 @@ Emby-Category-Rename = type=http-response,pattern=^https?://\w+.mebimmer.de/emby
 Emby-Category-Rename = type=http-response,pattern=^https?://\w+.sadchicktv.com/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 Emby-Category-Rename = type=http-response,pattern=^https?://\w+.zhezhi.art/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 Emby-Category-Rename = type=http-response,pattern=^https?://\w+.cn2gias.uk/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
+Emby-Category-Rename = type=http-response,pattern=^https?://s2.array2026.cc/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
+Emby-Category-Rename = type=http-response,pattern=^https?://s3.array2026.com/emby/Users/\w+/Views,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/emby-rename.js,max-size=20971520
 
 [MITM]
-hostname = %APPEND% gy.meowfly.de,*.apitron.net,ness1.gbpgbp.cn,dengao9527.top:0,*.mebimmer.de,*.sadchicktv.com,*.zhezhi.art,*.cn2gias.uk:0
+hostname = %APPEND% gy.meowfly.de,*.apitron.net,ness1.gbpgbp.cn,dengao9527.top:0,*.mebimmer.de,*.sadchicktv.com,*.zhezhi.art,*.cn2gias.uk:0,s2.array2026.cc,s3.array2026.com
 
