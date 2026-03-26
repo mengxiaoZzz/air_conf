@@ -1,7 +1,7 @@
 
 
 #华语动漫
-(?i)(2160p).*((ADWeb.*深空彼岸)|(ADWeb.*牧神记)|(ADWeb.*师兄啊师兄)|(HQ.*HHWEB.*师兄啊师兄)|(UBWEB.*玄界之门)|(ADWeb.*光阴之外)|(HQ.*HHWEB.*光阴之外)|(CHDWEB.*择天记))
+(?i)(2160p).*((ADWeb.*深空彼岸)|(ADWeb.*牧神记)|(ADWeb.*师兄啊师兄)|(HQ.*HHWEB.*师兄啊师兄)|(UBWEB.*玄界之门)|(ADWeb.*光阴之外)|(HQ.*HHWEB.*光阴之外)|(CHDWEB.*择天记)|(CHDWEB.*搜神记))
 
 
 #外语动漫
@@ -9,7 +9,7 @@
 
 
 #华语剧集
-(?i)(2160p).*(((HDR|DV).*ADWeb.*她的盛焰)|((HDR|DV).*CHDWEB.*你好1983)|((HDR|DV).*ADWeb.*隐身的名字)|(HDR.*ADWeb.*逐玉)|(DV.*HHWEB.*逐玉)|(HHWEB.*正义女神))
+(?i)(2160p).*(((HDR|DV).*ADWeb.*她的盛焰)|((HDR|DV).*CHDWEB.*你好1983)|((HDR|DV).*ADWeb.*隐身的名字)|(HDR.*ADWeb.*逐玉)|(DV.*HHWEB.*逐玉)|((HQ|60fps).*CHDWEB.*正义女神)|(ADWeb.*家事法庭))
 
 
 
