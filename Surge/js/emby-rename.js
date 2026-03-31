@@ -156,7 +156,7 @@ if (url.includes("apitron.net") || url.includes("ness1.gbpgbp.cn")) {
     });
 }
 
-if (url.includes("dengao9527.top")) {
+if (url.includes("dengao9527.top") || url.includes("dengao9528.top")) {
     // 按此顺序排序
     const customOrder = [
         "国产动漫",
