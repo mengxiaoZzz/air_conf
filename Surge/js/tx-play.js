@@ -1,5 +1,4 @@
 const url = $request.url;
-let body = JSON.parse($response.body);
 
 // 播放地址
 const videoUrl = $request.url;
@@ -17,4 +16,4 @@ $task.fetch({
 });
 
 
-$done({body});
+$done({});
