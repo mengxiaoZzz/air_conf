@@ -1,6 +1,7 @@
 const url = $request.url;
 
-console.log($arguments);
+console.log("$argument");
+console.log($argument);
 
 // 播放器相关参数
 const PLAYER_MAP = {
