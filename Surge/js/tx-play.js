@@ -5,8 +5,6 @@ const videoUrl = $request.url;
 
 // user-agent
 let userAgent = $request.headers["user-agent"]
-console.log("userAgent")
-console.log(userAgent)
 
 if (userAgent.includes("SenPlayer")) {
     $done({});
