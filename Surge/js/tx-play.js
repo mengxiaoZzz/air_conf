@@ -13,6 +13,16 @@ const PLAYER_MAP = {
     "lenna": {scheme: "lenna://x-callback-url/play?url="}
 };
 
+let player = $argument.player
+console.log("player");
+console.log(player);
+if (player === undefined || player === "") {
+    player = "SenPlayer"
+}
+let scheme = PLAYER_MAP[player]
+console.log("scheme");
+console.log(scheme);
+
 // 播放地址
 const videoUrl = $request.url;
 
@@ -23,7 +33,7 @@ if (userAgent.includes("SenPlayer")) {
     $done({});
 }
 // 1. 构建 SenPlayer 的 URL Scheme
-const senPlayerLink = `SenPlayer://x-callback-url/play?url=${encodeURIComponent(videoUrl)}`;
+const senPlayerLink = scheme + `${encodeURIComponent(videoUrl)}`;
 // 2. 发送通知，并在通知中携带跳转指令
 $notification.post("ʚ前方高能预警ɞ", "翩若惊鸿，婉若游龙。", "", {
     "url": senPlayerLink
