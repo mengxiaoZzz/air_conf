@@ -13,13 +13,13 @@ const PLAYER_MAP = {
     "lenna": {scheme: "lenna://x-callback-url/play?url="}
 };
 
-let player = $argument.player
+let player = $argument.split('=')[1];
 console.log("player");
 console.log(player);
-if (player === undefined || player === "") {
+if (player === undefined || player === "" || player === null) {
     player = "SenPlayer"
 }
-let scheme = PLAYER_MAP[player]
+let scheme = PLAYER_MAP[player].scheme
 console.log("scheme");
 console.log(scheme);
 
