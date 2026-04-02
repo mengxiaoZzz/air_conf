@@ -1,9 +1,16 @@
 const url = $request.url;
 
 // 播放地址
-console.log($request)
 const videoUrl = $request.url;
 
+// user-agent
+let userAgent = $request.headers["user-agent"]
+console.log("userAgent")
+console.log(userAgent)
+
+if (userAgent.includes("SenPlayer")) {
+    $done({});
+}
 // 1. 构建 SenPlayer 的 URL Scheme
 const senPlayerLink = `SenPlayer://x-callback-url/play?url=${encodeURIComponent(videoUrl)}`;
 // 2. 发送通知，并在通知中携带跳转指令
