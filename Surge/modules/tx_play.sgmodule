@@ -1,9 +1,11 @@
 #!name=tx播放
 #!desc=tx播放
+#!arguments=播放器名称:SenPlayer, 自定义Scheme:完整的URLscheme, URL编码:auto
+#!arguments-desc=播放器支持: SenPlayer, SenPlayer-dl, Infuse, Forward, VidHub, lenna
 
 [Script]
-TX-Play = type=http-response,pattern=^https?://tth.txh069.com/.*\.m3u8,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play.js
-TX-Play = type=http-response,pattern=^https?://\w+.cloudfront.net/.*\.m3u8.*$,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play.js
+TX-Play = type=http-response,pattern=^https?://tth.txh069.com/.*\.m3u8,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play.js, argument=player={{{播放器名称}}}&scheme={{{自定义Scheme}}}&encode={{{URL编码}}}
+TX-Play = type=http-response,pattern=^https?://\w+.cloudfront.net/.*\.m3u8.*$,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play.js, argument=player={{{播放器名称}}}&scheme={{{自定义Scheme}}}&encode={{{URL编码}}}
 
 [MITM]
 hostname = %APPEND% tth.txh069.com,*.cloudfront.net

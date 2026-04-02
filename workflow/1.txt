@@ -9,7 +9,7 @@
 
 
 #华语剧集
-(?i)(2160p).*((ADWeb.*月鳞绮纪)|((HDR|DV).*CHDWEB.*你好1983)|((HDR|DV).*ADWeb.*隐身的名字)|(HDR.*ADWeb.*逐玉)|(DV.*HHWEB.*逐玉)|((HQ|60fps).*CHDWEB.*正义女神)|(ADWeb.*家事法庭)|(ADWeb.*你是迟来的欢喜)|(ADWeb.*白日提灯)|(ADWeb.*战旗如画)|(HHWEB.*危险关系))
+(?i)(2160p).*((HQ.*ADWeb.*月鳞绮纪)|((HDR|DV).*CHDWEB.*你好1983)|((HDR|DV).*ADWeb.*隐身的名字)|(HDR.*ADWeb.*逐玉)|(DV.*HHWEB.*逐玉)|((HQ|60fps).*CHDWEB.*正义女神)|(ADWeb.*家事法庭)|(ADWeb.*你是迟来的欢喜)|(ADWeb.*白日提灯)|(ADWeb.*战旗如画)|(HHWEB.*危险关系)|(ADWeb.*叵测))
 
 
 #欧美剧集

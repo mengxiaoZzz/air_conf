@@ -1,5 +1,17 @@
 const url = $request.url;
 
+console.log($arguments);
+
+// 播放器相关参数
+const PLAYER_MAP = {
+    "SenPlayer": {scheme: "SenPlayer://x-callback-url/play?url="},
+    "SenPlayer-dl": {scheme: "SenPlayer://x-callback-url/download?url="},
+    "Infuse": {scheme: "infuse://x-callback-url/play?url="},
+    "Forward": {scheme: "forward://x-callback-url?url="},
+    "VidHub": {scheme: "vidhub://x-callback-url/play?url="},
+    "lenna": {scheme: "lenna://x-callback-url/play?url="}
+};
+
 // 播放地址
 const videoUrl = $request.url;
 
