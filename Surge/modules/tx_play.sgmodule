@@ -2,7 +2,7 @@
 #!desc=tx播放
 
 [Script]
-TX-Play = type=http-response,pattern=^https?://tth.txh069.com/h5/m3u8/link/\w+.m3u8,requires-body=true,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play.js,max-size=20971520
+TX-Play = type=http-response,pattern=^https?://tth.txh069.com/h5/m3u8/link/\w+.m3u8,script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play.js
 
 [MITM]
 hostname = %APPEND% tth.txh069.com
