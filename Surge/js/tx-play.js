@@ -7,8 +7,8 @@ console.log($argument);
 const PLAYER_MAP = {
     "SenPlayer": {scheme: "SenPlayer://x-callback-url/play?url="},
     "SenPlayer-dl": {scheme: "SenPlayer://x-callback-url/download?url="},
-    "Forward": {scheme: "forward://x-callback-url/open?url="},
-    "VidHub": {scheme: "vidhub://x-callback-url/open?url="},
+    "Forward": {scheme: "open-forward://x-callback-url/open?url="},
+    "VidHub": {scheme: "open-vidhub://x-callback-url/open?url="},
     "lenna": {scheme: "lenna://x-callback-url/play?url="}
 };
 
