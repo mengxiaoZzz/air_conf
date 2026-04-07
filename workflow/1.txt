@@ -9,7 +9,7 @@
 
 
 #华语剧集
-(?i)(2160p).*((HQ.*(HDR|DV).*ADWeb.*月鳞绮纪)|(HQ.*60fps.*HHWEB.*月鳞绮纪)|(ADWeb.*拼桌)|((HDR|DV).*CHDWEB.*你好1983)|((HDR|DV).*ADWeb.*隐身的名字)|((HQ|60fps).*CHDWEB.*正义女神)|(ADWeb.*家事法庭)|(ADWeb.*你是迟来的欢喜)|(ADWeb.*白日提灯)|(ADWeb.*战旗如画)|(HHWEB.*危险关系)|(ADWeb.*叵测))
+(?i)(2160p).*((HQ.*(HDR|DV).*ADWeb.*月鳞绮纪)|(HQ.*60fps.*HHWEB.*月鳞绮纪)|(ADWeb.*拼桌)|((HQ|60fps).*CHDWEB.*正义女神)|(ADWeb.*家事法庭)|(ADWeb.*你是迟来的欢喜)|(ADWeb.*白日提灯)|(HHWEB.*危险关系)|(ADWeb.*叵测))
 
 
 #欧美剧集
@@ -21,9 +21,7 @@
 
 
 
-(?i)(日语无字|先行|MiniBD|DIY原盘|iPad|AV1|BDMV|RMVB|CAMRip|DVD|vcd|480p|OPUS|\bH&R\b|SubsPlease|Up to 21°C|VARYG|TELESYNC|NTb|sGnb|BHYS|DBD|HDH|COLLECTiVE|SRVFI|HDSPad|去头尾|(全|共)\d+(集|期)|完结|合集|Complete)
+(?i)(IQ|先行|MiniBD|DIY原盘|iPad|AV1|BDMV|RMVB|CAMRip|DVD|vcd|480p|OPUS|\bH&R\b|去头尾|(全|共)\d+(集|期)|完结|合集|Complete)
 
-
-(?i)(\bH&R\b|(全|共)\d+(集|期)|完结|合集|Complete)
 
 
