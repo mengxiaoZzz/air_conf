@@ -203,6 +203,14 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoFlix2.png"
         },
         {
+            "name": "EchoPro",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoPro.png"
+        },
+        {
+            "name": "EchoSuper",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoSuper.png"
+        },
+        {
             "name": "OkEmby",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/OkEmby.png"
         },

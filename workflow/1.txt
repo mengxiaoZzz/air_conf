@@ -1,28 +1,33 @@
 
 
 #华语动漫
-(?i)(2160p).*((ADWeb.*深空彼岸)|(ADWeb.*牧神记)|(ADWeb.*大道独行之蝶龙变)|(ADWeb.*师兄啊师兄)|(HQ.*HHWEB.*师兄啊师兄)|(ADWeb.*玄界之门)|(ADWeb.*光阴之外)|(HQ.*HHWEB.*光阴之外)|(CHDWEB.*择天记)|(CHDWEB.*搜神记)|((HDR|DV).*CHDWEB.*大主宰))
+(?i)(2160p).*((ADWeb.*牧神记)|(ADWeb.*将夜)|(ADWeb.*大道独行之蝶龙变)|(ADWeb.*师兄啊师兄)|(HQ.*HHWEB.*师兄啊师兄)|(CHDWEB.*搜神记)|((HDR|DV).*CHDWEB.*大主宰))
 
 
 #外语动漫
-(?i)(friDay|CR).*?(||被邻国王子溺爱)
 (?i)(friDay|CR).*?(ADWeb.*欢迎来到实力至上主义的教室)
 
 
 #华语剧集
-(?i)(2160p).*((HQ.*(HDR|DV).*ADWeb.*月鳞绮纪)|(HQ.*60fps.*HHWEB.*月鳞绮纪)|(UBWEB.*八千里路云和月)|(HHWEB.*冰湖重生)|(ADWeb.*家事法庭)|(ADWeb.*你是迟来的欢喜)|(ADWeb.*白日提灯)|(ADWeb.*叵测)|(ADWeb.*蜜语纪))
-
+(?i)(2160p).*(((HDR|DV).*ADWeb.*低智商犯罪)|((HDR|DV).*ADWeb.*喀什恋歌)|((HDR|DV).*HHWEB.*佳偶天成)|((HDR|DV).*CHDWEB.*主角))
 
 #欧美剧集
-(?i)(2160p).*((CHDWEB.*不完美的女人)|(CHDWEB.*雄鸡生活)|((HDR|DV).*HHWEB.*黑袍纠察队))
+(?i)(2160p).*((CHDWEB.*不完美的女人)|((HDR|DV).*CHDWEB.*母爱无赦)|(CHDWEB.*雄鸡生活)|((HDR|DV).*CHDWEB.*惊魂海湾)|((HDR|DV).*CHDWEB.*赌金))
 
 
 #日韩剧集
 (?i)((CHDWEB.*给你宇宙)|(CHDWEB.*紫菜包饭和饭团))
 
+#观众Remux动漫
+(?i)(Remux.*动画)
 
 
 (?i)(IQ|先行|MiniBD|DIY原盘|iPad|AV1|BDMV|RMVB|CAMRip|DVD|vcd|480p|OPUS|\bH&R\b|去头尾|(全|共)\d+(集|期)|完结|合集|Complete)
+
+
+
+# 鸢尾综艺追新
+(?i)(2160p.*ADWeb).*(哈哈哈哈哈|乘风破浪的姐姐|妻子的浪漫旅行|今夜喜友秀|魔力歌先生|无限超越班|我们的爸爸|不好笑就露宿街头|风华合伙人|音你而来|合伙人|奋斗吧人生|周五晚高疯|超燃青春的合唱|大侦探).*正片
 
 
 
