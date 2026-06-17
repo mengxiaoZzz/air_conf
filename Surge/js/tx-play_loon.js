@@ -12,6 +12,9 @@ const PLAYER_MAP = {
 let player = $argument.arg1;
 console.log("player===" + player);
 
+let player2 = $argument["player"]
+console.log("player2===" + player2);
+
 if (player === undefined || player === "" || player === null) {
     player = "SenPlayer"
 }
@@ -24,6 +27,7 @@ const videoUrl = $request.url;
 // user-agent
 let userAgent = $request.headers["user-agent"]
 console.log("$request.headers===" + $request.headers);
+console.log($request.headers);
 console.log("userAgent===" + userAgent);
 
 if (userAgent.includes("SenPlayer")) {
