@@ -9,7 +9,7 @@
 
 
 #华语剧集
-(?i)(2160p).*(((HDR|DV).*ADWeb.*低智商犯罪)|((HDR|DV).*ADWeb.*喀什恋歌)|((HDR|DV).*HHWEB.*佳偶天成)|((HDR|DV).*CHDWEB.*主角))
+(?i)(2160p).*(((HDR|DV).*ADWeb.*迷墙)|(HDR.*60FPS.*ADWeb.*莫离)|(DV.*CHDWEB.*莫离))
 
 #欧美剧集
 (?i)(2160p).*((CHDWEB.*不完美的女人)|((HDR|DV).*CHDWEB.*母爱无赦)|(CHDWEB.*雄鸡生活)|((HDR|DV).*CHDWEB.*惊魂海湾)|((HDR|DV).*CHDWEB.*赌金))
