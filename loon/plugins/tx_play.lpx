@@ -13,4 +13,3 @@ http-response ^https?://\w+.cloudfront.net/.*\.m3u8.*$ script-path=https://raw.g
 [MITM]
 hostname = tth.txh069.com,*.cloudfront.net
 
-https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/loon/plugins/tx_play.lpx
