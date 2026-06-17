@@ -10,7 +10,6 @@ const PLAYER_MAP = {
 };
 
 let player = $argument["player"]
-console.log("player===" + player);
 
 if (player === undefined || player === "" || player === null) {
     player = "SenPlayer"
@@ -22,9 +21,6 @@ const videoUrl = $request.url;
 
 // user-agent
 let userAgent = $request.headers["User-Agent"]
-console.log("$request.headers===" + $request.headers);
-console.log($request.headers);
-console.log("userAgent===" + userAgent);
 
 if (userAgent.includes("SenPlayer")) {
     $done({});
@@ -37,8 +33,7 @@ let title = "ʚ前方高能预警ɞ"
 let subtitle = "翩若惊鸿，婉若游龙。"
 let content = ""
 $notification.post(title, subtitle, content, {
-    "url": senPlayerLink,
-    "openUrl": senPlayerLink,
+    "openUrl": senPlayerLink
 });
 
 $done({});
