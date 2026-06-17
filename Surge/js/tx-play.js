@@ -12,7 +12,7 @@ const PLAYER_MAP = {
     "lenna": {scheme: "lenna://x-callback-url/play?url="}
 };
 
-let player = $argument.split('=')[1];
+let player = $argument.arg1;
 console.log("player");
 console.log(player);
 if (player === undefined || player === "" || player === null) {
@@ -27,6 +27,9 @@ const videoUrl = $request.url;
 
 // user-agent
 let userAgent = $request.headers["user-agent"]
+
+console.log("userAgent");
+console.log(userAgent);
 
 if (userAgent.includes("SenPlayer")) {
     $done({});
