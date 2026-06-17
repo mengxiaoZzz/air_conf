@@ -7,9 +7,10 @@
 player = select, "SenPlayer", "SenPlayer-dl", tag=播放器, desc=选择跳转的播放器
 
 [Script]
-http-response ^https?://tth.txh069.com/.*\.m3u8.*$ script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play.js, requires-body=false, timeout=60, tag=跳转, argument=[{player}]
-http-response ^https?://\w+.cloudfront.net/.*\.m3u8.*$ script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play.js, requires-body=false, timeout=60, tag=跳转, argument=[{player}]
+http-response ^https?://tth.txh069.com/.*\.m3u8.*$ script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play_loon.js.js, requires-body=true, timeout=60, tag=跳转, argument=[{player}]
+http-response ^https?://\w+.cloudfront.net/.*\.m3u8.*$ script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/Surge/js/tx-play_loon.js.js, requires-body=true, timeout=60, tag=跳转, argument=[{player}]
 
 [MITM]
 hostname = tth.txh069.com,*.cloudfront.net
 
+https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/loon/plugins/tx_play.lpx
