@@ -10,20 +10,21 @@ const PLAYER_MAP = {
 };
 
 let player = $argument.arg1;
-console.log("player");
-console.log(player);
+console.log("player===" + player);
+
 if (player === undefined || player === "" || player === null) {
     player = "SenPlayer"
 }
 let scheme = PLAYER_MAP[player].scheme
-console.log("scheme");
-console.log(scheme);
+console.log("scheme===" + scheme);
 
 // 播放地址
 const videoUrl = $request.url;
 
 // user-agent
 let userAgent = $request.headers["user-agent"]
+console.log("$request.headers===" + $request.headers);
+console.log("userAgent===" + userAgent);
 
 if (userAgent.includes("SenPlayer")) {
     $done({});
