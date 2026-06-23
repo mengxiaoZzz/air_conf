@@ -2,7 +2,7 @@
 #!desc=B站去除开屏
 
 [Script]
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash, script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/loon/js/tx-play_loon.js, requires-body=true, timeout=60, tag=去除广告
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash, script-path=https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/loon/js/bilibili-screen.js, requires-body=true, timeout=60, tag=去除广告
 
 [MITM]
 hostname = app.bilibili.com
