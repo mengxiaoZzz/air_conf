@@ -9,7 +9,7 @@
 
 
 #华语剧集
-(?i)(2160p).*(((HDR|DV).*ADWeb.*迷墙)|(HDR.*60FPS.*ADWeb.*莫离)|(DV.*CHDWEB.*莫离))
+(?i)(2160p.*(ADWeb.*(画梦录|千香|昨夜将至|问心)|CHDWEB.*(云秀行)|HDR.*HHWEB.*(云秀行)|UBWEB.*(种墨园)|PTerWEB.*(问心2)))
 
 #欧美剧集
 (?i)(2160p).*((CHDWEB.*不完美的女人)|((HDR|DV).*CHDWEB.*母爱无赦)|(CHDWEB.*雄鸡生活)|((HDR|DV).*CHDWEB.*惊魂海湾)|((HDR|DV).*CHDWEB.*赌金))
@@ -25,9 +25,12 @@
 (?i)(IQ|先行|MiniBD|DIY原盘|iPad|AV1|BDMV|RMVB|CAMRip|DVD|vcd|480p|OPUS|\bH&R\b|去头尾|(全|共)\d+(集|期)|完结|合集|Complete)
 
 
-
-# 鸢尾综艺追新
-(?i)(2160p.*ADWeb).*(哈哈哈哈哈|乘风破浪的姐姐|妻子的浪漫旅行|今夜喜友秀|魔力歌先生|无限超越班|我们的爸爸|不好笑就露宿街头|风华合伙人|音你而来|合伙人|奋斗吧人生|周五晚高疯|超燃青春的合唱|大侦探).*正片
+(?i)(2160p).*((DV|HDR).*CHDWEB.*剧.*(简|中))
 
 
 
+(?i)(friDay|CR).*?((ADWeb.*欢迎来到实力至上主义的教室)|((MWeb|ADWeb).*上伊那牡丹)|((MWeb|ADWeb).*弱弱老师)|(MWeb.*一叠间漫画咖啡屋生活)|(FROGWeb.*海贼王)|(ADWeb.*猫与龙))
+
+(?i)(friDay|CR).*?(ADWeb.*(Re：从零开始的异世界生活 第四季|Re：从零开始的异世界生活第4季)|(MWeb|ADWeb).*(关于我转生变成史莱姆这档事 第四季 Part 2|关于我转生变成史莱姆这档事 第四季)|(MWeb|ADWeb).*(和班上第二可爱的女孩子成为了朋友|我和班上第二可爱的女生成为朋友)|ADWeb.*女神“异世界转生想成为什么”我“勇者的肋骨”|ADWeb.*想结束这场“我爱你”的游戏|ADWeb.*黑猫与魔女的教室|ADWeb.*复制品的我也会谈恋爱|MWeb.*当前、正被打扰中！|MWeb.*钻石王牌 第四季|MWeb.*幽灵音乐会|ADWeb.*楠木邸的神明庭院|ADWeb.*摩绪|ADWeb.*LIAR GAME - 诈欺游戏|ADWeb.*淫欲团地|ADWeb.*夜樱家大作战 第2季|ADWeb.*主播女孩重度依赖|ADWeb.*冻结地球|ADWeb.*出租女友|(ADWeb|MWeb).*(异兽魔都 第二季|/None|异兽魔都 第2季)|ADWeb.*加油！中村同学！！|ADWeb.*溜掉的大鱼比不上自己钓到的鱼|ADWeb.*灰原同学重返过去，开启所向无敌的第二轮青春游戏|MWeb.*库兹马唱歌的话家里哆啰啰|MWeb.*百鬼夜行抄|MWeb.*雾尾粉丝俱乐部|MWeb.*淡岛百景|MWeb.*女骑士成为蛮族新娘|ADWeb.*魔法姐妹露露与莉莉|MWeb.*茉莉花酱的好感度正在崩坏|(MWeb|Nest@ADWeb).*黄泉的使者|(MWeb|ADWeb).*女仆小姐的贪吃日常|(MWeb|ADWeb).*入间同学入魔了！|(MWeb|ADWeb).*你又被杀了呢，侦探大人|MWeb.*迦楠大人的白给是恶魔级|MWeb.*石纪元 第四季 Part 3|MWeb.*朱音落语|MWeb.*轮回的花瓣|MWeb.*吃魔物的冒险者|MWeb.*关于邻家的天使大人不知不觉把我惯成了废人这档子事 第二季|MWeb.*神之水滴|MWeb.*左撇子艾伦|MWeb.*杀手青春|(MWeb|ADWeb).*婚姻剧毒|MWeb.*异世界悠闲农家|(ADWeb|Ansgwrt@ADWeb).*自称恶役大小姐的婚约者观察记录。|ADWeb.*小书痴的下克上：为了成为图书管理员不择手段！领主的养女|MWeb.*身为悲剧始作俑者的最强邪恶BOSS女王为民竭心尽力|(ADWeb|Nest@ADWeb).*尖帽子的魔法工房|(MWeb|ADWeb).*(最强王者的第二人生 第二季|终末起点 第二季)|ADWeb.*想看她一脸嫌恶地露出裤裤R|(MWeb|ADWeb).*(废柴风纪委员与裙子长度不合规的JK的故事|木头风纪委员和迷你裙 JK 的故事)|(Nest@ADWeb|AnimeS@ADWeb).*杖与剑的魔剑谭 第二季)
+
+(?i)(friDay|CR).*?(?:ADWeb.*欢迎来到实力至上主义的教室|(MWeb|ADWeb).*上伊那牡丹|(MWeb|ADWeb).*弱弱老师|MWeb.*一叠间漫画咖啡屋生活|FROGWeb.*海贼王|ADWeb.*猫与龙|ADWeb.*(Re：从零开始的异世界生活 第四季|Re：从零开始的异世界生活第4季)|(MWeb|ADWeb).*(关于我转生变成史莱姆这档事 第四季 Part 2|关于我转生变成史莱姆这档事 第四季)|(MWeb|ADWeb).*(和班上第二可爱的女孩子成为了朋友|我和班上第二可爱的女生成为朋友)|ADWeb.*女神“异世界转生想成为什么”我“勇者的肋骨”|ADWeb.*想结束这场“我爱你”的游戏|ADWeb.*黑猫与魔女的教室|ADWeb.*复制品的我也会谈恋爱|MWeb.*当前、正被打扰中！|MWeb.*钻石王牌 第四季|MWeb.*幽灵音乐会|ADWeb.*楠木邸的神明庭院|ADWeb.*摩绪|ADWeb.*LIAR GAME - 诈欺游戏|ADWeb.*淫欲团地|ADWeb.*夜樱家大作战 第2季|ADWeb.*主播女孩重度依赖|ADWeb.*冻结地球|ADWeb.*出租女友|(ADWeb|MWeb).*(异兽魔都 第二季|/None|异兽魔都 第2季)|ADWeb.*加油！中村同学！！|ADWeb.*溜掉的大鱼比不上自己钓到的鱼|ADWeb.*灰原同学重返过去，开启所向无敌的第二轮青春游戏|MWeb.*库兹马唱歌的话家里哆啰啰|MWeb.*百鬼夜行抄|MWeb.*雾尾粉丝俱乐部|MWeb.*淡岛百景|MWeb.*女骑士成为蛮族新娘|ADWeb.*魔法姐妹露露与莉莉|MWeb.*茉莉花酱的好感度正在崩坏|(MWeb|Nest@ADWeb).*黄泉的使者|(MWeb|ADWeb).*女仆小姐的贪吃日常|(MWeb|ADWeb).*入间同学入魔了！|(MWeb|ADWeb).*你又被杀了呢，侦探大人|MWeb.*迦楠大人的白给是恶魔级|MWeb.*石纪元 第四季 Part 3|MWeb.*朱音落语|MWeb.*轮回的花瓣|MWeb.*吃魔物的冒险者|MWeb.*关于邻家的天使大人不知不觉把我惯成了废人这档子事 第二季|MWeb.*神之水滴|MWeb.*左撇子艾伦|MWeb.*杀手青春|(MWeb|ADWeb).*婚姻剧毒|MWeb.*异世界悠闲农家|(ADWeb|Ansgwrt@ADWeb).*自称恶役大小姐的婚约者观察记录。|ADWeb.*小书痴的下克上：为了成为图书管理员不择手段！领主的养女|MWeb.*身为悲剧始作俑者的最强邪恶BOSS女王为民竭心尽力|(ADWeb|Nest@ADWeb).*尖帽子的魔法工房|(MWeb|ADWeb).*(最强王者的第二人生 第二季|终末起点 第二季)|ADWeb.*想看她一脸嫌恶地露出裤裤R|(MWeb|ADWeb).*(废柴风纪委员与裙子长度不合规的JK的故事|木头风纪委员和迷你裙 JK 的故事)|(Nest@ADWeb|AnimeS@ADWeb).*杖与剑的魔剑谭 第二季)
