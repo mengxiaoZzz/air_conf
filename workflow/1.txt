@@ -27,6 +27,8 @@
 
 (?i)(2160p).*((DV|HDR).*CHDWEB.*剧.*(简|中))
 
+(?i)(2160p.*(ADWeb.*(画梦录|千香)|(HDR|DV).*ADWeb.*(灿如繁星)|CHDWEB.*(云秀行)|(HDR.*HHWEB.*(云秀行)|(HQ.*(DV|HDR).*60fps.*HHWEB.*悬案))|UBWEB.*(种墨园)|(H264|HDRVivid).*UBWEB.*(野狗骨头)))
+
 
 
 (?i)(friDay|CR).*?((ADWeb.*欢迎来到实力至上主义的教室)|((MWeb|ADWeb).*上伊那牡丹)|((MWeb|ADWeb).*弱弱老师)|(MWeb.*一叠间漫画咖啡屋生活)|(FROGWeb.*海贼王)|(ADWeb.*猫与龙))
