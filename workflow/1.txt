@@ -1,7 +1,7 @@
 
 
 #华语动漫
-(?i)(2160p).*((ADWeb.*牧神记)|(ADWeb.*将夜)|(ADWeb.*大道独行之蝶龙变)|(ADWeb.*师兄啊师兄)|(HQ.*HHWEB.*师兄啊师兄)|(CHDWEB.*搜神记)|((HDR|DV).*CHDWEB.*大主宰))
+(?i)2160p.*(HDR.*ADWeb.*牧神记|HDR.*ADWeb.*将夜|ADWeb.*师兄啊师兄|HQ.*HHWEB.*师兄啊师兄|(HDR|DV).*CHDWEB.*大主宰|HDR.*ADWeb.*凡人修仙传|HDR.*PTerWEB.*万人之上|(HDR|DV).*CHDWEB.*择日飞升|(HDR|DV).*CHDWEB.*搜神记)
 
 
 #外语动漫
@@ -9,7 +9,8 @@
 
 
 #华语剧集
-(?i)(2160p.*(ADWeb.*(画梦录|千香|昨夜将至|问心)|CHDWEB.*(云秀行)|HDR.*HHWEB.*(云秀行)|UBWEB.*(种墨园)|PTerWEB.*(问心2)))
+(?i)(2160p.*(HDR.*ADWeb.*春日之地|ADWeb.*依然的喜事|ADWeb.*江海潮生|HDR.*ADWeb.*这一秒过火|(HDR|DV).*ADWeb.*小芳|((HDR|DV).*HHWEB.*雀骨)))
+
 
 #欧美剧集
 (?i)(2160p).*((CHDWEB.*不完美的女人)|((HDR|DV).*CHDWEB.*母爱无赦)|(CHDWEB.*雄鸡生活)|((HDR|DV).*CHDWEB.*惊魂海湾)|((HDR|DV).*CHDWEB.*赌金))
