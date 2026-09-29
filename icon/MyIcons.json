@@ -35,32 +35,8 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Final.png"
         },
         {
-            "name": "Texon",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Texon.png"
-        },
-        {
-            "name": "ViKing",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/ViKing.png"
-        },
-        {
-            "name": "AJS",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/AJS.png"
-        },
-        {
             "name": "LinkCube",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/LinkCube.png"
-        },
-        {
-            "name": "Linkeless",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Linkeless.png"
-        },
-        {
-            "name": "KFC",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/KFC.png"
-        },
-        {
-            "name": "Dimension",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/Dimension.png"
         },
         {
             "name": "Unicorn",
@@ -69,10 +45,6 @@
         {
             "name": "To2",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/To2.png"
-        },
-        {
-            "name": "ESNC",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/144/ESNC.png"
         },
         {
             "name": "Apple",
@@ -151,16 +123,8 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/DimLight.png"
         },
         {
-            "name": "FaintRay",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/FaintRay.png"
-        },
-        {
             "name": "Iris",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Iris_1.png"
-        },
-        {
-            "name": "Cloud",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Cloud.png"
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Iris.png"
         },
         {
             "name": "Meowfly",
@@ -171,12 +135,12 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Meowfly2.png"
         },
         {
-            "name": "Omega",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Omega.png"
+            "name": "OMEGA",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/OMEGA1.png"
         },
         {
             "name": "Omega",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Omega2.png"
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/OMEGA2.png"
         },
         {
             "name": "MooGuu",
@@ -187,20 +151,8 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MoonCakeV.png"
         },
         {
-            "name": "HardMoon",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/HardMoon.png"
-        },
-        {
             "name": "MoonCake",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MoonCake2.png"
-        },
-        {
-            "name": "Paolu_Plex",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Paolu_Plex.png"
-        },
-        {
-            "name": "EchoFlixPro",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoFlixPro.png"
         },
         {
             "name": "EchoFlix",
@@ -211,24 +163,16 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoFlix2.png"
         },
         {
-            "name": "EchoPro",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoPro.png"
+            "name": "EchoFilx_Pro",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoFilx_Pro.png"
         },
         {
-            "name": "EchoSuper",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoSuper.png"
+            "name": "EchoFlix_Super",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/EchoFlix_Super.png"
         },
         {
             "name": "OkEmby",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/OkEmby.png"
-        },
-        {
-            "name": "Lily",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Lily.png"
-        },
-        {
-            "name": "Raise_115",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Raise_115.png"
         },
         {
             "name": "Youno",
@@ -243,36 +187,12 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/YounoPlus.png"
         },
         {
-            "name": "BCXC",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/BCXC2.png"
-        },
-        {
-            "name": "shenmiliwu",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/shenmiliwu.png"
-        },
-        {
-            "name": "LiuYingShe",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/LiuYingShe.png"
+            "name": "gift",
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/gift.png"
         },
         {
             "name": "Onyra",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Onyra.png"
-        },
-        {
-            "name": "Violet",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Violet.png"
-        },
-        {
-            "name": "FuFu",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/FuFu1.png"
-        },
-        {
-            "name": "FuFu",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/FuFu2.png"
-        },
-        {
-            "name": "FuFu",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/FuFu3.png"
         },
         {
             "name": "ME",
@@ -283,24 +203,12 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.Pre.png"
         },
         {
-            "name": "SaturDay.Pre",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.Pre2.png"
-        },
-        {
             "name": "SaturDay.X",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.X.png"
         },
         {
-            "name": "SaturDay.X",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.X2.png"
-        },
-        {
             "name": "SaturDay.Lite",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.Lite.png"
-        },
-        {
-            "name": "SaturDay.Lite",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SaturDay.Lite2.png"
         },
         {
             "name": "Robo",
@@ -323,28 +231,8 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/AskUltra.png"
         },
         {
-            "name": "Steven",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Steven.png"
-        },
-        {
-            "name": "Steven",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Steven2.png"
-        },
-        {
-            "name": "PandaTV",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/PandaTV1.png"
-        },
-        {
-            "name": "PandaTV",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/PandaTV2.png"
-        },
-        {
             "name": "Panda_CINE",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Panda_CINE_3.png"
-        },
-        {
-            "name": "SNTP",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SNTP.png"
+            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Panda_CINE.png"
         },
         {
             "name": "SNTPLite",
@@ -353,10 +241,6 @@
         {
             "name": "pdx",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/pdx.png"
-        },
-        {
-            "name": "GuGu",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/GuGu.png"
         },
         {
             "name": "MoYunGe",
@@ -375,184 +259,16 @@
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/ChilledMelon2.png"
         },
         {
-            "name": "JSQ",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/JSQ2.png"
-        },
-        {
-            "name": "GUAI",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/GUAI.png"
-        },
-        {
-            "name": "denggao",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/denggao.png"
-        },
-        {
-            "name": "TOTORO",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/TOTORO.png"
-        },
-        {
-            "name": "Lyrebird",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Lyrebird.png"
-        },
-        {
-            "name": "Rainbow",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Rainbow.png"
-        },
-        {
             "name": "Rainbow",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Rainbow_Horse.png"
-        },
-        {
-            "name": "MeFun",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/MeFun.png"
-        },
-        {
-            "name": "Misty",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Misty.png"
-        },
-        {
-            "name": "handou",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/handou.png"
-        },
-        {
-            "name": "105",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/105.png"
-        },
-        {
-            "name": "Peach",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Peach.png"
-        },
-        {
-            "name": "RuJing",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/RuJing.png"
-        },
-        {
-            "name": "RuJi",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/RuJi.png"
-        },
-        {
-            "name": "Msky",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Msky.png"
-        },
-        {
-            "name": "ZOX",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/ZOX.png"
-        },
-        {
-            "name": "CineTrail",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/CineTrail.png"
-        },
-        {
-            "name": "Temby",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Temby.png"
-        },
-        {
-            "name": "qdz",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/qdz.png"
-        },
-        {
-            "name": "WenJian",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/WenJian.png"
-        },
-        {
-            "name": "LevildeLuminia",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/LevildeLuminia.png"
-        },
-        {
-            "name": "CCEmby",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/CCEmby.png"
-        },
-        {
-            "name": "PrejuDice",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/PrejuDice.png"
-        },
-        {
-            "name": "paper",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Paper.png"
-        },
-        {
-            "name": "paper",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Paper2.png"
-        },
-        {
-            "name": "erciyuan",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/erciyuan.png"
-        },
-        {
-            "name": "NTRRR",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/NTRRR.png"
-        },
-        {
-            "name": "Ranger",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/Ranger.png"
         },
         {
             "name": "PornEmby",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/PornEmby.png"
         },
         {
-            "name": "ShuFu",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/DaShu2.png"
-        },
-        {
-            "name": "PlayZ",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/PlayZ.png"
-        },
-        {
-            "name": "SexRain",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SexRain.png"
-        },
-        {
-            "name": "TanHua",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/TanHua.png"
-        },
-        {
-            "name": "TanHua",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/TanHua2.png"
-        },
-        {
-            "name": "STAR",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/STAR.png"
-        },
-        {
-            "name": "STAR",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/STAR2.png"
-        },
-        {
-            "name": "SpaceK",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/SpaceK.png"
-        },
-        {
             "name": "云海互联",
             "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/oceancloud_emby.png"
-        },
-        {
-            "name": "云海互联",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/oceancloud_nsfw.png"
-        },
-        {
-            "name": "lris",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/lris.png"
-        },
-        {
-            "name": "lris",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/lris2.png"
-        },
-        {
-            "name": "AlphaTV",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/AlphaTV.png"
-        },
-        {
-            "name": "AlphaTV-X",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/AlphaTV-X.png"
-        },
-        {
-            "name": "PiliPili",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/PiliPili.png"
-        },
-        {
-            "name": "JieShu",
-            "url": "https://raw.githubusercontent.com/mengxiaoZzz/air_conf/main/icon/emby/JieShu.png"
         },
         {
             "name": "HK/HongKong/香港",
